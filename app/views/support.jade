@@ -1,0 +1,49 @@
+!!!
+html
+  head
+    title= title
+    
+    script(src="bower_components/bootstrap/assets/js/html5shiv.js")
+    script(src="bower_components/bootstrap/assets/js/respond.min.js")
+    script(src='//swww.tokbox.com/webrtc/v2.0/js/TB.min.js')
+    
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='bower_components/bootstrap/dist/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='/css/site.css')
+  body
+
+    .navbar.navbar-default
+      .navbar-header
+          .navbar-brand OpenTok Test
+
+    .container
+      .row.well
+        h1 OpenTok 3 room test
+        .input-group
+           span.input-group-addon
+             @
+           input(id="username", type="text", class="form-control", placeholder="Username")
+        span Move to: 
+        .btn-group
+          button.btn.btn-default#room1 Room1
+          button.btn.btn-default#room2 Room2
+          button.btn.btn-default#room3 Room3
+
+        
+      .row
+        #room1.col-md-4.well
+           h2 room1
+           #opentok
+           #devicePanelContainer
+           #opentokstreams
+             #myPublisherDiv
+        #room2.col-md-4.well
+           h2 room2
+        #room3.col-md-4.well
+           h2 room3
+
+    script(src="//code.jquery.com/jquery.js")
+    script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+    script(src="js/opentok.js")
+
+
