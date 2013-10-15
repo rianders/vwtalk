@@ -141,6 +141,6 @@ app.get('/api/:world/:user/:room', function(req, res) {
 
 });
 
-app.listen(process.env.PORT, function() {
+app.listen(80, function() {
     console.log("opentok app running: " + process.env.PORT);
 });
