@@ -32,6 +32,7 @@ function subscribeToStreams(streams) {
         subProperties.style.nameDisplayMode = "on";
 
         var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);
+       // subscriber.subscribeToVideo(false).subscribeToAudio(true);
 
     }
 
@@ -56,7 +57,8 @@ function subscribeToStreams(streams) {
         var publisher = TB.initPublisher(event.apikey, publisherContainer, {
             height: 128,
             width: 128,
-            name: user
+            name: user,
+           // publishVideo: false
         });
         sessions[currentRoom].publish(publisher);
         console.log("PubRoom: " + room);
