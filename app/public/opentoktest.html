@@ -31,7 +31,7 @@
              $.ajax({
                
                 dataType: "json",
-                url: "/api/" + user + "/" + room,
+                url: "/api/" + "001/" + user + "/" + room,
                 success: function(data) {
                        // Initialize session, set up event listeners, and connect
                      session = TB.initSession(data.sessionID);

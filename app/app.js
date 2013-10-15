@@ -46,40 +46,47 @@ var sessions = {};
 for (var ii = 0; ii < world.roomCount; ii++) {
     var session = {};
     session.sessionName = world.roomNames[ii];
+    session.sessionId = "NOT";
     sessions[world.roomNames[ii]] = session;
 }
 console.log(sessions);
-
-Sync(function(){
-    for (var sess in sessions) {
-        console.log("sess %j: ", sess);
+/* This is not working because by the time the session is create "room3" is the key for all rooms.
+Sync(function() {
+var key;
+    for (key in sessions) {
+        console.log("key: " + key);
         opentokAPP.createSession(location, {'p2p.preference':'disabled'}, function(result){
-            sess.sessionId = result;
+            sessions[key.toString()].sessionId = result;
+            console.log("sessions[" + key.toString() + "].sessionId: ", sessions[key].sessionId);
+
         });
     }
 });
 
-/*
+console.log(sessions);
+*/
+
+
 Sync(function() {
     opentokAPP.createSession(location, {
         'p2p.preference': 'disabled'
     }, function(result) {
-        console.log(sessions[0]);
-        sessions[0].sessionId = result;
+        console.log(sessions["room1"]);
+        sessions["room1"].sessionId = result;
         opentokAPP.createSession(location, {
             'p2p.preference': 'disabled'
         }, function(result) {
-            sessions[1].sessionId = result;
+            sessions["room2"].sessionId = result;
             opentokAPP.createSession(location, {
                 'p2p.preference': 'disabled'
             }, function(result) {
-                sessions[2].sessionId = result;
+                sessions["room3"].sessionId = result;
                 console.log("ASessions %j", sessions);
             });
         });
     });
 });
-*/
+
 
 
 app.configure('development', function() {
@@ -96,6 +103,7 @@ app.configure('production', function() {
 // Routes
 
 app.get('/', function(req, res) {
+    console.log("Sessions: %j", sessions);
     res.render('index', {
         title: 'OpenTok Test',
         sessions: sessions
@@ -105,26 +113,27 @@ app.get('/', function(req, res) {
 app.get('/support', routes.support);
 
 
-app.get('/api/:user/:room', function(req, res) {
+app.get('/api/:world/:user/:room', function(req, res) {
     var data = {};
     data.user = req.params.user;
     data.sessionName = req.params.room;
     data.apikey = config.opentok.key;
     console.log("sesionName: " + data.sessionName);
-    data.sessionID = sessions[session.sessionName].sessionId;
+    data.sessionId = sessions[session.sessionName].sessionId;
     console.log("opentok: %j", opentok);
     var token = opentokAPP.generateToken({
         session_id: data.sessionId,
-        role: opentok.RoleConstants.PUBLISHER,
+        role: opentok.RoleConstants.SUBSCRIBER,
         connection_data: "userId:" + req.params.user
     });
     data.token = token;
+    console.log("token: ", data.token);
     console.log("data: %j", data);
 
     res.json(data);
 
 });
 
-app.listen(8080, function() {
+app.listen(process.env.PORT, function() {
     console.log("opentok app running: " + process.env.PORT);
 });

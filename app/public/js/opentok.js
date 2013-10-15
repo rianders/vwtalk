@@ -1,7 +1,7 @@
     var currentRoom;
     var room = "room1";
     var user;
-    var sessions = [];
+    var sessions = {};
     var globaldata;
     var publisher;
 
@@ -42,12 +42,9 @@
     }
        function sessionConnectedHandler(event) {
         console.log("sessionConnectedHandler");
-        /* orig
-        subscribeToStreams(event.streams);
-        sessions[room].publish();
-        */
+        
         // Create publisher and start streaming into the session
-        var publisher = TB.initPublisher(apiKey, 'myPublisherDiv');
+        var publisher = TB.initPublisher(event.apikey, 'myPublisherDiv');
         sessions[room].publish(publisher);
 
         // Subscribe to streams that were in the session when we connected
@@ -57,24 +54,26 @@
   $(document).ready(function() {
         console.log("ready!");
 
-        $("button").click(function(event) {
+         $(".disconnect").click(function(event) {
+             sessions[currentRoom].disconnect();
+             console.log("Disconnect: " + sessions[currentRoom]);
+         });
+         
+        $(".session").click(function(event) {
             room = event.target.id;
+            world = "001";
             currentRoom = room;
             user = $("#username").val();
-            console.log("EventRoom: " + room);
-            console.log("user: " + user);
             $.ajax({
                 dataType: "json",
-                url: "/api/" + user + "/" + room,
+                url: "/api/" + world + "/" + user + "/" + room,
                 success: function(data) {
-                    console.log("token:" + data.token);
-		    console.log("Data: " + JSON.stringify(data));
-                        var session = TB.initSession(data.sessionID);
+		                console.log("Data: " + JSON.stringify(data));
+                        var session = TB.initSession(data.sessionId);
                         sessions[room] = session;
                         sessions[room].connect(data.apikey, data.token);
                         sessions[room].addEventListener("sessionConnected", sessionConnectedHandler);
                         sessions[room].addEventListener("streamCreated", streamCreatedHandler);
-                        console.log("Connected");
                 }
             });
         });
