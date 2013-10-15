@@ -15,7 +15,7 @@ function subscribeToStreams(streams) {
     for (var ii = 0; ii < streams.length; ii++) {
         console.log("stream ii: " + streams.length + ", StreamName: " + streams[ii].name);
         // Make sure we don't subscribe to ourself
-        if (streams[ii].connection.connectionId == sessions[room].connection.connectionId) {
+        if (streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
             return;
         }
 
@@ -31,7 +31,7 @@ function subscribeToStreams(streams) {
         subProperties.style = {};
         subProperties.style.nameDisplayMode = "on";
 
-        var subscriber = sessions[room].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);
+        var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);
 
     }
 
@@ -58,7 +58,9 @@ function subscribeToStreams(streams) {
             width: 128,
             name: user
         });
-        sessions[room].publish(publisher);
+        sessions[currentRoom].publish(publisher);
+        console.log("PubRoom: " + room);
+        console.log("PubRoom: " + currentRoom);
 
         // Subscribe to streams that were in the session when we connected
         subscribeToStreams(event.streams);
@@ -76,7 +78,7 @@ function subscribeToStreams(streams) {
           dataType: "json",
           url: "/api/" + world + "/" + user + "/" + room,
           success: function(data) {
-              globaldata = data;
+              globaldata = $.extend({},  data);
               sessions = data.sessions;
 
               for (key in sessions) {
@@ -98,11 +100,16 @@ function subscribeToStreams(streams) {
   
       $(".connect").click(function(event) {
           //console.log(sessions);
+          //disconnect from previous room
+          sessions[currentRoom].disconnect();
+          $("#devicePanelContainer").prepend("<div id='publisherContainer' />");
+          //connect to new room
+          currentRoom = event.target.id;
           console.log("room: " + event.target.id);
           console.log("token: " + globaldata.tokens[event.target.id]);
           console.dir(sessions[event.target.id]);
           sessions[event.target.id].connect(globaldata.apikey,globaldata.tokens[event.target.id]);
-          $("#rooms").val(event.target.id);
+          $("#rooms").text($(event.target).text());
       });
   });
 
