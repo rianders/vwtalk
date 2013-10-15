@@ -42,11 +42,13 @@ var location = config.opentok.location;
 var opentokAPP = new opentok.OpenTokSDK(config.opentok.key, config.opentok.secret);
 
 console.log("rmCount: ", world.roomCount);
+var tokens = {};
 var sessions = {};
 for (var ii = 0; ii < world.roomCount; ii++) {
     var session = {};
     session.sessionName = world.roomNames[ii];
     session.sessionId = "NOT";
+    session.token = "";
     sessions[world.roomNames[ii]] = session;
 }
 console.log(sessions);
@@ -114,22 +116,27 @@ app.get('/support', routes.support);
 
 
 app.get('/api/:world/:user/:room', function(req, res) {
+    //This selects the world, the user, and starter room
     var data = {};
     data.user = req.params.user;
     data.sessionName = req.params.room;
     data.apikey = config.opentok.key;
-    console.log("sesionName: " + data.sessionName);
-    data.sessionId = sessions[session.sessionName].sessionId;
-    console.log("opentok: %j", opentok);
+    //data.sessionId = sessions[session.sessionName].sessionId;
+
+    //loop sessions
+    for (var key in sessions) {
     var token = opentokAPP.generateToken({
-        session_id: data.sessionId,
-        role: opentok.RoleConstants.SUBSCRIBER,
+        session_id: sessions[key].sessionId,
+        role: opentok.RoleConstants.PUBLISHER,
         connection_data: "userId:" + req.params.user
     });
-    data.token = token;
-    console.log("token: ", data.token);
+    tokens[key] = token;
+    sessions[key].token = token;
+   // console.log("token: ",sessions[key].token );
+    }
+    data.tokens = tokens;
+    data.sessions = sessions;
     console.log("data: %j", data);
-
     res.json(data);
 
 });
