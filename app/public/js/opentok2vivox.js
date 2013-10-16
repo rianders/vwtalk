@@ -11,6 +11,29 @@ var isLoggingIn = false;
 
 function VivoxUnityInit() {
     console.log("VivoxUnityInit");
+    console.log("VivoxUnityInit: Start");
+    var callbackFunctions = {
+        onConnected: vivoxConnected
+				 , onParticipantAdded: ParticipantAdded
+				 , onParticipantRemoved: ParticipantRemoved
+				 , onParticipantUpdated: ParticipantUpdated
+				 , onVersionCheck: VersionCheck
+    };
+    console.log("VivoxUnityInit: Callback functions success");
+    //vvxHandle not enabled
+    /*
+    vvxHandle = new Vivox.API('https://www.regp.vivox.com/api2/',
+				{
+				    callbacks: callbackFunctions,
+				    //autoDownload: false,
+				    pluginVersion: '0.0.0',
+				    channelUri: voiceChannelAddress,
+				    //ephemeralId: voiceChannelAddress
+				});
+				console.log("VivoxUnityInit: Finished!" + vvxHandle);
+    // alert("Init!");
+    */
+    
     }
 
 function VersionCheck(event) {
