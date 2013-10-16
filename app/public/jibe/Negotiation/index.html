@@ -76,27 +76,7 @@
         
         
 <script type="text/javascript">
-/*
-    if(navigator.userAgent.indexOf("MSIE")!=-1)
-    {
-                alert("Internet Explorer is not officially supported by this site.  Please use Mozilla Firefox.");
-    }
-    <!--
-    function GetUnity() {
-            if (typeof unityObject !== "undefined") {
-                    return unityObject.getObjectById("unityPlayer");
-            }
-            return null;
-    }
-    if (typeof unityObject !== "undefined") {
-            var params = {
-                    disableContextMenu: true
-            };
-            unityObject.embedUnity("unityPlayer", "webplayer.unity3d", 800, 500, params);
-    }
-    
-    */
-    
+
     
     function GetUserName(gameObject) {
     }
@@ -228,50 +208,46 @@
 <body>
 
 <div class="container">
-<div class="row">
-           <div   class="col-md-10">
-<table border="0" cellpadding="5">
-    <tbody>
-        <tr>
-            <td>
-            	<div id="unityPlayer">
-				<div class="missing">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-					</a>
-				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
-			</div>
-<!--
-                <div class="content missing" id="unityPlayer">
-                    <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-                    <img alt="Unity Web Player. Install now!" src="http:///webplayer.unity3d.com/installation/getunity.png" width="193" height="63" /></a>
-                </div>
-                
-                -->
-                
-            </td>
-            <td style="vertical-align:top">
-                <div id="OnlineUsers"></div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-</div>
-<div id="room1" class="col-md-4 well">
-    <h2 id="rooms">Room: Starter</h2>
-    <div id="opentok">
-        <div id="devicePanelContainer"></div>
-        <div id="publisherContainer"></div>
-        <div id="streamsContainer"></div>
-    </div>
-</div>
-</div>
+    <div class="row">
+        <div class="col-md-10">
+            <table border="0" cellpadding="5">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div id="unityPlayer">
+                                <div class="missing">
+                                    <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
 
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+
+					</a>
+                                </div>
+                                <div class="broken">
+                                    <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+
+					</a>
+                                </div>
+                            </div>
+                           
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="room1" class="col-md-4 well">
+            <h2 id="rooms">Room: Starter</h2>
+            <div id="OnlineUsers"></div>
+
+            <div id="opentok">
+                <div id="devicePanelContainer"></div>
+                <div id="publisherContainer"></div>
+                <div id="streamsContainer"></div>
+            </div>
+        </div>
+    </div>
+    
 <div class = "row-fluid pagination-centered">
 	   <a class="btn btn-large btn-danger" href="//onlinelearning.rutgers.edu/virtual-worlds">About</a>
        <a class="btn btn-large btn-danger" href="../Communication.pdf">Help with Communication</a>
