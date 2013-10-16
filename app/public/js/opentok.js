@@ -42,6 +42,12 @@ function subscribeToStreams(streams) {
         console.log("streamCreateHandler");
         subscribeToStreams(event.streams);
     }
+    
+    function streamDestroyedHandler(event) {
+        console.log("streamCreateHandler");
+        subscribeToStreams(event.streams);
+    }
+    
     function sessionConnectedHandler(event) {
         console.log("sessionConnectedHandler");//: cnt:  " +  event.connections.length);
 
@@ -67,6 +73,17 @@ function subscribeToStreams(streams) {
         // Subscribe to streams that were in the session when we connected
         subscribeToStreams(event.streams);
         }
+        
+    function unpublish() {
+        sessions[currentRoom].unpublish(publisher);
+    }
+    function sessionDisconnectedHandler(event) {
+		console.log("Disconnected");
+		event.preventDefault();
+	    sessions[currentRoom].unpublish(publisher);
+
+	}
+
 
   $(document).ready(function() {
       console.log("ready!");
@@ -88,15 +105,18 @@ function subscribeToStreams(streams) {
                   var session = TB.initSession(data.sessions[key].sessionId);
                   sessions[key] = session;
                   sessions[key].addEventListener("sessionConnected", sessionConnectedHandler);
+                  sessions[key].addEventListener("sessionDisconnected", sessionDisconnectedHandler);
                   sessions[key].addEventListener("streamCreated", streamCreatedHandler);
+                  sessions[key].addEventListener('streamDestroyed', streamDestroyedHandler);
               }
           }
       });
   
       $(".disconnect").click(function(event) {
           sessions[currentRoom].disconnect();
+          //sessions[currentRoom].unpublish(publisher);
           //disconnect kills the div the publisher is in
-          $("#devicePanelContainer").prepend("<div id='publisherContainer' />");
+         $("#devicePanelContainer").prepend("<div id='publisherContainer' />");
           console.log("Disconnect Room: " + currentRoom);
       });
   

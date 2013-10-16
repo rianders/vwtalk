@@ -6,29 +6,75 @@
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
 <meta name="generator" content="HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
 <title>Rutgers University Jibe World - Jibe 1.4.2</title>
-<link rel="stylesheet" type="text/css" href="markitup/skins/markitup/style.css" />
-<link rel="stylesheet" type="text/css" href="markitup/sets/default/style.css" />
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject.js">
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">
-</script>
-<script type="text/javascript" src="markitup/jquery.markitup.js">
-</script>
-<script type="text/javascript" src="markitup/sets/default/set.js">
-</script>
-<link href="../bootstrap.css" rel="stylesheet"/>
-<link href="../bootstrap-responsive.css" rel="stylesheet"/>
-<script type="text/javascript" src="../bootstrap.js"></script>
-<script src="VivoxUnity.js" type="text/javascript">
-</script>
-<script src="VivoxVoiceAPI.js" type="text/javascript">
-</script>
-<script src="http://Rutgers.jibemix.com/Scripts/version.js" type="text/javascript">
-</script>
-<script type="text/javascript" src="js/swfobject.js"></script>
-<script type="text/javascript" src="js/downloadify.min.js"></script>
+         <script src="//code.jquery.com/jquery.js"></script>
+        <script src="/bower_components/bootstrap/assets/js/html5shiv.js"></script>
+        <script src="/bower_components/bootstrap/assets/js/respond.min.js"></script>
+        <script src="//swww.tokbox.com/webrtc/v2.0/js/TB.js"></script>
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        
+        	<script type="text/javascript">
+		<!--
+		var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+		if (document.location.protocol == 'https:')
+			unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+		document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+		-->
+		</script>
+		<script type="text/javascript">
+		<!--
+			var config = {
+				width: 960, 
+				height: 600,
+				params: { enableDebugging:"0" }
+				
+			};
+			var u = new UnityObject2(config);
+
+			jQuery(function() {
+
+				var $missingScreen = jQuery("#unityPlayer").find(".missing");
+				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+				$missingScreen.hide();
+				$brokenScreen.hide();
+				
+				u.observeProgress(function (progress) {
+					switch(progress.pluginStatus) {
+						case "broken":
+							$brokenScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$brokenScreen.show();
+						break;
+						case "missing":
+							$missingScreen.find("a").click(function (e) {
+								e.stopPropagation();
+								e.preventDefault();
+								u.installPlugin();
+								return false;
+							});
+							$missingScreen.show();
+						break;
+						case "installed":
+							$missingScreen.remove();
+						break;
+						case "first":
+						break;
+					}
+				});
+				u.initPlugin(jQuery("#unityPlayer")[0], "WebPlayer.unity3d");
+			});
+		-->
+		</script>
+
+
+        
+        
 <script type="text/javascript">
+/*
     if(navigator.userAgent.indexOf("MSIE")!=-1)
     {
                 alert("Internet Explorer is not officially supported by this site.  Please use Mozilla Firefox.");
@@ -46,6 +92,10 @@
             };
             unityObject.embedUnity("unityPlayer", "webplayer.unity3d", 800, 500, params);
     }
+    
+    */
+    
+    
     function GetUserName(gameObject) {
     }
     function GetUserUUID(gameObject) {
@@ -160,7 +210,7 @@
 
 
     $(document).ready(function() {
-        VivoxInstall();
+     //   VivoxInstall();
         DisplayChatBox("ContractPlaque");
         $('#ChatHistory').hide();
         $('#ToggleChat').hide();
@@ -175,24 +225,46 @@
 </head>
 <body>
 <table border="0" cellpadding="5">
-<tbody><tr><td><div class="content missing" id="unityPlayer"><a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!"><img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" /></a></div></td>
-<td style="vertical-align:top"><div id="VivoxOnlineUsers"></div></td></tr>
-</tbody></table>
+    <tbody>
+        <tr>
+            <td>
+            	<div id="unityPlayer">
+				<div class="missing">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+					</a>
+				</div>
+				<div class="broken">
+					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+					</a>
+				</div>
+			</div>
+<!--
+                <div class="content missing" id="unityPlayer">
+                    <a href="//unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                    <img alt="Unity Web Player. Install now!" src="http:///webplayer.unity3d.com/installation/getunity.png" width="193" height="63" /></a>
+                </div>
+                
+                -->
+                
+            </td>
+            <td style="vertical-align:top">
+                <div id="OnlineUsers"></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
 <div class = "row-fluid pagination-centered">
-	   <a class="btn btn-large btn-danger" href="http://onlinelearning.rutgers.edu/virtual-worlds">About</a>
+	   <a class="btn btn-large btn-danger" href="//onlinelearning.rutgers.edu/virtual-worlds">About</a>
        <a class="btn btn-large btn-danger" href="../Communication.pdf">Help with Communication</a>
        <a class="btn btn-large btn-danger" href="../NavigationControls.pdf">Movement Controls</a>
-       <a class="btn btn-large btn-danger" href="http://goo.gl/QPqFr">Request Technical Support</a>
+       <a class="btn btn-large btn-danger" href="//goo.gl/QPqFr">Request Technical Support</a>
 </div>
 
 <div id="Div1"></div>
-<div class = "row-fluid pagination-centered">
-        <a class="btn btn-large btn-danger" href="http://code.vivox.com/downloads/VivoxWebVoice-1.18.3.4133-win32.signed.xpi">Install Vivox for Windows</a>
-	<!-- <a class="btn btn-large btn-danger" href="">Install Vivox for Mac</a> -->
-        <a class="btn btn-large btn-danger" href="http://www.youtube.com/playlist?list=PLErpjdXcOLkWVShIPqxxrWv-xEENrK1ja&feature=edit_ok">Installation Tutorial</a>
-</div>
 
 <div id="ToggleChat">Open/Close Chat Log</div>
 <textarea id="ChatHistory" readonly="readonly" rows="10" cols="20">
@@ -265,11 +337,8 @@ table {
 </style>
 <br />
 
-<div class = "pagination-centered">
-    <h3 class="text-error">For best performance please use a USB headset and maximize the web page.</h3>
-    <h3 class="text-error">Internet Explorer is not compatible with the voice system. Please use Firefox, or Chrome on Windows which has the best compatibility. For Mac OS X please use Safari.</h3>
-    <h3 class="text-error">Powered by Rutgers University, Jibe 1.4.2, and SmartFoxServer</h3>
-</div>
 
+        <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/js/opentok.js"></script>
 </body>
 </html>
