@@ -20,6 +20,11 @@ function VivoxUnityInit() {
 				 , onVersionCheck: VersionCheck
     };
     console.log("VivoxUnityInit: Callback functions success");
+    console.log("VivoxJoinedRoom");
+    GetUnity().SendMessage("VivoxHud", "VivoxJoinedRoom", "");
+    console.log("VivoxJoinedRoom");
+    GetUnity().SendMessage("RaiseHand", "VivoxJoinedRoom", "");
+
     //vvxHandle not enabled
     /*
     vvxHandle = new Vivox.API('https://www.regp.vivox.com/api2/',
@@ -46,7 +51,19 @@ function HandleMuting(isMuted) { console.log("HandleMuting: " + isMuted); }
 
 function VivoxLogin(player) { console.log("VivoxLogin: " + player); }
 
-function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChannel); }
+function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChannel);
+        GetUnity().SendMessage("VivoxHud", "UpdateCurrentChannel", newChannel);
+	if (newChannel == "sip:confctl-157@regp.vivox.com"){
+		console.log("Management: room3");
+ 	}
+	if (newChannel == "sip:confctl-31@regp.vivox.com"){
+		console.log("Union: room1");
+ 	}
+	if (newChannel == "sip:confctl-158@regp.vivox.com"){
+		console.log("Negotiation: room2");
+ 	}
+}
+
 
 function installLocation() { console.log("installLocation"); }
 
@@ -66,7 +83,12 @@ function vivoxChannelCreate(Response) { console.log("vivoxChannelCreate: " + Res
 
 function VivoxJoinChannel(channelURI, fontId) { console.log("VivoxJoinChannel: " + channelURI + " fintId: " + fontId); }
 
-function VivoxLogout(channelURI) { console.log("VivoxLogout: " + channelURI); }
+function VivoxLogout(channelURI) { 
+	console.log("VivoxLogout: " + channelURI);
+	//added commented out vivox onvivoxlogout
+	GetUnity().SendMessage("VivoxHud", "onVivoxLogout");
+
+ }
 
 function vivoxCompletedLogout(Response) { console.log("vivoxCompletedLogout: " + Response); }
 
