@@ -4,10 +4,11 @@
  */
 var express = require('express'),
     routes = require('./routes'),
-    opentok = require('opentok'),
-    Sync = require('sync');
+    opentok = require('opentok')
+    Sync = require('Sync');
 
 var config = require('./config');
+console.log("PORT: " + config.port + " HOST: " + config.host);
 
 var app = module.exports = express();
 
@@ -141,6 +142,6 @@ app.get('/api/:world/:user/:room', function(req, res) {
 
 });
 
-app.listen(process.env.PORT, function() {
-    console.log("opentok app running: " + process.env.PORT);
+app.listen(config.port, function() {
+    console.log("opentok app running: " + config.port);
 });

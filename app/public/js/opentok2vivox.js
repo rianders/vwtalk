@@ -2,7 +2,7 @@
 //Vivox functions that could be called by or have been called from unity web player
 
 //initial vars
-//var vvxHandle = null;
+var vvxHandle = {};
 //var voiceChannelAddress = "sip:confctl-158@regp.vivox.com";
 var isLoggingIn = false;
 
