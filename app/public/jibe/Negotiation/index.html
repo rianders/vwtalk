@@ -146,44 +146,6 @@
              }
          }
      }
-      function DisplayChatBox(areaToDisplay) {
-      /*    textA = '<textarea rows="10" cols="25" id="';
-          textB =  '"></textarea>';
-          $("#textEditors").append( textA + areaToDisplay + textB);
-        //document.getElementById("textEditors").insertAdjacentHTML('beforeend', '<textarea rows="10" cols="25" id="'+areaToDisplay+'"></textarea>');
-        $('#'+areaToDisplay).markItUp(mySettings);
-        $('.add').click(function() {
-            $.markItUp({ openWith: '<opening tag>',
-                closeWith: '<\/closing tag>',
-                placeHolder: "New content"
-            }
-                            );
-            return false;
-        });
-        $(areaToDisplay).keypress(function() {
-            GetUnity().SendMessage("ContractPlaqueA", "ReadPlaqueInputFromWebPage", $('#TestArea').val());
-            console.log("Sent message to unity." + $('#TestArea').val());
-        });
-            */}
-	function load() {
-	Downloadify.create('downloadify',{
-		filename: function(){
-			return "notepad.txt";
-		},
-		data: function(){ 
-			return document.getElementById('TestArea').value;
-		},
-		onComplete: function(){ alert('Your File Has Been Saved!'); },
-		onCancel: function(){ alert('You have cancelled the saving of this file.'); },
-		onError: function(){ alert('You must put something in the File Contents or there will be nothing to save!'); },
-		swf: 'media/downloadify.swf',
-		downloadImage: 'images/download.png',
-		width: 100,
-		height: 30,
-		transparent: true,
-		append: false
-	});
-}
 -->
 </script>
 
@@ -196,7 +158,7 @@
 
     $(document).ready(function() {
      //   VivoxInstall();
-        DisplayChatBox("ContractPlaque");
+        //DisplayChatBox("ContractPlaque");
         $('#ChatHistory').hide();
         $('#ToggleChat').hide();
         $('#ToggleChat').click(function() {

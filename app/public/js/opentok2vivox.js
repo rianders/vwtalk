@@ -55,13 +55,37 @@ function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChan
         GetUnity().SendMessage("VivoxHud", "UpdateCurrentChannel", newChannel);
 	if (newChannel == "sip:confctl-157@regp.vivox.com"){
 		console.log("Management: room3");
+		currenRoom = "Management";
  	}
 	if (newChannel == "sip:confctl-31@regp.vivox.com"){
 		console.log("Union: room1");
+		currentRoom = "Union";
  	}
 	if (newChannel == "sip:confctl-158@regp.vivox.com"){
 		console.log("Negotiation: room2");
+		currentRoom = "Negotiation";
  	}
+		//need to figure the username earlier
+            user = $("#username").val();
+	    
+            console.log("EventRoom: " + room);
+            console.log("user: " + user);
+            $.ajax({
+                dataType: "json",
+                url: "/api/" + user + "/" + room,
+                success: function(data) {
+                    console.log("token:" + data.token);
+		    console.log("Data: " + JSON.stringify(data));
+                        var session = TB.initSession(data.sessionID);
+                        sessions[room] = session;
+                        sessions[room].connect(data.apikey, data.token);
+                        sessions[room].addEventListener("sessionConnected", sessionConnectedHandler);
+                        sessions[room].addEventListener("streamCreated", streamCreatedHandler);
+                        console.log("Connected");
+                }
+            });
+
+
 }
 
 
