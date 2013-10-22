@@ -13,6 +13,8 @@
         <script src="/js/opentok2vivox.js"></script>
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/css/site.css">
+
 
         
         	<script type="text/javascript">
@@ -26,7 +28,7 @@
 		<script type="text/javascript">
 		<!--
 			var config = {
-				width: 960, 
+				width: 950, 
 				height: 600,
 				params: { enableDebugging:"0" }
 				
@@ -209,8 +211,9 @@
 <body>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-10">
+    <div class="row well">
+        <div class="col-md-10 well">
+	<h2>Negotiation Simulation</h2>
             <div id="unityPlayer">
                 <div class="missing">
                     <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
@@ -222,7 +225,7 @@
                 </div>
             </div>
         </div>
-        <div id="room1" class="col-md-4 well">
+        <div id="room1" class="col-md-2 well">
             <h2 id="rooms">Room: Starter</h2>
             <div id="OnlineUsers"></div>
 
@@ -234,86 +237,13 @@
         </div>
     </div>
     
-<div class = "row-fluid pagination-centered">
-	   <a class="btn btn-large btn-danger" href="//onlinelearning.rutgers.edu/virtual-worlds">About</a>
-       <a class="btn btn-large btn-danger" href="../Communication.pdf">Help with Communication</a>
-       <a class="btn btn-large btn-danger" href="../NavigationControls.pdf">Movement Controls</a>
-       <a class="btn btn-large btn-danger" href="//goo.gl/QPqFr">Request Technical Support</a>
+	<div class = "row pagination-centered">
+	 	<a class="btn btn-large btn-danger" href="//onlinelearning.rutgers.edu/virtual-worlds">About</a>
+       		<a class="btn btn-large btn-danger" href="../Communication.pdf">Help with Communication</a>
+       		<a class="btn btn-large btn-danger" href="../NavigationControls.pdf">Movement Controls</a>
+       		<a class="btn btn-large btn-danger" href="//goo.gl/QPqFr">Request Technical Support</a>
+	</div>
 </div>
-</div>
-
-
-
-<div id="ToggleChat">Open/Close Chat Log</div>
-<textarea id="ChatHistory" readonly="readonly" rows="10" cols="20">
-</textarea>
-<div id="textEditors">
-</div>
-<p id="downloadify"></p>
- <!--<div id="ChatHistory" contenteditable="true" readonly="true">-->
-
-<style type="text/css">
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-#VivoxOnlineUsers
-{
-    float: left;
-    padding:5px;
-    padding-bottom:20px;
-}
-.Speaking
-{
-       float:right;
-       padding-left:5px;
-}
-.Hand
-{
-    float:right;
-    padding-left:5px;
-}
-</style>
-<br />
 
 
         <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

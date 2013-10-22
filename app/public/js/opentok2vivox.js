@@ -22,8 +22,8 @@ function VivoxUnityInit() {
     console.log("VivoxUnityInit: Callback functions success");
     console.log("VivoxJoinedRoom");
     GetUnity().SendMessage("VivoxHud", "VivoxJoinedRoom", "");
-    console.log("VivoxJoinedRoom");
-    GetUnity().SendMessage("RaiseHand", "VivoxJoinedRoom", "");
+    //console.log("VivoxJoinedRoom");
+    //GetUnity().SendMessage("RaiseHand", "VivoxJoinedRoom", "");
 
     //vvxHandle not enabled
     /*
