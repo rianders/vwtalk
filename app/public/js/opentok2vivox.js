@@ -65,25 +65,29 @@ function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChan
 		console.log("Negotiation: room2");
 		currentRoom = "Negotiation";
  	}
-		//need to figure the username earlier
-            user = $("#username").val();
-	    
-            console.log("EventRoom: " + room);
-            console.log("user: " + user);
-            $.ajax({
+
+  	  var session;
+          var user = "rianders";
+          var room = "room1";
+          var gData;
+                 
+             $.ajax({
+               
                 dataType: "json",
-                url: "/api/" + user + "/" + room,
+                url: "/api/" + "001/" + user + "/" + room,
                 success: function(data) {
-                    console.log("token:" + data.token);
-		    console.log("Data: " + JSON.stringify(data));
-                        var session = TB.initSession(data.sessionID);
-                        sessions[room] = session;
-                        sessions[room].connect(data.apikey, data.token);
-                        sessions[room].addEventListener("sessionConnected", sessionConnectedHandler);
-                        sessions[room].addEventListener("streamCreated", streamCreatedHandler);
-                        console.log("Connected");
+                       // Initialize session, set up event listeners, and connect
+                     session = TB.initSession(data.sessionID);
+                     session.addEventListener('sessionConnected', sessionConnectedHandler);
+                     console.log("Before:");
+                     console.log(data.sessionID);
+                     session.connect(data.apikey, data.token);
+                     console.log("After:");
+                     console.log(data);
+                 //    console.log("ajax call complete");
                 }
             });
+
 
 
 }
