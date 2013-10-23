@@ -1,8 +1,28 @@
 
 //Vivox functions that could be called by or have been called from unity web player
+var prevRoom = "";
+var session;
+var user = "unassigned";
+var room = "unassigned";
+var gData;
 
 //initial vars
 var vvxHandle = {};
+
+vvxHandle = {
+    "_accounts": {
+        "15b642c2-19ed-44aa-80be-e171202a03f3": {
+            "AccountHandle": "15b642c2-19ed-44aa-80be-e171202a03f3",
+            "Uri": "sip:.90b11c633f65_2013102314160476785300.@regp.vivox.com",
+            "DisplayName": "Rick%20Support",
+            "IsAnonymousLogin": true,
+            "State": "1",
+            "WavDestinationPath": "C:\\Users\\rianders\\Documents\\"
+        }
+    }
+}
+
+
 //var voiceChannelAddress = "sip:confctl-158@regp.vivox.com";
 var isLoggingIn = false;
 
@@ -10,6 +30,7 @@ var isLoggingIn = false;
 //functino from vivox
 
 function VivoxUnityInit() {
+	//If possible this is where the OpenTok init code should go
     console.log("VivoxUnityInit");
     console.log("VivoxUnityInit: Start");
     var callbackFunctions = {
@@ -20,9 +41,9 @@ function VivoxUnityInit() {
 				 , onVersionCheck: VersionCheck
     };
     console.log("VivoxUnityInit: Callback functions success");
-    console.log("VivoxJoinedRoom");
+    console.log("VivoxJoinedRoom:start");
     GetUnity().SendMessage("VivoxHud", "VivoxJoinedRoom", "");
-    //console.log("VivoxJoinedRoom");
+    console.log("VivoxJoinedRoom:end");
     //GetUnity().SendMessage("RaiseHand", "VivoxJoinedRoom", "");
 
     //vvxHandle not enabled
@@ -51,11 +72,16 @@ function HandleMuting(isMuted) { console.log("HandleMuting: " + isMuted); }
 
 function VivoxLogin(player) { console.log("VivoxLogin: " + player); }
 
-function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChannel);
+function SwitchToChannel(newChannel) { 
+	//This is where the vivox session disconnect and connect code should go.
+	prevRoom = currentRoom;
+	console.log("prevRoom: " + prevRoom);
+
+	console.log("SwitchToChannel: " + newChannel);
         GetUnity().SendMessage("VivoxHud", "UpdateCurrentChannel", newChannel);
 	if (newChannel == "sip:confctl-157@regp.vivox.com"){
 		console.log("Management: room3");
-		currenRoom = "Management";
+		currentRoom = "Management";
  	}
 	if (newChannel == "sip:confctl-31@regp.vivox.com"){
 		console.log("Union: room1");
@@ -66,11 +92,9 @@ function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChan
 		currentRoom = "Negotiation";
  	}
 
-  	  var session;
-          var user = "rianders";
-          var room = "room1";
-          var gData;
-                 
+  	
+	  console.log("OpenTOK url: " + "/api/" + "001/" + user + "/" + currentRoom );
+                 /*
              $.ajax({
                
                 dataType: "json",
@@ -87,7 +111,7 @@ function SwitchToChannel(newChannel) { console.log("SwitchToChannel: " + newChan
                  //    console.log("ajax call complete");
                 }
             });
-
+	    */
 
 
 }
