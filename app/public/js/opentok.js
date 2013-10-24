@@ -1,6 +1,6 @@
     var currentRoom;
     var room = "room1";
-    //var user;
+    var user;
     var sessions = {};
     var globaldata = {};
     var publisher;
@@ -67,6 +67,9 @@ function subscribeToStreams(streams) {
         // Subscribe to streams that were in the session when we connected
         subscribeToStreams(event.streams);
         }
+   function streamAvailableHandler(event) {
+   	console.log("streamAvailableHandler: no camera or microphone"); 
+   }
 
   $(document).ready(function() {
       console.log("ready!");
@@ -91,7 +94,7 @@ function subscribeToStreams(streams) {
               }
           }
       });
-  
+
       $(".disconnect").click(function(event) {
           sessions[currentRoom].disconnect();
           //disconnect kills the div the publisher is in

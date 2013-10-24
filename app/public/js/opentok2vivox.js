@@ -78,24 +78,27 @@ function HandleMuting(isMuted) { console.log("HandleMuting: " + isMuted); }
 
 function VivoxLogin(player) { 
 	user = player;
-	    $.ajax({
-               
-                dataType: "json",
-                url: "/api/" + "001/" + user + "/" + room,
-                success: function(data) {
-                       // Initialize session, set up event listeners, and connect
-                     session = TB.initSession(data.sessionID);
-                     session.addEventListener('sessionConnected', sessionConnectedHandler);
-                     console.log("Before:");
-                     console.dir(data.sessionID);
-                     session.connect(data.apikey, data.token);
-                     console.log("After:");
-                     console.log(data);
-                 //    console.log("ajax call complete");
-                }
-            });
+ 	$.ajax({
+          dataType: "json",
+          url: "/api/" + world + "/" + user + "/" + room,
+          success: function(data) {
+              globaldata = $.extend({},  data);
+              sessions = data.sessions;
+
+              for (key in sessions) {
+                  console.log("Key: " + key + " data: " + data.sessions[key].sessionId);
+                  var session = TB.initSession(data.sessions[key].sessionId);
+                  sessions[key] = session;
+                  sessions[key].addEventListener("sessionConnected", sessionConnectedHandler);
+                  sessions[key].addEventListener("streamCreated", streamCreatedHandler);
+              }
+	      sessions[room].connect(globaldata.apikey,globaldata.tokens[room]);
+	      $("#rooms").text("Room: "+ room);
+          }
+      });
+
 	  console.log("OpenTOK url: " + "/api/" + "001/" + user + "/" + currentRoom );
-	console.log("VivoxLogin: " + player); 
+	console.log("VivoxLoginEnd: " + player); 
 }
 
 function SwitchToChannel(newChannel) { 
@@ -120,7 +123,10 @@ function SwitchToChannel(newChannel) {
 
   	if (prevRoom != currentRoom) {
 		sessions[prevRoom].disconnect();
-		sessions[currentRoom].connect(globaldata.apikey,globaldata.tokens[event.target.id]);
+		$("#devicePanelContainer").prepend("<div id='publisherContainer' />");
+		sessions[currentRoom].connect(globaldata.apikey,globaldata.tokens[currentRoom]);
+	      $("#rooms").text("Room: " + currentRoom);
+		
 	}	
 	console.log("SwitchToChannelComplete");
 }

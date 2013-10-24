@@ -1,6 +1,6 @@
     var currentRoom;
     var room = "room1";
-    //var user;
+    var user;
     var sessions = {};
     var globaldata = {};
     var publisher;
@@ -91,7 +91,7 @@ function subscribeToStreams(streams) {
               }
           }
       });
-  
+
       $(".disconnect").click(function(event) {
           sessions[currentRoom].disconnect();
           //disconnect kills the div the publisher is in
