@@ -69,7 +69,14 @@ var key;
 console.log(sessions);
 */
 
-
+ for (var key in sessions) {
+        console.log("key: " + key);
+        opentokAPP.createSession(location, {'p2p.preference':'disabled'}, function(aKey) { return function(result){
+            sessions[aKey.toString()].sessionId = result;
+            console.log("sessions[" + aKey.toString() + "].sessionId: ", sessions[aKey].sessionId);
+        }}(key));
+    }
+/*
 Sync(function() {
     opentokAPP.createSession(location, {
         'p2p.preference': 'disabled'
@@ -90,7 +97,7 @@ Sync(function() {
     });
 });
 
-
+*/
 
 app.configure('development', function() {
     app.use(express.errorHandler({
