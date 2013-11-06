@@ -4,8 +4,7 @@
  */
 var express = require('express'),
     routes = require('./routes'),
-    opentok = require('opentok')
-    Sync = require('Sync');
+    opentok = require('opentok');
 
 var config = require('./config');
 console.log("PORT: " + config.port + " HOST: " + config.host);
@@ -42,69 +41,33 @@ console.log( "world: %j", worlds);
 var location = config.opentok.location;
 var opentokAPP = new opentok.OpenTokSDK(config.opentok.key, config.opentok.secret);
 
-console.log("rmCount: ", world.roomCount);
 var tokens = {};
 var sessions = {};
-for (var ii = 0; ii < world.roomCount; ii++) {
+var ii;
+for (ii = 0; ii < world.roomCount; ii++) {
     var session = {};
     session.sessionName = world.roomNames[ii];
     session.sessionId = "NOT";
     session.token = "";
     sessions[world.roomNames[ii]] = session;
 }
-console.log(sessions);
-/* This is not working because by the time the session is create "room3" is the key for all rooms.
-Sync(function() {
-var key;
-    for (key in sessions) {
-        console.log("key: " + key);
-        opentokAPP.createSession(location, {'p2p.preference':'disabled'}, function(result){
-            sessions[key.toString()].sessionId = result;
-            console.log("sessions[" + key.toString() + "].sessionId: ", sessions[key].sessionId);
 
-        });
-    }
-});
-
-console.log(sessions);
-*/
-
- for (var key in sessions) {
-        console.log("key: " + key);
-        opentokAPP.createSession(location, {'p2p.preference':'disabled'}, function(aKey) { return function(result){
-            sessions[aKey.toString()].sessionId = result;
-            console.log("sessions[" + aKey.toString() + "].sessionId: ", sessions[aKey].sessionId);
+for (var key in sessions) {
+    console.log("key: " + key);
+    opentokAPP.createSession(location, {'p2p.preference':'disabled'}, function(aKey) { 
+	return function(result){
+      		sessions[aKey.toString()].sessionId = result;
+       		console.log("sessions[" + aKey.toString() + "].sessionId: ", sessions[aKey].sessionId);
         }}(key));
-    }
-/*
-Sync(function() {
-    opentokAPP.createSession(location, {
-        'p2p.preference': 'disabled'
-    }, function(result) {
-        console.log(sessions["room1"]);
-        sessions["room1"].sessionId = result;
-        opentokAPP.createSession(location, {
-            'p2p.preference': 'disabled'
-        }, function(result) {
-            sessions["room2"].sessionId = result;
-            opentokAPP.createSession(location, {
-                'p2p.preference': 'disabled'
-            }, function(result) {
-                sessions["room3"].sessionId = result;
-                console.log("ASessions %j", sessions);
-            });
-        });
-    });
-});
-
-*/
+}
 
 app.configure('development', function() {
-    app.use(express.errorHandler({
+app.use(express.errorHandler({
         dumpExceptions: true,
         showStack: true
     }));
 });
+
 
 app.configure('production', function() {
     app.use(express.errorHandler());
