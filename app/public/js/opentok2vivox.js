@@ -26,7 +26,7 @@ vvxHandle = {
 
     
     //var voiceChannelAddress = "sip:confctl-158@regp.vivox.com";
-var isLoggingIn = false;
+var isLoggingIn = true;
 
 
 //functino from vivox
@@ -78,6 +78,8 @@ function HandleMuting(isMuted) { console.log("HandleMuting: " + isMuted); }
 
 function VivoxLogin(player) { 
 	user = player;
+	if (isLoggingIn) {
+	isLoggingIn = false;
  	$.ajax({
           dataType: "json",
           url: "/api/" + world + "/" + user + "/" + room,
@@ -96,7 +98,7 @@ function VivoxLogin(player) {
 	      $("#rooms").text("Room: "+ room);
           }
       });
-
+	}
 	  console.log("OpenTOK url: " + "/api/" + "001/" + user + "/" + currentRoom );
 	console.log("VivoxLoginEnd: " + player); 
 }
@@ -105,8 +107,9 @@ function SwitchToChannel(newChannel) {
 	//This is where the vivox session disconnect and connect code should go.
 	prevRoom = currentRoom;
 	console.log("prevRoom: " + prevRoom);
-
 	console.log("SwitchToChannel: " + newChannel);
+
+	//Determine if there is a new room
         GetUnity().SendMessage("VivoxHud", "UpdateCurrentChannel", newChannel);
 	if (newChannel == "sip:confctl-157@regp.vivox.com"){
 		console.log("Management: room3");
@@ -120,14 +123,13 @@ function SwitchToChannel(newChannel) {
 		console.log("Negotiation: room2");
 		currentRoom = "room2";
  	}
-
+	//If room acutally changes switch
   	if (prevRoom != currentRoom) {
 		sessions[prevRoom].disconnect();
 		$("#devicePanelContainer").prepend("<div id='publisherContainer' />");
 		sessions[currentRoom].connect(globaldata.apikey,globaldata.tokens[currentRoom]);
 	      $("#rooms").text("Room: " + currentRoom);
-		
-	}	
+	}
 	console.log("SwitchToChannelComplete");
 }
 

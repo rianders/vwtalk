@@ -5,7 +5,8 @@
     var globaldata = {};
     var publisher;
     var isMicOn = true;
-	var sessionToJoinOnStart;
+    var sessionToJoinOnStart;
+    var subscribed = false;
 	
     TB.setLogLevel(TB.DEBUG);
   
@@ -53,20 +54,28 @@ function subscribeToStreams(streams) {
         // This example assumes that a publisherContainer div exists
         publisherContainer.appendChild(div);
 
-
-        var publisher = TB.initPublisher(event.apikey, publisherContainer, {
-            height: 128,
-            width: 128,
-            name: user,
-           // publishVideo: false
-        });
+        //set publishing options
+	var pubOptions = { 
+			publishAudio:true
+			, publishVideo: false
+ 			, height: 128
+            		, width: 128
+            		, name: user
+	};
+        var publisher = TB.initPublisher(event.apikey, publisherContainer, pubOptions); 
         sessions[currentRoom].publish(publisher);
-        console.log("PubRoom: " + room);
-        console.log("PubRoom: " + currentRoom);
+        console.log("Pub Room: " + room);
+        console.log("Pub currentRoom: " + currentRoom);
 
         // Subscribe to streams that were in the session when we connected
-        subscribeToStreams(event.streams);
-        }
+/*	if (subscribed == false) {
+		subscribed = true;
+        	subscribeToStreams(event.streams);
+	}
+*/
+                subscribeToStreams(event.streams);
+
+   }
    function streamAvailableHandler(event) {
    	console.log("streamAvailableHandler: no camera or microphone"); 
    }
