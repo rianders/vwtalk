@@ -29,6 +29,9 @@ vvxHandle = {
 var isLoggingIn = true;
 
 
+var opentokdivs = '<div id="devicePanelContainer"></div>\n<div id="publisherContainer"></div>\n<div id="streamsContainer"></div>';
+
+
 //functino from vivox
 
 function VivoxUnityInit() {
@@ -126,7 +129,7 @@ function SwitchToChannel(newChannel) {
 	//If room acutally changes switch
   	if (prevRoom != currentRoom) {
 		sessions[prevRoom].disconnect();
-		$("#devicePanelContainer").prepend("<div id='publisherContainer' />");
+		$("#opentok").append("<div id='publisherContainer' />");
 		sessions[currentRoom].connect(globaldata.apikey,globaldata.tokens[currentRoom]);
 	      $("#rooms").text("Room: " + currentRoom);
 	}
