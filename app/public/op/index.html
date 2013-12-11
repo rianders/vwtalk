@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>OpenTok Demo</title>
+<script src="https://swww.tokbox.com/webrtc/v2.0/js/TB.min.js"></script>
+  <script src="op.js"></script>  
+  
+  <style>
+    
+    #publisherContainer {
+      background-color: #ccc;
+      min-height: 100px;
+    }
+    
+    #subscriberContainer {
+      background-color: #999;
+      min-height: 100px;
+    }
+    
+  </style>
+  
+  
+</head>
+<body>
+  <div>Session:
+    <span id="session">DEFAULT: one</span>
+  </div>
+    <button onclick="switchSession();">switch</button>
+  <button onclick="connect();">connect</button>
+  <button onclick="disconnect();">Disconnect</button>
+  
+  <button onclick="publish();">publish</button>
+  <button onclick="unpublish();">unpublish</button>
+  <div id="publisherContainer"></div>
+  
+  <div id="subscriberContainer"></div>
+  
+</body>
+</html>
