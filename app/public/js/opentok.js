@@ -25,6 +25,8 @@ function subscribeToStreams(streams) {
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
     var subProperties = {};
+    subProperties.height = 100;
+    subProperties.width = 128;
     subProperties.style = {};
     subProperties.style.nameDisplayMode = 'on';
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);

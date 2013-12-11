@@ -81,8 +81,8 @@ function VivoxLogin(player) {
 	var pubOptions = {
 	  publishAudio: config.mic,
 	  publishVideo: config.video,
-	  height: 128,
-	  width: 128,
+	  height: 1,
+	  width: 1,
 	  name: user
 	};
 	publisher = TB.initPublisher(globaldata.apikey, "publisherContainer", pubOptions);
