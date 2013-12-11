@@ -72,9 +72,20 @@ function VivoxLogin(player) {
           sessions[key] = session;
           sessions[key].addEventListener('sessionConnected', sessionConnectedHandler);
           sessions[key].addEventListener('streamCreated', streamCreatedHandler);
+	  sessions[key].addEventListener('connectionDestroyed', connectionDestroyedHandler);
+	  sessions[key].addEventListener('streamDestroyed', streamDestroyedHandler);
         }
         sessions[room].connect(globaldata.apikey, globaldata.tokens[room]);
         $('#rooms').text('Room: ' + room);
+	//set publishing options
+	var pubOptions = {
+	  publishAudio: config.mic,
+	  publishVideo: config.video,
+	  height: 128,
+	  width: 128,
+	  name: user
+	};
+	publisher = TB.initPublisher(globaldata.apikey, "publisherContainer", pubOptions);
       }
     });
   }
@@ -103,8 +114,8 @@ function SwitchToChannel(newChannel) {
   }
   //If room acutally changes switch
   if (prevRoom != currentRoom) {
+    sessions[prevRoom].unpublish(publisher);
     sessions[prevRoom].disconnect();
-    $('#opentok').append('<div id=\'publisherContainer\' />');
     sessions[currentRoom].connect(globaldata.apikey, globaldata.tokens[currentRoom]);
     $('#rooms').text('Room: ' + currentRoom);
   }

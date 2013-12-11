@@ -19,17 +19,12 @@ function subscribeToStreams(streams) {
   for (var ii = 0; ii < streams.length; ii++) {
     console.log('stream ii: ' + streams.length + ', StreamName: ' + streams[ii].name);
     // Make sure we don't subscribe to ourself
-    if (streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
-      return;
-    }
     // Create the div to put the subscriber element in to
     var div = document.createElement('div');
     div.setAttribute('id', 'stream' + streams[ii].streamId);
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
     var subProperties = {};
-    subProperties.height = 100;
-    subProperties.width = 128;
     subProperties.style = {};
     subProperties.style.nameDisplayMode = 'on';
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
@@ -45,20 +40,6 @@ function sessionConnectedHandler(event) {
   console.log('sessionConnectedHandler');
   //: cnt:  " +  event.connections.length);
   // Create publisher and start streaming into the session
-  var div = document.createElement('div');
-  div.setAttribute('id', 'publisher');
-  var publisherContainer = document.getElementById('publisherContainer');
-  // This example assumes that a publisherContainer div exists
-  publisherContainer.appendChild(div);
-  //set publishing options
-  var pubOptions = {
-      publishAudio: config.mic,
-      publishVideo: config.video,
-      height: 128,
-      width: 128,
-      name: user
-    };
-  var publisher = TB.initPublisher(event.apikey, publisherContainer, pubOptions);
   sessions[currentRoom].publish(publisher);
   sessions[currentRoom].pubObj = publisher;
   console.log('Pub Room: ' + room);
@@ -75,12 +56,13 @@ function unpublish(room) {
 	console.log("unpublished: " + room);
 }
 function connectionDestroyedHandler(event) {
-	preventDefault();
+	event.preventDefault();
 	console.log("The session disconnected. " + event.reason);
 }
-function streamDestroyedHandler(event) {
-    for (var ii = 0; ii < event.streams.length; ii++) {
-           var stream = event.streams[ii];
-            console.log("Stream " + stream.name + " ended. " + event.reason);
-    }
+function streamDestroyedHandler(ee) {
+  ee.preventDefault();
+  var subscriberDiv = document.getElementById("subscriber-"+ee.streams[0].streamId);
+  console.log(subscriberDiv);
+  subscriberDiv.parentNode.removeChild(subscriberDiv);
+  console.log(ee);
 }
