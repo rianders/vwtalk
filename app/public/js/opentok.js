@@ -7,6 +7,11 @@ var publisher;
 var isMicOn = true;
 var sessionToJoinOnStart;
 var subscribed = false;
+var config = {
+	mic: true,
+	video: true
+}
+
 TB.setLogLevel(TB.DEBUG);
 
 function subscribeToStreams(streams) {
@@ -47,14 +52,15 @@ function sessionConnectedHandler(event) {
   publisherContainer.appendChild(div);
   //set publishing options
   var pubOptions = {
-      publishAudio: true,
-      publishVideo: false,
+      publishAudio: config.mic,
+      publishVideo: config.video,
       height: 128,
       width: 128,
       name: user
     };
   var publisher = TB.initPublisher(event.apikey, publisherContainer, pubOptions);
   sessions[currentRoom].publish(publisher);
+  sessions[currentRoom].pubObj = publisher;
   console.log('Pub Room: ' + room);
   console.log('Pub currentRoom: ' + currentRoom);
   // Subscribe to streams that were in the session when we connected
@@ -63,4 +69,18 @@ function sessionConnectedHandler(event) {
 
 function streamAvailableHandler(event) {
   console.log('streamAvailableHandler: no camera or microphone');
+}
+function unpublish(room) {
+	sessions[room].unpublish(sessions[room].pubObj);
+	console.log("unpublished: " + room);
+}
+function connectionDestroyedHandler(event) {
+	preventDefault();
+	console.log("The session disconnected. " + event.reason);
+}
+function streamDestroyedHandler(event) {
+    for (var ii = 0; ii < event.streams.length; ii++) {
+           var stream = event.streams[ii];
+            console.log("Stream " + stream.name + " ended. " + event.reason);
+    }
 }
