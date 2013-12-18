@@ -31,6 +31,9 @@ function subscribeToStreams(streams) {
       nameDisplayMode : 'on'
     }
     };
+    if(stream.connection.connectionId == sessions[currentRoom].connection.connectionId) {
+      subProperties.subscribeToAudio = false;
+    }
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
   }
 }
