@@ -4,9 +4,6 @@ var user;
 var sessions = {};
 var globaldata = {};
 var publisher;
-var isMicOn = true;
-var sessionToJoinOnStart;
-var subscribed = false;
 var config = {
   mic: true,
   video: true
@@ -31,6 +28,7 @@ function subscribeToStreams(streams) {
       nameDisplayMode : 'on'
     }
     };
+    //prevent echo
     if(stream.connection.connectionId == sessions[currentRoom].connection.connectionId) {
       subProperties.subscribeToAudio = false;
     }
@@ -66,10 +64,7 @@ function publish(room) {
   console.log("published: " + room);
 }
 function toggleAudio(isEnabled) {
-  //check that we are publishing before we try to adjust the publisher settings
-  if(publisher) {
-    publisher.publishAudio(isEnabled);
-  }
+  publisher.publishAudio(isEnabled);
 }
 function connectionDestroyedHandler(event) {
   event.preventDefault();

@@ -1,9 +1,6 @@
 //Vivox functions that could be called by or have been called from unity web player
 var prevRoom = '';
 var session;
-var room = 'unassigned';
-var user;
-var gData;
 //initial vars
 
 //functino from vivox
