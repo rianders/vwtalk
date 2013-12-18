@@ -122,6 +122,7 @@ function VivoxLogout(channelURI) {
 function vivoxCompletedLogout(Response) {
   console.log('vivoxCompletedLogout: ' + Response);
 }
+//mute myself
 function VivoxMicMute(mute) {
   console.log('VivoxMicMute: ' + mute);
   toggleAudio(!mute);
@@ -135,6 +136,15 @@ function VersionCheck(event) {
 function vivoxConnected(Event) {
   console.log('vivoxConnected: ' + Event);
 }
+//mute other people
 function HandleMuting(isMuted) {
   console.log('HandleMuting: ' + isMuted);
+  $('audio, video').each(function() {
+    if(isMuted) {
+      $(this).pause();
+    }
+    else {
+      $(this).play();
+    }
+  });
 }
