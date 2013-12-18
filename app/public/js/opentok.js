@@ -45,7 +45,6 @@ function sessionConnectedHandler(event) {
   //: cnt:  " +  event.connections.length);
   // Create publisher and start streaming into the session
   sessions[currentRoom].publish(publisher);
-  sessions[currentRoom].pubObj = publisher;
   console.log('Pub Room: ' + room);
   console.log('Pub currentRoom: ' + currentRoom);
   // Subscribe to streams that were in the session when we connected
@@ -56,8 +55,18 @@ function streamAvailableHandler(event) {
   console.log('streamAvailableHandler: no camera or microphone');
 }
 function unpublish(room) {
-  sessions[room].unpublish(sessions[room].pubObj);
+  sessions[room].unpublish(publisher);
   console.log("unpublished: " + room);
+}
+function publish(room) {
+  sessions[room].publish(publisher);
+  console.log("published: " + room);
+}
+function toggleAudio(isEnabled) {
+  //check that we are publishing before we try to adjust the publisher settings
+  if(publisher) {
+    publisher.publishAudio(isEnabled);
+  }
 }
 function connectionDestroyedHandler(event) {
   event.preventDefault();

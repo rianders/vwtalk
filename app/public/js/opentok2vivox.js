@@ -79,7 +79,7 @@ function SwitchToChannel(newChannel) {
   }
   //If room acutally changes switch
   if (prevRoom != currentRoom) {
-    sessions[prevRoom].unpublish(publisher);
+    unpublish(prevRoom);
     sessions[prevRoom].disconnect();
     sessions[currentRoom].connect(globaldata.apikey, globaldata.tokens[currentRoom]);
     $('#rooms').text('Room: ' + currentRoom);
@@ -124,6 +124,7 @@ function vivoxCompletedLogout(Response) {
 }
 function VivoxMicMute(mute) {
   console.log('VivoxMicMute: ' + mute);
+  toggleAudio(!mute);
 }
 function vivoxMicMuteResult(response) {
   console.log('vivoxMicMuteResult: ' + response);
