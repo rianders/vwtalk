@@ -61,6 +61,7 @@ function MicMute(mute) {
   toggleAudio(!mute);
 }
 //mute other people
-function SetVolume(isMuted) {
+function SetVolume(newVolume) {
   console.log('SetVolume: ' + isMuted);
+  $('#video').volume = newVolume;
 }
