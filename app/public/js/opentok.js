@@ -1,5 +1,5 @@
 var currentRoom;
-var room = 'room1';
+var room = 'room2';
 var user;
 var sessions = {};
 var globaldata = {};
@@ -8,9 +8,9 @@ var isMicOn = true;
 var sessionToJoinOnStart;
 var subscribed = false;
 var config = {
-	mic: true,
-	video: true
-}
+  mic: true,
+  video: true
+};
 
 TB.setLogLevel(TB.DEBUG);
 
@@ -24,11 +24,13 @@ function subscribeToStreams(streams) {
     div.setAttribute('id', 'stream' + streams[ii].streamId);
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
-    var subProperties = {};
-    subProperties.height = 100;
-    subProperties.width = 128;
-    subProperties.style = {};
-    subProperties.style.nameDisplayMode = 'on';
+    var subProperties = {
+    height : 100,
+    width : 128,
+    style : {
+      nameDisplayMode : 'on'
+    }
+    };
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
   }
 }
@@ -54,12 +56,12 @@ function streamAvailableHandler(event) {
   console.log('streamAvailableHandler: no camera or microphone');
 }
 function unpublish(room) {
-	sessions[room].unpublish(sessions[room].pubObj);
-	console.log("unpublished: " + room);
+  sessions[room].unpublish(sessions[room].pubObj);
+  console.log("unpublished: " + room);
 }
 function connectionDestroyedHandler(event) {
-	event.preventDefault();
-	console.log("The session disconnected. " + event.reason);
+  event.preventDefault();
+  console.log("The session disconnected. " + event.reason);
 }
 function streamDestroyedHandler(ee) {
   ee.preventDefault();

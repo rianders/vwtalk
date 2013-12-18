@@ -5,36 +5,11 @@ var room = 'unassigned';
 var user;
 var gData;
 //initial vars
-var vvxHandle = {};
-vvxHandle = {
-  '_accounts': {
-    '15b642c2-19ed-44aa-80be-e171202a03f3': {
-      'AccountHandle': '15b642c2-19ed-44aa-80be-e171202a03f3',
-      'Uri': 'sip:.90b11c633f65_2013102314160476785300.@regp.vivox.com',
-      'DisplayName': 'Rick%20Support',
-      'IsAnonymousLogin': true,
-      'State': '1',
-      'WavDestinationPath': 'C:\\Users\\rianders\\Documents\\'
-    }
-  }
-};
-//var voiceChannelAddress = "sip:confctl-158@regp.vivox.com";
-var isLoggingIn = true;
-var opentokdivs = '<div id="devicePanelContainer"></div>\n<div id="publisherContainer"></div>\n<div id="streamsContainer"></div>';
 
 //functino from vivox
 function VivoxUnityInit() {
   //If possible this is where the OpenTok init code should go
-  console.log('VivoxUnityInit');
   console.log('VivoxUnityInit: Start');
-  var callbackFunctions = {
-      onConnected: vivoxConnected,
-      onParticipantAdded: ParticipantAdded,
-      onParticipantRemoved: ParticipantRemoved,
-      onParticipantUpdated: ParticipantUpdated,
-      onVersionCheck: VersionCheck
-    };
-  console.log('VivoxUnityInit: Callback functions success');
   console.log('VivoxJoinedRoom:start');
   GetUnity().SendMessage('VivoxHud', 'VivoxJoinedRoom', '');
   console.log('VivoxJoinedRoom:end');
@@ -42,53 +17,43 @@ function VivoxUnityInit() {
   //triggers vivoxLogin event and assigns user name
   GetUnity().SendMessage('VivoxHud', 'onVivoxConnected', 'Connected to Vivox network!');
   console.log('VivoxUnityInit: end');
-}
-
-function VersionCheck(event) {
-  console.log('VersionCheck event' + event);
-}
-
-function vivoxConnected(Event) {
-  console.log('vivoxConnected: ' + Event);
-}
-
-function HandleMuting(isMuted) {
-  console.log('HandleMuting: ' + isMuted);
+    //grab session keys from the server, and then initialize the session (the server automatically regenerates the tokens when necessary)
+  $.ajax({
+    dataType: 'json',
+    url: '/api/' + world + '/' + user + '/' + room,
+    success: function (data) {
+      //copy the data for later use
+      globaldata = $.extend({}, data);
+      sessions = data.sessions;
+      //initalize the sessions
+      for (var key in sessions) {
+        console.log('Key: ' + key + ' data: ' + data.sessions[key].sessionId);
+        var session = TB.initSession(data.sessions[key].sessionId);
+        sessions[key] = session;
+        sessions[key].addEventListener('sessionConnected', sessionConnectedHandler);
+        sessions[key].addEventListener('streamCreated', streamCreatedHandler);
+        sessions[key].addEventListener('connectionDestroyed', connectionDestroyedHandler);
+        sessions[key].addEventListener('streamDestroyed', streamDestroyedHandler);
+      }
+      console.log("Joining:" + room);
+    }
+  });
 }
 
 function VivoxLogin(player) {
+  console.log("VivoxLogin: Start");
   user = player;
-  if (isLoggingIn) {
-    isLoggingIn = false;
-    $.ajax({
-      dataType: 'json',
-      url: '/api/' + world + '/' + user + '/' + room,
-      success: function (data) {
-        globaldata = $.extend({}, data);
-        sessions = data.sessions;
-        for (key in sessions) {
-          console.log('Key: ' + key + ' data: ' + data.sessions[key].sessionId);
-          var session = TB.initSession(data.sessions[key].sessionId);
-          sessions[key] = session;
-          sessions[key].addEventListener('sessionConnected', sessionConnectedHandler);
-          sessions[key].addEventListener('streamCreated', streamCreatedHandler);
-	  sessions[key].addEventListener('connectionDestroyed', connectionDestroyedHandler);
-	  sessions[key].addEventListener('streamDestroyed', streamDestroyedHandler);
-        }
-        sessions[room].connect(globaldata.apikey, globaldata.tokens[room]);
-        $('#rooms').text('Room: ' + room);
-	//set publishing options
-	var pubOptions = {
-	  publishAudio: config.mic,
-	  publishVideo: config.video,
-	  height: 1,
-	  width: 1,
-	  name: user
-	};
-	publisher = TB.initPublisher(globaldata.apikey, "publisherContainer", pubOptions);
-      }
-    });
-  }
+  sessions[room].connect(globaldata.apikey, globaldata.tokens[room]);
+  $('#rooms').text('Room: ' + room);
+  //set publishing options
+  var pubOptions = {
+    publishAudio: config.mic,
+    publishVideo: config.video,
+    height: 1,
+    width: 1,
+    name: user
+  };
+  publisher = TB.initPublisher(globaldata.apikey, "publisherContainer", pubOptions);
   console.log('OpenTOK url: ' + '/api/' + '001/' + user + '/' + currentRoom);
   console.log('VivoxLoginEnd: ' + player);
 }
@@ -162,4 +127,13 @@ function VivoxMicMute(mute) {
 }
 function vivoxMicMuteResult(response) {
   console.log('vivoxMicMuteResult: ' + response);
+}
+function VersionCheck(event) {
+  console.log('VersionCheck event' + event);
+}
+function vivoxConnected(Event) {
+  console.log('vivoxConnected: ' + Event);
+}
+function HandleMuting(isMuted) {
+  console.log('HandleMuting: ' + isMuted);
 }
