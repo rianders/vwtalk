@@ -23,9 +23,9 @@ worlds['001'] = world;
 world.name = 'negotiation';
 world.roomCount = 3;
 world.roomNames = [];
-world.roomNames[0] = 'room1';
-world.roomNames[1] = 'room2';
-world.roomNames[2] = 'room3';
+world.roomNames[0] = 'union';
+world.roomNames[1] = 'management';
+world.roomNames[2] = 'middle';
 console.log('world: %j', worlds);
 //OpenTOk Config
 var location = config.opentok.location;

@@ -29,7 +29,7 @@ function subscribeToStreams(streams) {
     }
     };
     //prevent echo
-    if(stream.connection.connectionId == sessions[currentRoom].connection.connectionId) {
+    if(streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
       subProperties.subscribeToAudio = false;
     }
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
@@ -71,9 +71,9 @@ function connectionDestroyedHandler(event) {
   console.log("The session disconnected. " + event.reason);
 }
 function streamDestroyedHandler(ee) {
+  console.log(ee);
   ee.preventDefault();
-  var subscriberDiv = document.getElementById("subscriber-"+ee.streams[0].streamId);
+  var subscriberDiv = document.getElementById("stream"+ee.streams[0].streamId);
   console.log(subscriberDiv);
   subscriberDiv.parentNode.removeChild(subscriberDiv);
-  console.log(ee);
 }
