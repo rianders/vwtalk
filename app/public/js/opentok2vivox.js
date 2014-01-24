@@ -1,20 +1,8 @@
 //Vivox functions that could be called by or have been called from unity web player
 var prevRoom = '';
 var session;
-//initial vars
-
-//functino from vivox
-function VivoxUnityInit() {
-  //If possible this is where the OpenTok init code should go
-  console.log('VivoxUnityInit: Start');
-  console.log('VivoxJoinedRoom:start');
-  GetUnity().SendMessage('VivoxHud', 'VivoxJoinedRoom', '');
-  console.log('VivoxJoinedRoom:end');
-  //GetUnity().SendMessage("RaiseHand", "VivoxJoinedRoom", "");
-  //triggers vivoxLogin event and assigns user name
-  GetUnity().SendMessage('VivoxHud', 'onVivoxConnected', 'Connected to Vivox network!');
-  console.log('VivoxUnityInit: end');
-    //grab session keys from the server, and then initialize the session (the server automatically regenerates the tokens when necessary)
+var world='001';
+$(document).ready(function() {
   $.ajax({
     dataType: 'json',
     url: '/api/' + world + '/' + user + '/' + room,
@@ -35,11 +23,16 @@ function VivoxUnityInit() {
       console.log("Joining:" + room);
     }
   });
+});
+function VivoxUnityInit() {
+	console.log("VivoxUnityInit: Start");
+	GetUnity().SendMessage("VivoxHud", "VivoxJoinedRoom", "");
+	GetUnity().SendMessage("VivoxHud", "onVivoxConnected", "Connected to Vivox network!");
+	console.log("VivoxUnityInit: End");
 }
-
 function VivoxLogin(player) {
   console.log("VivoxLogin: Start");
-  user = player;
+  user = player;	
   sessions[room].connect(globaldata.apikey, globaldata.tokens[room]);
   $('#rooms').text('Room: ' + room);
   //set publishing options
@@ -64,15 +57,15 @@ function SwitchToChannel(newChannel) {
   GetUnity().SendMessage('VivoxHud', 'UpdateCurrentChannel', newChannel);
   if (newChannel == 'sip:confctl-592@regp.vivox.com') {
     console.log('Management: room3');
-    currentRoom = 'room3';
+    currentRoom = 'management';
   }
   if (newChannel == 'sip:confctl-593@regp.vivox.com') {
     console.log('Union: room1');
-    currentRoom = 'room1';
+    currentRoom = 'union';
   }
   if (newChannel == 'sip:confctl-591@regp.vivox.com') {
     console.log('Negotiation: room2');
-    currentRoom = 'room2';
+    currentRoom = 'middle';
   }
   //If room acutally changes switch
   if (prevRoom != currentRoom) {

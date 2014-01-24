@@ -1,5 +1,5 @@
 var currentRoom;
-var room = 'room2';
+var room = 'middle';
 var user;
 var sessions = {};
 var globaldata = {};
@@ -64,7 +64,7 @@ function publish(room) {
   console.log("published: " + room);
 }
 function toggleAudio(isEnabled) {
-  publisher.publishAudio(isEnabled);
+  if(publisher!=undefined) publisher.publishAudio(isEnabled);
 }
 function connectionDestroyedHandler(event) {
   event.preventDefault();
