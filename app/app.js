@@ -60,6 +60,7 @@ app.configure('production', function () {
 });
 // Routes
 app.get('/', function (req, res) {
+  res.redirect('/Negotiation');
   console.log('Sessions: %j', sessions);
   res.render('index', {
     title: 'OpenTok Test',

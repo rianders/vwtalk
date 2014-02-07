@@ -115,7 +115,8 @@ function vivoxCompletedLogout(Response) {
 //mute myself
 function VivoxMicMute(mute) {
   console.log('VivoxMicMute: ' + mute);
-  toggleAudio(!mute);
+  if(mute=="True") toggleAudio(false);
+  else toggleAudio(true);
 }
 function vivoxMicMuteResult(response) {
   console.log('vivoxMicMuteResult: ' + response);

@@ -6,7 +6,7 @@ var globaldata = {};
 var publisher;
 var config = {
   mic: true,
-  video: true
+  video: false
 };
 
 TB.setLogLevel(TB.DEBUG);
