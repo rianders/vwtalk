@@ -15,10 +15,10 @@ $(document).ready(function() {
         console.log('Key: ' + key + ' data: ' + data.sessions[key].sessionId);
         var session = TB.initSession(data.sessions[key].sessionId);
         sessions[key] = session;
-        sessions[key].addEventListener('sessionConnected', sessionConnectedHandler);
-        sessions[key].addEventListener('streamCreated', streamCreatedHandler);
-        sessions[key].addEventListener('connectionDestroyed', connectionDestroyedHandler);
-        sessions[key].addEventListener('streamDestroyed', streamDestroyedHandler);
+        sessions[key].on('sessionConnected', sessionConnectedHandler);
+        sessions[key].on('streamCreated', streamCreatedHandler);
+        sessions[key].on('connectionDestroyed', connectionDestroyedHandler);
+        sessions[key].on('streamDestroyed', streamDestroyedHandler);
       }
       console.log("Joining:" + room);
     }
@@ -44,6 +44,12 @@ function VivoxLogin(player) {
     name: user
   };
   publisher = TB.initPublisher(globaldata.apikey, "publisherContainer", pubOptions);
+  publisher.on('streamDestroyed', function(evt) {
+    evt.preventDefault();
+  });
+  publisher.on('streamCreated', function(evt) {
+    subscribeToStreams([evt.stream]);
+  });
   console.log('OpenTOK url: ' + '/api/' + '001/' + user + '/' + currentRoom);
   console.log('VivoxLoginEnd: ' + player);
 }

@@ -9,7 +9,7 @@ var config = {
   video: false
 };
 
-TB.setLogLevel(TB.DEBUG);
+TB.setLogLevel(TB.INFO);
 
 function subscribeToStreams(streams) {
   console.log('subscribeToStreams');
@@ -28,11 +28,11 @@ function subscribeToStreams(streams) {
       nameDisplayMode : 'on'
     }
     };
+    var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
     //prevent echo
     if(streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
-      subProperties.subscribeToAudio = false;
+	subscriber.setAudioVolume(0);
     }
-    var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
   }
 }
 
@@ -49,7 +49,7 @@ function sessionConnectedHandler(event) {
   console.log('Pub Room: ' + room);
   console.log('Pub currentRoom: ' + currentRoom);
   // Subscribe to streams that were in the session when we connected
-  subscribeToStreams(event.streams);
+  //subscribeToStreams(event.streams);
 }
 
 function streamAvailableHandler(event) {
@@ -71,8 +71,6 @@ function connectionDestroyedHandler(event) {
   console.log("The session disconnected. " + event.reason);
 }
 function streamDestroyedHandler(ee) {
-  console.log(ee);
-  ee.preventDefault();
   var subscriberDiv = document.getElementById("stream"+ee.streams[0].streamId);
   console.log(subscriberDiv);
   subscriberDiv.parentNode.removeChild(subscriberDiv);
