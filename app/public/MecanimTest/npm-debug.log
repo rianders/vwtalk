@@ -1,0 +1,1778 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'jshint',
+1 verbose cli   '-g' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose cache add [ 'jshint', null ]
+5 verbose cache add name=undefined spec="jshint" args=["jshint",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'jshint',
+6 verbose parsed url   path: 'jshint',
+6 verbose parsed url   href: 'jshint' }
+7 silly lockFile da5c03cb-jshint jshint
+8 verbose lock jshint /home/rianders/.npm/da5c03cb-jshint.lock
+9 silly lockFile da5c03cb-jshint jshint
+10 silly lockFile da5c03cb-jshint jshint
+11 verbose addNamed [ 'jshint', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile a02a2468-jshint jshint@
+14 verbose lock jshint@ /home/rianders/.npm/a02a2468-jshint.lock
+15 silly addNameRange { name: 'jshint', range: '*', hasData: false }
+16 verbose url raw jshint
+17 verbose url resolving [ 'https://registry.npmjs.org/', './jshint' ]
+18 verbose url resolved https://registry.npmjs.org/jshint
+19 info trying registry request attempt 1 at 15:46:50
+20 http GET https://registry.npmjs.org/jshint
+21 info retry will retry, error on last attempt: Error: socket hang up
+22 info trying registry request attempt 2 at 15:47:04
+23 http GET https://registry.npmjs.org/jshint
+24 http 200 https://registry.npmjs.org/jshint
+25 silly registry.get cb [ 200,
+25 silly registry.get   { vary: 'Accept',
+25 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+25 silly registry.get     etag: '"329TR56RE9SSX7SCUB3KD058O"',
+25 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:19 GMT',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     'content-length': '176361' } ]
+26 silly addNameRange number 2 { name: 'jshint', range: '*', hasData: true }
+27 silly addNameRange versions [ 'jshint',
+27 silly addNameRange   [ '0.1.8',
+27 silly addNameRange     '0.1.9',
+27 silly addNameRange     '0.2.0',
+27 silly addNameRange     '0.2.1',
+27 silly addNameRange     '0.2.2',
+27 silly addNameRange     '0.2.3',
+27 silly addNameRange     '0.3.0',
+27 silly addNameRange     '0.3.1',
+27 silly addNameRange     '0.4.0',
+27 silly addNameRange     '0.5.0',
+27 silly addNameRange     '0.5.1',
+27 silly addNameRange     '0.5.2',
+27 silly addNameRange     '0.5.3',
+27 silly addNameRange     '0.5.4',
+27 silly addNameRange     '0.5.5',
+27 silly addNameRange     '0.5.6',
+27 silly addNameRange     '0.5.7',
+27 silly addNameRange     '0.5.8',
+27 silly addNameRange     '0.5.9',
+27 silly addNameRange     '0.6.0',
+27 silly addNameRange     '0.6.1',
+27 silly addNameRange     '0.6.2',
+27 silly addNameRange     '0.6.3',
+27 silly addNameRange     '0.7.0',
+27 silly addNameRange     '0.7.1',
+27 silly addNameRange     '0.7.2',
+27 silly addNameRange     '0.7.3',
+27 silly addNameRange     '0.8.0',
+27 silly addNameRange     '0.8.1',
+27 silly addNameRange     '0.8.2',
+27 silly addNameRange     '0.9.0',
+27 silly addNameRange     '0.9.1',
+27 silly addNameRange     '1.0.0',
+27 silly addNameRange     '1.1.0',
+27 silly addNameRange     '2.0.0',
+27 silly addNameRange     '2.0.1',
+27 silly addNameRange     '2.1.0',
+27 silly addNameRange     '2.1.1',
+27 silly addNameRange     '2.1.2',
+27 silly addNameRange     '2.1.3',
+27 silly addNameRange     '2.1.4',
+27 silly addNameRange     '2.1.5',
+27 silly addNameRange     '2.1.6',
+27 silly addNameRange     '2.1.7',
+27 silly addNameRange     '2.1.8',
+27 silly addNameRange     '2.1.9',
+27 silly addNameRange     '2.1.10',
+27 silly addNameRange     '2.1.11',
+27 silly addNameRange     '2.2.0',
+27 silly addNameRange     '2.3.0' ] ]
+28 verbose addNamed [ 'jshint', '2.3.0' ]
+29 verbose addNamed [ '2.3.0', '2.3.0' ]
+30 silly lockFile 8841ddaf-jshint-2-3-0 jshint@2.3.0
+31 verbose lock jshint@2.3.0 /home/rianders/.npm/8841ddaf-jshint-2-3-0.lock
+32 silly lockFile 7312816a-pmjs-org-jshint-jshint-2-3-0-tgz https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz
+33 verbose lock https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz /home/rianders/.npm/7312816a-pmjs-org-jshint-jshint-2-3-0-tgz.lock
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz',
+34 verbose addRemoteTarball   '19504455a2c20c46ee183361eb87f3a1c0b7dc47' ]
+35 info retry fetch attempt 1 at 15:47:20
+36 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz
+37 http GET https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz
+38 http 200 https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz
+39 verbose tar unpack /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz
+40 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+41 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package /home/rianders/.npm/afdca1d8-0565-0-16802106774412096-package.lock
+42 silly lockFile 2040df59-0565-0-16802106774412096-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz
+43 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz /home/rianders/.npm/2040df59-0565-0-16802106774412096-tmp-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm extractEntry README.md
+47 silly gunzTarPerm extractEntry bin/apply
+48 silly gunzTarPerm extractEntry bin/build
+49 silly gunzTarPerm extractEntry bin/changelog
+50 silly gunzTarPerm extractEntry bin/jshint
+51 silly gunzTarPerm extractEntry bin/land
+52 silly gunzTarPerm extractEntry data/ascii-identifier-data.js
+53 silly gunzTarPerm extractEntry data/non-ascii-identifier-part-only.js
+54 silly gunzTarPerm extractEntry data/non-ascii-identifier-start.js
+55 silly gunzTarPerm extractEntry src/cli.js
+56 silly gunzTarPerm extractEntry src/jshint.js
+57 silly gunzTarPerm extractEntry src/lex.js
+58 silly gunzTarPerm extractEntry src/messages.js
+59 silly gunzTarPerm extractEntry src/reg.js
+60 silly gunzTarPerm extractEntry src/state.js
+61 silly gunzTarPerm extractEntry src/style.js
+62 silly gunzTarPerm extractEntry src/vars.js
+63 silly gunzTarPerm extractEntry src/platforms/rhino.js
+64 silly gunzTarPerm extractEntry src/reporters/checkstyle.js
+65 silly gunzTarPerm extractEntry src/reporters/default.js
+66 silly gunzTarPerm extractEntry src/reporters/jslint_xml.js
+67 silly gunzTarPerm extractEntry src/reporters/non_error.js
+68 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+69 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+70 silly lockFile 2040df59-0565-0-16802106774412096-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz
+71 silly lockFile 2040df59-0565-0-16802106774412096-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/tmp.tgz
+72 verbose tar pack [ '/home/rianders/.npm/jshint/2.3.0/package.tgz',
+72 verbose tar pack   '/home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package' ]
+73 verbose tarball /home/rianders/.npm/jshint/2.3.0/package.tgz
+74 verbose folder /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+75 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+76 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package /home/rianders/.npm/afdca1d8-0565-0-16802106774412096-package.lock
+77 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+78 verbose lock tar:///home/rianders/.npm/jshint/2.3.0/package.tgz /home/rianders/.npm/74ff78c0-ers-npm-jshint-2-3-0-package-tgz.lock
+79 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+80 silly lockFile afdca1d8-0565-0-16802106774412096-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357640565-0.16802106774412096/package
+81 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+82 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+83 silly lockFile 65716fdf-ianders-npm-jshint-2-3-0-package /home/rianders/.npm/jshint/2.3.0/package
+84 verbose lock /home/rianders/.npm/jshint/2.3.0/package /home/rianders/.npm/65716fdf-ianders-npm-jshint-2-3-0-package.lock
+85 silly lockFile 65716fdf-ianders-npm-jshint-2-3-0-package /home/rianders/.npm/jshint/2.3.0/package
+86 silly lockFile 65716fdf-ianders-npm-jshint-2-3-0-package /home/rianders/.npm/jshint/2.3.0/package
+87 verbose tar unpack /home/rianders/.npm/jshint/2.3.0/package.tgz
+88 silly lockFile 307cc997-ianders-npm-jshint-2-3-0-package tar:///home/rianders/.npm/jshint/2.3.0/package
+89 verbose lock tar:///home/rianders/.npm/jshint/2.3.0/package /home/rianders/.npm/307cc997-ianders-npm-jshint-2-3-0-package.lock
+90 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+91 verbose lock tar:///home/rianders/.npm/jshint/2.3.0/package.tgz /home/rianders/.npm/74ff78c0-ers-npm-jshint-2-3-0-package-tgz.lock
+92 silly gunzTarPerm modes [ '755', '644' ]
+93 silly gunzTarPerm extractEntry package.json
+94 silly gunzTarPerm extractEntry README.md
+95 silly gunzTarPerm extractEntry bin/apply
+96 silly gunzTarPerm extractEntry bin/build
+97 silly gunzTarPerm extractEntry bin/changelog
+98 silly gunzTarPerm extractEntry bin/jshint
+99 silly gunzTarPerm extractEntry bin/land
+100 silly gunzTarPerm extractEntry data/ascii-identifier-data.js
+101 silly gunzTarPerm extractEntry data/non-ascii-identifier-part-only.js
+102 silly gunzTarPerm extractEntry data/non-ascii-identifier-start.js
+103 silly gunzTarPerm extractEntry src/cli.js
+104 silly gunzTarPerm extractEntry src/jshint.js
+105 silly gunzTarPerm extractEntry src/lex.js
+106 silly gunzTarPerm extractEntry src/messages.js
+107 silly gunzTarPerm extractEntry src/reg.js
+108 silly gunzTarPerm extractEntry src/state.js
+109 silly gunzTarPerm extractEntry src/style.js
+110 silly gunzTarPerm extractEntry src/vars.js
+111 silly gunzTarPerm extractEntry src/platforms/rhino.js
+112 silly gunzTarPerm extractEntry src/reporters/checkstyle.js
+113 silly gunzTarPerm extractEntry src/reporters/default.js
+114 silly gunzTarPerm extractEntry src/reporters/jslint_xml.js
+115 silly gunzTarPerm extractEntry src/reporters/non_error.js
+116 silly lockFile 307cc997-ianders-npm-jshint-2-3-0-package tar:///home/rianders/.npm/jshint/2.3.0/package
+117 silly lockFile 307cc997-ianders-npm-jshint-2-3-0-package tar:///home/rianders/.npm/jshint/2.3.0/package
+118 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+119 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+120 verbose chmod /home/rianders/.npm/jshint/2.3.0/package.tgz 644
+121 verbose chown /home/rianders/.npm/jshint/2.3.0/package.tgz [ 1002, 1002 ]
+122 silly lockFile 7312816a-pmjs-org-jshint-jshint-2-3-0-tgz https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz
+123 silly lockFile 7312816a-pmjs-org-jshint-jshint-2-3-0-tgz https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz
+124 silly lockFile 8841ddaf-jshint-2-3-0 jshint@2.3.0
+125 silly lockFile 8841ddaf-jshint-2-3-0 jshint@2.3.0
+126 silly lockFile a02a2468-jshint jshint@
+127 silly lockFile a02a2468-jshint jshint@
+128 silly resolved [ { name: 'jshint',
+128 silly resolved     version: '2.3.0',
+128 silly resolved     homepage: 'http://jshint.com/',
+128 silly resolved     description: 'Static analysis tool for JavaScript',
+128 silly resolved     author:
+128 silly resolved      { name: 'Anton Kovalyov',
+128 silly resolved        email: 'anton@kovalyov.net',
+128 silly resolved        url: 'http://anton.kovalyov.net/' },
+128 silly resolved     repository: { type: 'git', url: 'https://github.com/jshint/jshint.git' },
+128 silly resolved     bugs: { url: 'https://github.com/jshint/jshint/issues' },
+128 silly resolved     bin: { jshint: './bin/jshint' },
+128 silly resolved     scripts:
+128 silly resolved      { data: 'node scripts/generate-identifier-data',
+128 silly resolved        build: 'node bin/build',
+128 silly resolved        test: 'nodeunit tests tests/regression tests/unit',
+128 silly resolved        pretest: 'jshint src' },
+128 silly resolved     main: './src/jshint.js',
+128 silly resolved     dependencies:
+128 silly resolved      { shelljs: '0.1.x',
+128 silly resolved        underscore: '1.4.x',
+128 silly resolved        cli: '0.4.x',
+128 silly resolved        minimatch: '0.x.x',
+128 silly resolved        'console-browserify': '0.1.x' },
+128 silly resolved     devDependencies:
+128 silly resolved      { jshint: '2.3.x',
+128 silly resolved        shelljs: '0.1.x',
+128 silly resolved        browserify: '2.12.x',
+128 silly resolved        coveraje: '0.2.x',
+128 silly resolved        nodeunit: '0.8.x',
+128 silly resolved        sinon: '1.7.x',
+128 silly resolved        'unicode-6.3.0': '0.1.x',
+128 silly resolved        regenerate: '0.5.x' },
+128 silly resolved     jshintConfig:
+128 silly resolved      { boss: true,
+128 silly resolved        node: true,
+128 silly resolved        strict: true,
+128 silly resolved        white: true,
+128 silly resolved        smarttabs: true,
+128 silly resolved        maxlen: 100,
+128 silly resolved        newcap: false,
+128 silly resolved        undef: true,
+128 silly resolved        unused: true,
+128 silly resolved        onecase: true,
+128 silly resolved        indent: 2 },
+128 silly resolved     licenses: [ [Object] ],
+128 silly resolved     preferGlobal: true,
+128 silly resolved     files: [ 'bin', 'src', 'data' ],
+128 silly resolved     readme: 'JSHint, A Static Code Analysis Tool for JavaScript\n--------------------------------------------------\n\n\\[ [Use it online](http://jshint.com/) •  [About](http://jshint.com/about/) • \n[Docs](http://jshint.com/docs/) • [FAQ](http://jshint.com/docs/faq) • \n[Install](http://jshint.com/install/) • [Hack](http://jshint.com/hack/) • \n[Blog](http://jshint.com/blog/) • [Twitter](https://twitter.com/jshint/) \\]\n\n[![Build Status](https://travis-ci.org/jshint/jshint.png?branch=master)](https://travis-ci.org/jshint/jshint)\n[![NPM version](https://badge.fury.io/js/jshint.png)](http://badge.fury.io/js/jshint)\n\nJSHint is a community-driven tool to detect errors and potential problems\nin JavaScript code and to enforce your team’s coding conventions. It is\nvery flexible so you can easily adjust it to your particular coding guidelines\nand the environment you expect your code to execute in.\n\n#### JSHint 2.x versus JSHint 3\n\nThere\'s an effort going on to release the next major version of JSHint. All\ndevelopment in the `master` branch is for the version 3.0. Current stable\nversion is in the `2.x` branch. Keep that in mind when submitting pull requests.\n\nAlso, before reporting a bug or thinking about hacking on JSHint, read this:\n[JSHint 3 plans](http://www.jshint.com/blog/jshint-3-plans/). TL;DR: we\'re\nmoving away from style checks within JSHint so no new features around\nstyle checks will be accepted. Bug fixes are fine for the `2.x` branch.\n\n#### Reporting a bug\n\nTo report a bug simply create a\n[new GitHub Issue](https://github.com/jshint/jshint/issues/new) and describe\nyour problem or suggestion. We welcome all kind of feedback regarding\nJSHint including but not limited to:\n\n * When JSHint doesn\'t work as expected\n * When JSHint complains about valid JavaScript code that works in all browsers\n * When you simply want a new option or feature\n\nBefore reporting a bug look around to see if there are any open or closed tickets\nthat cover your issue. And remember the wisdom: pull request > bug report > tweet.\n\n\n#### License\n\nJSHint is distributed under the MIT License. One file and one file only\n(src/stable/jshint.js) is distributed under the slightly modified MIT License.\n\n\n#### Thank you!\n\nWe really appreciate all kind of feedback and contributions. Thanks for using and supporting JSHint!\n',
+128 silly resolved     readmeFilename: 'README.md',
+128 silly resolved     _id: 'jshint@2.3.0',
+128 silly resolved     dist: { shasum: '7c3c89287778c1a7d8f1748714409a228e82ace5' },
+128 silly resolved     _from: 'jshint@',
+128 silly resolved     _resolved: 'https://registry.npmjs.org/jshint/-/jshint-2.3.0.tgz' } ]
+129 info install jshint@2.3.0 into /usr/local/lib
+130 info installOne jshint@2.3.0
+131 info /usr/local/lib/node_modules/jshint unbuild
+132 verbose tar unpack /home/rianders/.npm/jshint/2.3.0/package.tgz
+133 silly lockFile 59dfcd45-sr-local-lib-node-modules-jshint tar:///usr/local/lib/node_modules/jshint
+134 verbose lock tar:///usr/local/lib/node_modules/jshint /home/rianders/.npm/59dfcd45-sr-local-lib-node-modules-jshint.lock
+135 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+136 verbose lock tar:///home/rianders/.npm/jshint/2.3.0/package.tgz /home/rianders/.npm/74ff78c0-ers-npm-jshint-2-3-0-package-tgz.lock
+137 silly gunzTarPerm modes [ '755', '644' ]
+138 silly gunzTarPerm extractEntry package.json
+139 silly gunzTarPerm extractEntry README.md
+140 silly gunzTarPerm extractEntry bin/apply
+141 silly gunzTarPerm extractEntry bin/build
+142 silly gunzTarPerm extractEntry bin/changelog
+143 silly gunzTarPerm extractEntry bin/jshint
+144 silly gunzTarPerm extractEntry bin/land
+145 silly gunzTarPerm extractEntry data/ascii-identifier-data.js
+146 silly gunzTarPerm extractEntry data/non-ascii-identifier-part-only.js
+147 silly gunzTarPerm extractEntry data/non-ascii-identifier-start.js
+148 silly gunzTarPerm extractEntry src/cli.js
+149 silly gunzTarPerm extractEntry src/jshint.js
+150 silly gunzTarPerm extractEntry src/lex.js
+151 silly gunzTarPerm extractEntry src/messages.js
+152 silly gunzTarPerm extractEntry src/reg.js
+153 silly gunzTarPerm extractEntry src/state.js
+154 silly gunzTarPerm extractEntry src/style.js
+155 silly gunzTarPerm extractEntry src/vars.js
+156 silly gunzTarPerm extractEntry src/platforms/rhino.js
+157 silly gunzTarPerm extractEntry src/reporters/checkstyle.js
+158 silly gunzTarPerm extractEntry src/reporters/default.js
+159 silly gunzTarPerm extractEntry src/reporters/jslint_xml.js
+160 silly gunzTarPerm extractEntry src/reporters/non_error.js
+161 silly lockFile 59dfcd45-sr-local-lib-node-modules-jshint tar:///usr/local/lib/node_modules/jshint
+162 silly lockFile 59dfcd45-sr-local-lib-node-modules-jshint tar:///usr/local/lib/node_modules/jshint
+163 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+164 silly lockFile 74ff78c0-ers-npm-jshint-2-3-0-package-tgz tar:///home/rianders/.npm/jshint/2.3.0/package.tgz
+165 info preinstall jshint@2.3.0
+166 verbose readDependencies using package.json deps
+167 verbose readDependencies using package.json deps
+168 verbose cache add [ 'shelljs@0.1.x', null ]
+169 verbose cache add name=undefined spec="shelljs@0.1.x" args=["shelljs@0.1.x",null]
+170 verbose parsed url { protocol: null,
+170 verbose parsed url   slashes: null,
+170 verbose parsed url   auth: null,
+170 verbose parsed url   host: null,
+170 verbose parsed url   port: null,
+170 verbose parsed url   hostname: null,
+170 verbose parsed url   hash: null,
+170 verbose parsed url   search: null,
+170 verbose parsed url   query: null,
+170 verbose parsed url   pathname: 'shelljs@0.1.x',
+170 verbose parsed url   path: 'shelljs@0.1.x',
+170 verbose parsed url   href: 'shelljs@0.1.x' }
+171 verbose cache add name="shelljs" spec="0.1.x" args=["shelljs","0.1.x"]
+172 verbose parsed url { protocol: null,
+172 verbose parsed url   slashes: null,
+172 verbose parsed url   auth: null,
+172 verbose parsed url   host: null,
+172 verbose parsed url   port: null,
+172 verbose parsed url   hostname: null,
+172 verbose parsed url   hash: null,
+172 verbose parsed url   search: null,
+172 verbose parsed url   query: null,
+172 verbose parsed url   pathname: '0.1.x',
+172 verbose parsed url   path: '0.1.x',
+172 verbose parsed url   href: '0.1.x' }
+173 verbose addNamed [ 'shelljs', '0.1.x' ]
+174 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+175 silly lockFile cc65d7ed-shelljs-0-1-x shelljs@0.1.x
+176 verbose lock shelljs@0.1.x /home/rianders/.npm/cc65d7ed-shelljs-0-1-x.lock
+177 verbose cache add [ 'underscore@1.4.x', null ]
+178 verbose cache add name=undefined spec="underscore@1.4.x" args=["underscore@1.4.x",null]
+179 verbose parsed url { protocol: null,
+179 verbose parsed url   slashes: null,
+179 verbose parsed url   auth: null,
+179 verbose parsed url   host: null,
+179 verbose parsed url   port: null,
+179 verbose parsed url   hostname: null,
+179 verbose parsed url   hash: null,
+179 verbose parsed url   search: null,
+179 verbose parsed url   query: null,
+179 verbose parsed url   pathname: 'underscore@1.4.x',
+179 verbose parsed url   path: 'underscore@1.4.x',
+179 verbose parsed url   href: 'underscore@1.4.x' }
+180 verbose cache add name="underscore" spec="1.4.x" args=["underscore","1.4.x"]
+181 verbose parsed url { protocol: null,
+181 verbose parsed url   slashes: null,
+181 verbose parsed url   auth: null,
+181 verbose parsed url   host: null,
+181 verbose parsed url   port: null,
+181 verbose parsed url   hostname: null,
+181 verbose parsed url   hash: null,
+181 verbose parsed url   search: null,
+181 verbose parsed url   query: null,
+181 verbose parsed url   pathname: '1.4.x',
+181 verbose parsed url   path: '1.4.x',
+181 verbose parsed url   href: '1.4.x' }
+182 verbose addNamed [ 'underscore', '1.4.x' ]
+183 verbose addNamed [ null, '>=1.4.0-0 <1.5.0-0' ]
+184 silly lockFile 53dcd9dd-underscore-1-4-x underscore@1.4.x
+185 verbose lock underscore@1.4.x /home/rianders/.npm/53dcd9dd-underscore-1-4-x.lock
+186 verbose cache add [ 'minimatch@0.x.x', null ]
+187 verbose cache add name=undefined spec="minimatch@0.x.x" args=["minimatch@0.x.x",null]
+188 verbose parsed url { protocol: null,
+188 verbose parsed url   slashes: null,
+188 verbose parsed url   auth: null,
+188 verbose parsed url   host: null,
+188 verbose parsed url   port: null,
+188 verbose parsed url   hostname: null,
+188 verbose parsed url   hash: null,
+188 verbose parsed url   search: null,
+188 verbose parsed url   query: null,
+188 verbose parsed url   pathname: 'minimatch@0.x.x',
+188 verbose parsed url   path: 'minimatch@0.x.x',
+188 verbose parsed url   href: 'minimatch@0.x.x' }
+189 verbose cache add name="minimatch" spec="0.x.x" args=["minimatch","0.x.x"]
+190 verbose parsed url { protocol: null,
+190 verbose parsed url   slashes: null,
+190 verbose parsed url   auth: null,
+190 verbose parsed url   host: null,
+190 verbose parsed url   port: null,
+190 verbose parsed url   hostname: null,
+190 verbose parsed url   hash: null,
+190 verbose parsed url   search: null,
+190 verbose parsed url   query: null,
+190 verbose parsed url   pathname: '0.x.x',
+190 verbose parsed url   path: '0.x.x',
+190 verbose parsed url   href: '0.x.x' }
+191 verbose addNamed [ 'minimatch', '0.x.x' ]
+192 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+193 silly lockFile 38c78372-minimatch-0-x-x minimatch@0.x.x
+194 verbose lock minimatch@0.x.x /home/rianders/.npm/38c78372-minimatch-0-x-x.lock
+195 verbose cache add [ 'cli@0.4.x', null ]
+196 verbose cache add name=undefined spec="cli@0.4.x" args=["cli@0.4.x",null]
+197 verbose parsed url { protocol: null,
+197 verbose parsed url   slashes: null,
+197 verbose parsed url   auth: null,
+197 verbose parsed url   host: null,
+197 verbose parsed url   port: null,
+197 verbose parsed url   hostname: null,
+197 verbose parsed url   hash: null,
+197 verbose parsed url   search: null,
+197 verbose parsed url   query: null,
+197 verbose parsed url   pathname: 'cli@0.4.x',
+197 verbose parsed url   path: 'cli@0.4.x',
+197 verbose parsed url   href: 'cli@0.4.x' }
+198 verbose cache add name="cli" spec="0.4.x" args=["cli","0.4.x"]
+199 verbose parsed url { protocol: null,
+199 verbose parsed url   slashes: null,
+199 verbose parsed url   auth: null,
+199 verbose parsed url   host: null,
+199 verbose parsed url   port: null,
+199 verbose parsed url   hostname: null,
+199 verbose parsed url   hash: null,
+199 verbose parsed url   search: null,
+199 verbose parsed url   query: null,
+199 verbose parsed url   pathname: '0.4.x',
+199 verbose parsed url   path: '0.4.x',
+199 verbose parsed url   href: '0.4.x' }
+200 verbose addNamed [ 'cli', '0.4.x' ]
+201 verbose addNamed [ null, '>=0.4.0-0 <0.5.0-0' ]
+202 silly lockFile c9212ae8-cli-0-4-x cli@0.4.x
+203 verbose lock cli@0.4.x /home/rianders/.npm/c9212ae8-cli-0-4-x.lock
+204 verbose cache add [ 'console-browserify@0.1.x', null ]
+205 verbose cache add name=undefined spec="console-browserify@0.1.x" args=["console-browserify@0.1.x",null]
+206 verbose parsed url { protocol: null,
+206 verbose parsed url   slashes: null,
+206 verbose parsed url   auth: null,
+206 verbose parsed url   host: null,
+206 verbose parsed url   port: null,
+206 verbose parsed url   hostname: null,
+206 verbose parsed url   hash: null,
+206 verbose parsed url   search: null,
+206 verbose parsed url   query: null,
+206 verbose parsed url   pathname: 'console-browserify@0.1.x',
+206 verbose parsed url   path: 'console-browserify@0.1.x',
+206 verbose parsed url   href: 'console-browserify@0.1.x' }
+207 verbose cache add name="console-browserify" spec="0.1.x" args=["console-browserify","0.1.x"]
+208 verbose parsed url { protocol: null,
+208 verbose parsed url   slashes: null,
+208 verbose parsed url   auth: null,
+208 verbose parsed url   host: null,
+208 verbose parsed url   port: null,
+208 verbose parsed url   hostname: null,
+208 verbose parsed url   hash: null,
+208 verbose parsed url   search: null,
+208 verbose parsed url   query: null,
+208 verbose parsed url   pathname: '0.1.x',
+208 verbose parsed url   path: '0.1.x',
+208 verbose parsed url   href: '0.1.x' }
+209 verbose addNamed [ 'console-browserify', '0.1.x' ]
+210 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+211 silly lockFile e69eec4c-console-browserify-0-1-x console-browserify@0.1.x
+212 verbose lock console-browserify@0.1.x /home/rianders/.npm/e69eec4c-console-browserify-0-1-x.lock
+213 silly addNameRange { name: 'shelljs', range: '>=0.1.0-0 <0.2.0-0', hasData: false }
+214 silly addNameRange { name: 'underscore',
+214 silly addNameRange   range: '>=1.4.0-0 <1.5.0-0',
+214 silly addNameRange   hasData: false }
+215 verbose url raw shelljs
+216 verbose url resolving [ 'https://registry.npmjs.org/', './shelljs' ]
+217 verbose url resolved https://registry.npmjs.org/shelljs
+218 info trying registry request attempt 1 at 15:47:33
+219 http GET https://registry.npmjs.org/shelljs
+220 verbose url raw underscore
+221 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+222 verbose url resolved https://registry.npmjs.org/underscore
+223 info trying registry request attempt 1 at 15:47:33
+224 http GET https://registry.npmjs.org/underscore
+225 silly addNameRange { name: 'minimatch',
+225 silly addNameRange   range: '>=0.0.0-0 <1.0.0-0',
+225 silly addNameRange   hasData: false }
+226 silly addNameRange { name: 'cli', range: '>=0.4.0-0 <0.5.0-0', hasData: false }
+227 silly addNameRange { name: 'console-browserify',
+227 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+227 silly addNameRange   hasData: false }
+228 verbose url raw cli
+229 verbose url resolving [ 'https://registry.npmjs.org/', './cli' ]
+230 verbose url resolved https://registry.npmjs.org/cli
+231 info trying registry request attempt 1 at 15:47:33
+232 http GET https://registry.npmjs.org/cli
+233 verbose url raw console-browserify
+234 verbose url resolving [ 'https://registry.npmjs.org/', './console-browserify' ]
+235 verbose url resolved https://registry.npmjs.org/console-browserify
+236 info trying registry request attempt 1 at 15:47:33
+237 http GET https://registry.npmjs.org/console-browserify
+238 verbose url raw minimatch
+239 verbose url resolving [ 'https://registry.npmjs.org/', './minimatch' ]
+240 verbose url resolved https://registry.npmjs.org/minimatch
+241 info trying registry request attempt 1 at 15:47:33
+242 verbose etag "433GUXE31BY78MEUH5M7CIXOG"
+243 http GET https://registry.npmjs.org/minimatch
+244 http 304 https://registry.npmjs.org/minimatch
+245 silly registry.get cb [ 304,
+245 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+245 silly registry.get     etag: '"433GUXE31BY78MEUH5M7CIXOG"',
+245 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:51 GMT',
+245 silly registry.get     'content-length': '0' } ]
+246 verbose etag minimatch from cache
+247 silly addNameRange number 2 { name: 'minimatch', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+248 silly addNameRange versions [ 'minimatch',
+248 silly addNameRange   [ '0.0.1',
+248 silly addNameRange     '0.0.2',
+248 silly addNameRange     '0.0.4',
+248 silly addNameRange     '0.0.5',
+248 silly addNameRange     '0.1.1',
+248 silly addNameRange     '0.1.2',
+248 silly addNameRange     '0.1.3',
+248 silly addNameRange     '0.1.4',
+248 silly addNameRange     '0.1.5',
+248 silly addNameRange     '0.2.0',
+248 silly addNameRange     '0.2.2',
+248 silly addNameRange     '0.2.3',
+248 silly addNameRange     '0.2.4',
+248 silly addNameRange     '0.2.5',
+248 silly addNameRange     '0.2.6',
+248 silly addNameRange     '0.2.7',
+248 silly addNameRange     '0.2.8',
+248 silly addNameRange     '0.2.9',
+248 silly addNameRange     '0.2.10',
+248 silly addNameRange     '0.2.11',
+248 silly addNameRange     '0.2.12' ] ]
+249 verbose addNamed [ 'minimatch', '0.2.12' ]
+250 verbose addNamed [ '0.2.12', '0.2.12' ]
+251 silly lockFile 16b89810-minimatch-0-2-12 minimatch@0.2.12
+252 verbose lock minimatch@0.2.12 /home/rianders/.npm/16b89810-minimatch-0-2-12.lock
+253 silly lockFile 16b89810-minimatch-0-2-12 minimatch@0.2.12
+254 silly lockFile 16b89810-minimatch-0-2-12 minimatch@0.2.12
+255 silly lockFile 38c78372-minimatch-0-x-x minimatch@0.x.x
+256 silly lockFile 38c78372-minimatch-0-x-x minimatch@0.x.x
+257 http 200 https://registry.npmjs.org/console-browserify
+258 silly registry.get cb [ 200,
+258 silly registry.get   { vary: 'Accept',
+258 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+258 silly registry.get     etag: '"A6FUTX76X8Y0BIXTD4F10KYVN"',
+258 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:52 GMT',
+258 silly registry.get     'content-type': 'application/json',
+258 silly registry.get     'content-length': '18503' } ]
+259 silly addNameRange number 2 { name: 'console-browserify',
+259 silly addNameRange   range: '>=0.1.0-0 <0.2.0-0',
+259 silly addNameRange   hasData: true }
+260 silly addNameRange versions [ 'console-browserify',
+260 silly addNameRange   [ '0.1.0',
+260 silly addNameRange     '0.1.1',
+260 silly addNameRange     '0.1.2',
+260 silly addNameRange     '0.1.3',
+260 silly addNameRange     '0.1.4',
+260 silly addNameRange     '0.1.5',
+260 silly addNameRange     '0.1.6',
+260 silly addNameRange     '1.0.1' ] ]
+261 verbose addNamed [ 'console-browserify', '0.1.6' ]
+262 verbose addNamed [ '0.1.6', '0.1.6' ]
+263 silly lockFile f41566ee-console-browserify-0-1-6 console-browserify@0.1.6
+264 verbose lock console-browserify@0.1.6 /home/rianders/.npm/f41566ee-console-browserify-0-1-6.lock
+265 http 200 https://registry.npmjs.org/underscore
+266 silly registry.get cb [ 200,
+266 silly registry.get   { vary: 'Accept',
+266 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+266 silly registry.get     etag: '"5B5TFBCUD4EE1HARVYGBG8GFE"',
+266 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:52 GMT',
+266 silly registry.get     'content-type': 'application/json',
+266 silly registry.get     'content-length': '43793' } ]
+267 silly lockFile 1199cf87-ify-console-browserify-0-1-6-tgz https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+268 verbose lock https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz /home/rianders/.npm/1199cf87-ify-console-browserify-0-1-6-tgz.lock
+269 verbose addRemoteTarball [ 'https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz',
+269 verbose addRemoteTarball   'd128a3c0bb88350eb5626c6e7c71a6f0fd48983c' ]
+270 info retry fetch attempt 1 at 15:47:53
+271 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+272 http GET https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+273 silly addNameRange number 2 { name: 'underscore',
+273 silly addNameRange   range: '>=1.4.0-0 <1.5.0-0',
+273 silly addNameRange   hasData: true }
+274 silly addNameRange versions [ 'underscore',
+274 silly addNameRange   [ '1.0.3',
+274 silly addNameRange     '1.0.4',
+274 silly addNameRange     '1.1.0',
+274 silly addNameRange     '1.1.1',
+274 silly addNameRange     '1.1.2',
+274 silly addNameRange     '1.1.3',
+274 silly addNameRange     '1.1.4',
+274 silly addNameRange     '1.1.5',
+274 silly addNameRange     '1.1.6',
+274 silly addNameRange     '1.1.7',
+274 silly addNameRange     '1.2.0',
+274 silly addNameRange     '1.2.1',
+274 silly addNameRange     '1.2.2',
+274 silly addNameRange     '1.2.3',
+274 silly addNameRange     '1.2.4',
+274 silly addNameRange     '1.3.0',
+274 silly addNameRange     '1.3.1',
+274 silly addNameRange     '1.3.2',
+274 silly addNameRange     '1.3.3',
+274 silly addNameRange     '1.4.0',
+274 silly addNameRange     '1.4.1',
+274 silly addNameRange     '1.4.2',
+274 silly addNameRange     '1.4.3',
+274 silly addNameRange     '1.4.4',
+274 silly addNameRange     '1.5.0',
+274 silly addNameRange     '1.5.1',
+274 silly addNameRange     '1.5.2' ] ]
+275 verbose addNamed [ 'underscore', '1.4.4' ]
+276 verbose addNamed [ '1.4.4', '1.4.4' ]
+277 silly lockFile c6b5e825-underscore-1-4-4 underscore@1.4.4
+278 verbose lock underscore@1.4.4 /home/rianders/.npm/c6b5e825-underscore-1-4-4.lock
+279 silly lockFile 91efdde3--underscore-underscore-1-4-4-tgz https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+280 verbose lock https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz /home/rianders/.npm/91efdde3--underscore-underscore-1-4-4-tgz.lock
+281 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz',
+281 verbose addRemoteTarball   '61a6a32010622afa07963bf325203cf12239d604' ]
+282 info retry fetch attempt 1 at 15:47:53
+283 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+284 http GET https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+285 http 200 https://registry.npmjs.org/cli
+286 silly registry.get cb [ 200,
+286 silly registry.get   { vary: 'Accept',
+286 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+286 silly registry.get     etag: '"22PZAKGQ2TRANTUMT2LYDK4ZS"',
+286 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:52 GMT',
+286 silly registry.get     'content-type': 'application/json',
+286 silly registry.get     'content-length': '89695' } ]
+287 silly addNameRange number 2 { name: 'cli', range: '>=0.4.0-0 <0.5.0-0', hasData: true }
+288 silly addNameRange versions [ 'cli',
+288 silly addNameRange   [ '0.1.0',
+288 silly addNameRange     '0.1.1',
+288 silly addNameRange     '0.1.3',
+288 silly addNameRange     '0.1.4',
+288 silly addNameRange     '0.1.5',
+288 silly addNameRange     '0.1.6',
+288 silly addNameRange     '0.1.7',
+288 silly addNameRange     '0.1.8',
+288 silly addNameRange     '0.1.9',
+288 silly addNameRange     '0.2.0',
+288 silly addNameRange     '0.2.1-1',
+288 silly addNameRange     '0.2.2-1',
+288 silly addNameRange     '0.2.3-1',
+288 silly addNameRange     '0.2.3-2',
+288 silly addNameRange     '0.2.3-3',
+288 silly addNameRange     '0.2.3-4',
+288 silly addNameRange     '0.2.3-5',
+288 silly addNameRange     '0.2.4-1',
+288 silly addNameRange     '0.2.4-2',
+288 silly addNameRange     '0.2.5',
+288 silly addNameRange     '0.2.6',
+288 silly addNameRange     '0.2.7',
+288 silly addNameRange     '0.2.8',
+288 silly addNameRange     '0.3.0',
+288 silly addNameRange     '0.3.1',
+288 silly addNameRange     '0.3.2',
+288 silly addNameRange     '0.3.3',
+288 silly addNameRange     '0.3.4',
+288 silly addNameRange     '0.3.5',
+288 silly addNameRange     '0.3.6',
+288 silly addNameRange     '0.3.7',
+288 silly addNameRange     '0.3.8',
+288 silly addNameRange     '0.3.9',
+288 silly addNameRange     '0.4.0',
+288 silly addNameRange     '0.4.1',
+288 silly addNameRange     '0.4.2',
+288 silly addNameRange     '0.4.3',
+288 silly addNameRange     '0.4.4',
+288 silly addNameRange     '0.4.4-1',
+288 silly addNameRange     '0.4.4-2',
+288 silly addNameRange     '0.4.5' ] ]
+289 verbose addNamed [ 'cli', '0.4.5' ]
+290 verbose addNamed [ '0.4.5', '0.4.5' ]
+291 silly lockFile f66b4835-cli-0-4-5 cli@0.4.5
+292 verbose lock cli@0.4.5 /home/rianders/.npm/f66b4835-cli-0-4-5.lock
+293 silly lockFile 7d319445-stry-npmjs-org-cli-cli-0-4-5-tgz https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+294 verbose lock https://registry.npmjs.org/cli/-/cli-0.4.5.tgz /home/rianders/.npm/7d319445-stry-npmjs-org-cli-cli-0-4-5-tgz.lock
+295 verbose addRemoteTarball [ 'https://registry.npmjs.org/cli/-/cli-0.4.5.tgz',
+295 verbose addRemoteTarball   '78f9485cd161b566e9a6c72d7170c4270e81db61' ]
+296 info retry fetch attempt 1 at 15:47:53
+297 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+298 http GET https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+299 http 200 https://registry.npmjs.org/shelljs
+300 silly registry.get cb [ 200,
+300 silly registry.get   { vary: 'Accept',
+300 silly registry.get     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+300 silly registry.get     etag: '"8LM6K2VK8IQRPPB8EWJS2Q4X0"',
+300 silly registry.get     date: 'Wed, 13 Nov 2013 15:47:52 GMT',
+300 silly registry.get     'content-type': 'application/json',
+300 silly registry.get     'content-length': '250436' } ]
+301 silly addNameRange number 2 { name: 'shelljs', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+302 silly addNameRange versions [ 'shelljs',
+302 silly addNameRange   [ '0.0.1',
+302 silly addNameRange     '0.0.2',
+302 silly addNameRange     '0.0.3',
+302 silly addNameRange     '0.0.4',
+302 silly addNameRange     '0.0.5',
+302 silly addNameRange     '0.0.6',
+302 silly addNameRange     '0.0.7',
+302 silly addNameRange     '0.0.8',
+302 silly addNameRange     '0.0.9',
+302 silly addNameRange     '0.1.0',
+302 silly addNameRange     '0.1.1',
+302 silly addNameRange     '0.1.2',
+302 silly addNameRange     '0.1.3',
+302 silly addNameRange     '0.1.4',
+302 silly addNameRange     '0.2.0',
+302 silly addNameRange     '0.2.1',
+302 silly addNameRange     '0.2.2',
+302 silly addNameRange     '0.2.3',
+302 silly addNameRange     '0.2.4',
+302 silly addNameRange     '0.2.5',
+302 silly addNameRange     '0.2.6',
+302 silly addNameRange     '0.0.1-alpha1',
+302 silly addNameRange     '0.0.2-pre1',
+302 silly addNameRange     '0.0.4-pre1',
+302 silly addNameRange     '0.0.5-pre1',
+302 silly addNameRange     '0.0.5-pre2',
+302 silly addNameRange     '0.0.5-pre3',
+302 silly addNameRange     '0.0.5-pre4',
+302 silly addNameRange     '0.0.6-pre1',
+302 silly addNameRange     '0.0.6-pre2' ] ]
+303 verbose addNamed [ 'shelljs', '0.1.4' ]
+304 verbose addNamed [ '0.1.4', '0.1.4' ]
+305 silly lockFile 77595a32-shelljs-0-1-4 shelljs@0.1.4
+306 verbose lock shelljs@0.1.4 /home/rianders/.npm/77595a32-shelljs-0-1-4.lock
+307 silly lockFile 018a1a85-js-org-shelljs-shelljs-0-1-4-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+308 verbose lock https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz /home/rianders/.npm/018a1a85-js-org-shelljs-shelljs-0-1-4-tgz.lock
+309 verbose addRemoteTarball [ 'https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz',
+309 verbose addRemoteTarball   'dfbbe78d56c3c0168d2fb79e10ecd1dbcb07ec0e' ]
+310 info retry fetch attempt 1 at 15:47:53
+311 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+312 http GET https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+313 error fetch failed https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+314 info retry will retry, error on last attempt: Error: socket hang up
+315 error fetch failed https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+316 info retry will retry, error on last attempt: Error: socket hang up
+317 error fetch failed https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+318 info retry will retry, error on last attempt: Error: socket hang up
+319 error fetch failed https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+320 info retry will retry, error on last attempt: Error: socket hang up
+321 info retry fetch attempt 2 at 15:48:21
+322 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+323 http GET https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+324 info retry fetch attempt 2 at 15:48:21
+325 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+326 http GET https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+327 info retry fetch attempt 2 at 15:48:21
+328 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+329 http GET https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+330 info retry fetch attempt 2 at 15:48:21
+331 verbose fetch to= /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+332 http GET https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+333 http 200 https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+334 http 200 https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+335 http 200 https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+336 verbose tar unpack /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+337 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+338 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package /home/rianders/.npm/3e3ff441-3406-0-25033417367376387-package.lock
+339 silly lockFile 97ce71f2-3406-0-25033417367376387-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+340 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz /home/rianders/.npm/97ce71f2-3406-0-25033417367376387-tmp-tgz.lock
+341 silly gunzTarPerm modes [ '755', '644' ]
+342 silly gunzTarPerm extractEntry package.json
+343 silly gunzTarPerm extractEntry README.md
+344 silly gunzTarPerm extractEntry cli.js
+345 silly gunzTarPerm extractEntry index.js
+346 silly gunzTarPerm extractEntry examples/cat.js
+347 silly gunzTarPerm extractEntry examples/command.js
+348 silly gunzTarPerm extractEntry examples/echo.js
+349 silly gunzTarPerm extractEntry examples/glob.js
+350 silly gunzTarPerm extractEntry examples/long_desc.js
+351 silly gunzTarPerm extractEntry examples/progress.js
+352 silly gunzTarPerm extractEntry examples/sort.js
+353 silly gunzTarPerm extractEntry examples/spinner.js
+354 verbose tar unpack /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+355 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+356 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package /home/rianders/.npm/a59774c0-73574-0-6679325946606696-package.lock
+357 silly lockFile 1dc33d94-73574-0-6679325946606696-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+358 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz /home/rianders/.npm/1dc33d94-73574-0-6679325946606696-tmp-tgz.lock
+359 silly gunzTarPerm extractEntry examples/static.js
+360 silly gunzTarPerm extractEntry examples/static.coffee
+361 silly gunzTarPerm modes [ '755', '644' ]
+362 silly gunzTarPerm extractEntry package.json
+363 silly gunzTarPerm extractEntry .npmignore
+364 silly gunzTarPerm extractEntry README.md
+365 verbose tar unpack /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+366 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+367 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package /home/rianders/.npm/71e93b7f-673347-0-327949344413355-package.lock
+368 silly lockFile 9c39645c-673347-0-327949344413355-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+369 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz /home/rianders/.npm/9c39645c-673347-0-327949344413355-tmp-tgz.lock
+370 silly gunzTarPerm modes [ '755', '644' ]
+371 silly gunzTarPerm extractEntry LICENSE
+372 silly gunzTarPerm extractEntry package.json
+373 silly gunzTarPerm extractEntry global.js
+374 silly gunzTarPerm extractEntry make.js
+375 silly gunzTarPerm extractEntry .npmignore
+376 silly gunzTarPerm extractEntry README.md
+377 silly gunzTarPerm extractEntry LICENSE
+378 silly gunzTarPerm extractEntry underscore-min.js
+379 silly gunzTarPerm extractEntry underscore.js
+380 silly gunzTarPerm extractEntry index.js
+381 silly gunzTarPerm extractEntry .travis.yml
+382 silly gunzTarPerm extractEntry shell.js
+383 silly gunzTarPerm extractEntry bin/shjs
+384 silly gunzTarPerm extractEntry index.html
+385 silly gunzTarPerm extractEntry favicon.ico
+386 silly gunzTarPerm extractEntry .documentup.json
+387 silly gunzTarPerm extractEntry jshint.json
+388 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+389 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+390 silly lockFile 97ce71f2-3406-0-25033417367376387-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+391 silly lockFile 97ce71f2-3406-0-25033417367376387-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/tmp.tgz
+392 verbose tar pack [ '/home/rianders/.npm/cli/0.4.5/package.tgz',
+392 verbose tar pack   '/home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package' ]
+393 verbose tarball /home/rianders/.npm/cli/0.4.5/package.tgz
+394 verbose folder /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+395 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+396 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package /home/rianders/.npm/3e3ff441-3406-0-25033417367376387-package.lock
+397 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+398 verbose lock tar:///home/rianders/.npm/cli/0.4.5/package.tgz /home/rianders/.npm/97d9641f-anders-npm-cli-0-4-5-package-tgz.lock
+399 silly gunzTarPerm extractEntry scripts/docs.js
+400 silly gunzTarPerm extractEntry scripts/run-tests.js
+401 silly gunzTarPerm extractEntry .travis.yml
+402 silly gunzTarPerm extractEntry test/.npmignore
+403 silly gunzTarPerm extractEntry CONTRIBUTING.md
+404 silly gunzTarPerm extractEntry CNAME
+405 silly gunzTarPerm extractEntry test/exec.js
+406 silly gunzTarPerm extractEntry test/find.js
+407 silly gunzTarPerm extractEntry test/grep.js
+408 silly gunzTarPerm extractEntry test/env.js
+409 silly gunzTarPerm extractEntry test/cat.js
+410 silly gunzTarPerm extractEntry test/mkdir.js
+411 silly gunzTarPerm extractEntry test/mv.js
+412 silly gunzTarPerm extractEntry test/popd.js
+413 silly gunzTarPerm extractEntry test/pushd.js
+414 silly gunzTarPerm extractEntry test/echo.js
+415 silly gunzTarPerm extractEntry test/pwd.js
+416 silly gunzTarPerm extractEntry test/dirs.js
+417 silly gunzTarPerm extractEntry test/to.js
+418 silly gunzTarPerm extractEntry test/cp.js
+419 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+420 silly lockFile 3e3ff441-3406-0-25033417367376387-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673406-0.25033417367376387/package
+421 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+422 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+423 silly lockFile 8817a0d5-e-rianders-npm-cli-0-4-5-package /home/rianders/.npm/cli/0.4.5/package
+424 verbose lock /home/rianders/.npm/cli/0.4.5/package /home/rianders/.npm/8817a0d5-e-rianders-npm-cli-0-4-5-package.lock
+425 silly lockFile 8817a0d5-e-rianders-npm-cli-0-4-5-package /home/rianders/.npm/cli/0.4.5/package
+426 silly lockFile 8817a0d5-e-rianders-npm-cli-0-4-5-package /home/rianders/.npm/cli/0.4.5/package
+427 silly gunzTarPerm extractEntry test/rm.js
+428 silly gunzTarPerm extractEntry test/config.js
+429 verbose tar unpack /home/rianders/.npm/cli/0.4.5/package.tgz
+430 silly lockFile 4578c9ff-e-rianders-npm-cli-0-4-5-package tar:///home/rianders/.npm/cli/0.4.5/package
+431 verbose lock tar:///home/rianders/.npm/cli/0.4.5/package /home/rianders/.npm/4578c9ff-e-rianders-npm-cli-0-4-5-package.lock
+432 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+433 verbose lock tar:///home/rianders/.npm/cli/0.4.5/package.tgz /home/rianders/.npm/97d9641f-anders-npm-cli-0-4-5-package-tgz.lock
+434 silly gunzTarPerm modes [ '755', '644' ]
+435 silly gunzTarPerm extractEntry package.json
+436 silly gunzTarPerm extractEntry test/sed.js
+437 silly gunzTarPerm extractEntry test/chmod.js
+438 silly gunzTarPerm extractEntry README.md
+439 silly gunzTarPerm extractEntry cli.js
+440 silly gunzTarPerm extractEntry index.js
+441 silly gunzTarPerm extractEntry test/tempdir.js
+442 silly gunzTarPerm extractEntry test/cd.js
+443 silly gunzTarPerm extractEntry test/test.js
+444 silly gunzTarPerm extractEntry test/ls.js
+445 silly gunzTarPerm extractEntry test/which.js
+446 silly gunzTarPerm extractEntry test/make.js
+447 silly gunzTarPerm extractEntry examples/cat.js
+448 silly gunzTarPerm extractEntry examples/command.js
+449 silly gunzTarPerm extractEntry test/resources/file1.js
+450 silly gunzTarPerm extractEntry test/resources/file2.js
+451 silly gunzTarPerm extractEntry test/resources/file2
+452 silly gunzTarPerm extractEntry test/resources/external/node_script.js
+453 silly gunzTarPerm extractEntry test/resources/file1
+454 silly gunzTarPerm extractEntry test/resources/a.txt
+455 silly gunzTarPerm extractEntry test/resources/file1.txt
+456 silly gunzTarPerm extractEntry test/resources/chmod/a/b/c/.npmignore
+457 silly gunzTarPerm extractEntry test/resources/chmod/b/a/b/.npmignore
+458 silly gunzTarPerm extractEntry test/resources/chmod/c/a/b/.npmignore
+459 silly gunzTarPerm extractEntry examples/echo.js
+460 silly gunzTarPerm extractEntry examples/glob.js
+461 silly gunzTarPerm extractEntry test/resources/chmod/file1
+462 silly gunzTarPerm extractEntry test/resources/cp/a
+463 silly gunzTarPerm extractEntry examples/long_desc.js
+464 silly gunzTarPerm extractEntry examples/progress.js
+465 silly gunzTarPerm extractEntry test/resources/cp/b
+466 silly gunzTarPerm extractEntry test/resources/cp/dir_a/z
+467 silly gunzTarPerm extractEntry examples/sort.js
+468 silly gunzTarPerm extractEntry examples/spinner.js
+469 silly gunzTarPerm extractEntry test/resources/cp/dir_b/dir_b_a/dir_b_a_a/z
+470 silly gunzTarPerm extractEntry test/resources/file2.txt
+471 silly gunzTarPerm extractEntry examples/static.js
+472 silly gunzTarPerm extractEntry examples/static.coffee
+473 silly gunzTarPerm extractEntry test/resources/find/.hidden
+474 silly gunzTarPerm extractEntry test/resources/find/a
+475 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+476 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+477 silly lockFile 9c39645c-673347-0-327949344413355-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+478 silly lockFile 9c39645c-673347-0-327949344413355-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/tmp.tgz
+479 verbose tar pack [ '/home/rianders/.npm/underscore/1.4.4/package.tgz',
+479 verbose tar pack   '/home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package' ]
+480 verbose tarball /home/rianders/.npm/underscore/1.4.4/package.tgz
+481 verbose folder /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+482 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+483 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package /home/rianders/.npm/71e93b7f-673347-0-327949344413355-package.lock
+484 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+485 verbose lock tar:///home/rianders/.npm/underscore/1.4.4/package.tgz /home/rianders/.npm/794fca0f-npm-underscore-1-4-4-package-tgz.lock
+486 silly gunzTarPerm extractEntry test/resources/find/b
+487 silly gunzTarPerm extractEntry test/resources/find/dir1/a_dir1
+488 silly gunzTarPerm extractEntry test/resources/find/dir1/dir11/a_dir11
+489 silly gunzTarPerm extractEntry test/resources/find/dir2/a_dir1
+490 silly gunzTarPerm extractEntry test/resources/issue44/main.js
+491 silly gunzTarPerm extractEntry test/resources/ls/file1.js
+492 silly gunzTarPerm extractEntry test/resources/ls/file2.js
+493 silly gunzTarPerm extractEntry test/resources/ls/.hidden_dir/nada
+494 silly gunzTarPerm extractEntry test/resources/ls/.hidden_file
+495 silly gunzTarPerm extractEntry test/resources/ls/a_dir/.hidden_dir/nada
+496 silly lockFile 4578c9ff-e-rianders-npm-cli-0-4-5-package tar:///home/rianders/.npm/cli/0.4.5/package
+497 silly lockFile 4578c9ff-e-rianders-npm-cli-0-4-5-package tar:///home/rianders/.npm/cli/0.4.5/package
+498 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+499 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+500 silly gunzTarPerm extractEntry test/resources/ls/a_dir/b_dir/z
+501 silly gunzTarPerm extractEntry test/resources/ls/a_dir/nada
+502 verbose chmod /home/rianders/.npm/cli/0.4.5/package.tgz 644
+503 verbose chown /home/rianders/.npm/cli/0.4.5/package.tgz [ 1002, 1002 ]
+504 silly lockFile 7d319445-stry-npmjs-org-cli-cli-0-4-5-tgz https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+505 silly lockFile 7d319445-stry-npmjs-org-cli-cli-0-4-5-tgz https://registry.npmjs.org/cli/-/cli-0.4.5.tgz
+506 silly lockFile f66b4835-cli-0-4-5 cli@0.4.5
+507 silly lockFile f66b4835-cli-0-4-5 cli@0.4.5
+508 silly lockFile c9212ae8-cli-0-4-x cli@0.4.x
+509 silly lockFile c9212ae8-cli-0-4-x cli@0.4.x
+510 silly gunzTarPerm extractEntry test/resources/ls/file1
+511 silly gunzTarPerm extractEntry test/resources/ls/file2
+512 silly gunzTarPerm extractEntry test/resources/ls/filename(with)[chars$]^that.must+be-escaped
+513 silly gunzTarPerm extractEntry test/resources/pushd/a/dummy
+514 silly gunzTarPerm extractEntry test/resources/pushd/b/c/dummy
+515 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+516 silly lockFile 71e93b7f-673347-0-327949344413355-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673347-0.327949344413355/package
+517 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+518 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+519 silly lockFile 6f1b1ccd-ers-npm-underscore-1-4-4-package /home/rianders/.npm/underscore/1.4.4/package
+520 verbose lock /home/rianders/.npm/underscore/1.4.4/package /home/rianders/.npm/6f1b1ccd-ers-npm-underscore-1-4-4-package.lock
+521 silly lockFile 6f1b1ccd-ers-npm-underscore-1-4-4-package /home/rianders/.npm/underscore/1.4.4/package
+522 silly lockFile 6f1b1ccd-ers-npm-underscore-1-4-4-package /home/rianders/.npm/underscore/1.4.4/package
+523 verbose tar unpack /home/rianders/.npm/underscore/1.4.4/package.tgz
+524 silly lockFile 58941ddc-ers-npm-underscore-1-4-4-package tar:///home/rianders/.npm/underscore/1.4.4/package
+525 verbose lock tar:///home/rianders/.npm/underscore/1.4.4/package /home/rianders/.npm/58941ddc-ers-npm-underscore-1-4-4-package.lock
+526 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+527 verbose lock tar:///home/rianders/.npm/underscore/1.4.4/package.tgz /home/rianders/.npm/794fca0f-npm-underscore-1-4-4-package-tgz.lock
+528 silly gunzTarPerm modes [ '755', '644' ]
+529 silly gunzTarPerm extractEntry package.json
+530 silly gunzTarPerm extractEntry .npmignore
+531 silly gunzTarPerm extractEntry README.md
+532 silly gunzTarPerm extractEntry LICENSE
+533 silly gunzTarPerm extractEntry underscore-min.js
+534 silly gunzTarPerm extractEntry index.js
+535 silly gunzTarPerm extractEntry underscore.js
+536 silly gunzTarPerm extractEntry index.html
+537 silly gunzTarPerm extractEntry .travis.yml
+538 silly gunzTarPerm extractEntry CONTRIBUTING.md
+539 silly gunzTarPerm extractEntry CNAME
+540 silly gunzTarPerm extractEntry favicon.ico
+541 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+542 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+543 silly lockFile 1dc33d94-73574-0-6679325946606696-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+544 silly lockFile 1dc33d94-73574-0-6679325946606696-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/tmp.tgz
+545 verbose tar pack [ '/home/rianders/.npm/shelljs/0.1.4/package.tgz',
+545 verbose tar pack   '/home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package' ]
+546 verbose tarball /home/rianders/.npm/shelljs/0.1.4/package.tgz
+547 verbose folder /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+548 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+549 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package /home/rianders/.npm/a59774c0-73574-0-6679325946606696-package.lock
+550 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+551 verbose lock tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz /home/rianders/.npm/e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz.lock
+552 silly lockFile 58941ddc-ers-npm-underscore-1-4-4-package tar:///home/rianders/.npm/underscore/1.4.4/package
+553 silly lockFile 58941ddc-ers-npm-underscore-1-4-4-package tar:///home/rianders/.npm/underscore/1.4.4/package
+554 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+555 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+556 verbose chmod /home/rianders/.npm/underscore/1.4.4/package.tgz 644
+557 verbose chown /home/rianders/.npm/underscore/1.4.4/package.tgz [ 1002, 1002 ]
+558 silly lockFile 91efdde3--underscore-underscore-1-4-4-tgz https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+559 silly lockFile 91efdde3--underscore-underscore-1-4-4-tgz https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz
+560 silly lockFile c6b5e825-underscore-1-4-4 underscore@1.4.4
+561 silly lockFile c6b5e825-underscore-1-4-4 underscore@1.4.4
+562 silly lockFile 53dcd9dd-underscore-1-4-x underscore@1.4.x
+563 silly lockFile 53dcd9dd-underscore-1-4-x underscore@1.4.x
+564 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+565 silly lockFile a59774c0-73574-0-6679325946606696-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673574-0.6679325946606696/package
+566 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+567 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+568 silly lockFile 78a4eb2f-anders-npm-shelljs-0-1-4-package /home/rianders/.npm/shelljs/0.1.4/package
+569 verbose lock /home/rianders/.npm/shelljs/0.1.4/package /home/rianders/.npm/78a4eb2f-anders-npm-shelljs-0-1-4-package.lock
+570 silly lockFile 78a4eb2f-anders-npm-shelljs-0-1-4-package /home/rianders/.npm/shelljs/0.1.4/package
+571 silly lockFile 78a4eb2f-anders-npm-shelljs-0-1-4-package /home/rianders/.npm/shelljs/0.1.4/package
+572 verbose tar unpack /home/rianders/.npm/shelljs/0.1.4/package.tgz
+573 silly lockFile 8ab68134-anders-npm-shelljs-0-1-4-package tar:///home/rianders/.npm/shelljs/0.1.4/package
+574 verbose lock tar:///home/rianders/.npm/shelljs/0.1.4/package /home/rianders/.npm/8ab68134-anders-npm-shelljs-0-1-4-package.lock
+575 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+576 verbose lock tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz /home/rianders/.npm/e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz.lock
+577 silly gunzTarPerm modes [ '755', '644' ]
+578 silly gunzTarPerm extractEntry package.json
+579 silly gunzTarPerm extractEntry .npmignore
+580 silly gunzTarPerm extractEntry README.md
+581 silly gunzTarPerm extractEntry LICENSE
+582 silly gunzTarPerm extractEntry global.js
+583 silly gunzTarPerm extractEntry make.js
+584 silly gunzTarPerm extractEntry shell.js
+585 silly gunzTarPerm extractEntry jshint.json
+586 silly gunzTarPerm extractEntry .travis.yml
+587 silly gunzTarPerm extractEntry bin/shjs
+588 silly gunzTarPerm extractEntry scripts/docs.js
+589 silly gunzTarPerm extractEntry scripts/run-tests.js
+590 silly gunzTarPerm extractEntry .documentup.json
+591 silly gunzTarPerm extractEntry test/.npmignore
+592 silly gunzTarPerm extractEntry test/exec.js
+593 silly gunzTarPerm extractEntry test/find.js
+594 silly gunzTarPerm extractEntry test/grep.js
+595 silly gunzTarPerm extractEntry test/env.js
+596 silly gunzTarPerm extractEntry test/cat.js
+597 silly gunzTarPerm extractEntry test/mkdir.js
+598 silly gunzTarPerm extractEntry test/mv.js
+599 silly gunzTarPerm extractEntry test/popd.js
+600 silly gunzTarPerm extractEntry test/pushd.js
+601 silly gunzTarPerm extractEntry test/echo.js
+602 silly gunzTarPerm extractEntry test/pwd.js
+603 silly gunzTarPerm extractEntry test/dirs.js
+604 silly gunzTarPerm extractEntry test/to.js
+605 silly gunzTarPerm extractEntry test/cp.js
+606 silly gunzTarPerm extractEntry test/rm.js
+607 silly gunzTarPerm extractEntry test/config.js
+608 silly gunzTarPerm extractEntry test/sed.js
+609 silly gunzTarPerm extractEntry test/chmod.js
+610 silly gunzTarPerm extractEntry test/tempdir.js
+611 silly gunzTarPerm extractEntry test/cd.js
+612 silly gunzTarPerm extractEntry test/test.js
+613 silly gunzTarPerm extractEntry test/ls.js
+614 silly gunzTarPerm extractEntry test/which.js
+615 silly gunzTarPerm extractEntry test/make.js
+616 silly gunzTarPerm extractEntry test/resources/file1.js
+617 silly gunzTarPerm extractEntry test/resources/file2.js
+618 silly gunzTarPerm extractEntry test/resources/file2
+619 silly gunzTarPerm extractEntry test/resources/external/node_script.js
+620 silly gunzTarPerm extractEntry test/resources/file1
+621 silly gunzTarPerm extractEntry test/resources/a.txt
+622 silly gunzTarPerm extractEntry test/resources/file1.txt
+623 silly gunzTarPerm extractEntry test/resources/chmod/a/b/c/.npmignore
+624 silly gunzTarPerm extractEntry test/resources/chmod/b/a/b/.npmignore
+625 silly gunzTarPerm extractEntry test/resources/chmod/c/a/b/.npmignore
+626 silly gunzTarPerm extractEntry test/resources/chmod/file1
+627 silly gunzTarPerm extractEntry test/resources/cp/a
+628 silly gunzTarPerm extractEntry test/resources/cp/b
+629 silly gunzTarPerm extractEntry test/resources/cp/dir_a/z
+630 silly gunzTarPerm extractEntry test/resources/cp/dir_b/dir_b_a/dir_b_a_a/z
+631 silly gunzTarPerm extractEntry test/resources/file2.txt
+632 silly gunzTarPerm extractEntry test/resources/find/.hidden
+633 silly gunzTarPerm extractEntry test/resources/find/a
+634 silly gunzTarPerm extractEntry test/resources/find/b
+635 silly gunzTarPerm extractEntry test/resources/find/dir1/a_dir1
+636 silly gunzTarPerm extractEntry test/resources/find/dir1/dir11/a_dir11
+637 silly gunzTarPerm extractEntry test/resources/find/dir2/a_dir1
+638 silly gunzTarPerm extractEntry test/resources/issue44/main.js
+639 silly gunzTarPerm extractEntry test/resources/ls/file1.js
+640 silly gunzTarPerm extractEntry test/resources/ls/file2.js
+641 silly gunzTarPerm extractEntry test/resources/ls/.hidden_dir/nada
+642 silly gunzTarPerm extractEntry test/resources/ls/.hidden_file
+643 silly gunzTarPerm extractEntry test/resources/ls/a_dir/.hidden_dir/nada
+644 silly gunzTarPerm extractEntry test/resources/ls/a_dir/b_dir/z
+645 silly gunzTarPerm extractEntry test/resources/ls/a_dir/nada
+646 silly gunzTarPerm extractEntry test/resources/ls/file1
+647 silly gunzTarPerm extractEntry test/resources/ls/file2
+648 silly gunzTarPerm extractEntry test/resources/ls/filename(with)[chars$]^that.must+be-escaped
+649 silly gunzTarPerm extractEntry test/resources/pushd/a/dummy
+650 silly gunzTarPerm extractEntry test/resources/pushd/b/c/dummy
+651 silly lockFile 8ab68134-anders-npm-shelljs-0-1-4-package tar:///home/rianders/.npm/shelljs/0.1.4/package
+652 silly lockFile 8ab68134-anders-npm-shelljs-0-1-4-package tar:///home/rianders/.npm/shelljs/0.1.4/package
+653 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+654 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+655 verbose chmod /home/rianders/.npm/shelljs/0.1.4/package.tgz 644
+656 verbose chown /home/rianders/.npm/shelljs/0.1.4/package.tgz [ 1002, 1002 ]
+657 silly lockFile 018a1a85-js-org-shelljs-shelljs-0-1-4-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+658 silly lockFile 018a1a85-js-org-shelljs-shelljs-0-1-4-tgz https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz
+659 silly lockFile 77595a32-shelljs-0-1-4 shelljs@0.1.4
+660 silly lockFile 77595a32-shelljs-0-1-4 shelljs@0.1.4
+661 silly lockFile cc65d7ed-shelljs-0-1-x shelljs@0.1.x
+662 silly lockFile cc65d7ed-shelljs-0-1-x shelljs@0.1.x
+663 http 200 https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+664 verbose tar unpack /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+665 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+666 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package /home/rianders/.npm/30e62e6c-73333-0-5648594624362886-package.lock
+667 silly lockFile 5d480de9-73333-0-5648594624362886-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+668 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz /home/rianders/.npm/5d480de9-73333-0-5648594624362886-tmp-tgz.lock
+669 silly gunzTarPerm modes [ '755', '644' ]
+670 silly gunzTarPerm extractEntry package.json
+671 silly gunzTarPerm extractEntry .npmignore
+672 silly gunzTarPerm extractEntry README.md
+673 silly gunzTarPerm extractEntry LICENCE
+674 silly gunzTarPerm extractEntry index.js
+675 silly gunzTarPerm extractEntry .testem.json
+676 silly gunzTarPerm extractEntry test/index.js
+677 silly gunzTarPerm extractEntry test/static/test-adapter.js
+678 silly gunzTarPerm extractEntry test/static/index.html
+679 silly gunzTarPerm extractEntry .travis.yml
+680 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+681 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+682 silly lockFile 5d480de9-73333-0-5648594624362886-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+683 silly lockFile 5d480de9-73333-0-5648594624362886-tmp-tgz tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/tmp.tgz
+684 verbose tar pack [ '/home/rianders/.npm/console-browserify/0.1.6/package.tgz',
+684 verbose tar pack   '/home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package' ]
+685 verbose tarball /home/rianders/.npm/console-browserify/0.1.6/package.tgz
+686 verbose folder /home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+687 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+688 verbose lock tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package /home/rianders/.npm/30e62e6c-73333-0-5648594624362886-package.lock
+689 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+690 verbose lock tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz /home/rianders/.npm/fe70c03c-ole-browserify-0-1-6-package-tgz.lock
+691 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+692 silly lockFile 30e62e6c-73333-0-5648594624362886-package tar:///home/rianders/tmp/npm-7160-RQcj0NVQ/1384357673333-0.5648594624362886/package
+693 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+694 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+695 silly lockFile cbcd5d33-console-browserify-0-1-6-package /home/rianders/.npm/console-browserify/0.1.6/package
+696 verbose lock /home/rianders/.npm/console-browserify/0.1.6/package /home/rianders/.npm/cbcd5d33-console-browserify-0-1-6-package.lock
+697 silly lockFile cbcd5d33-console-browserify-0-1-6-package /home/rianders/.npm/console-browserify/0.1.6/package
+698 silly lockFile cbcd5d33-console-browserify-0-1-6-package /home/rianders/.npm/console-browserify/0.1.6/package
+699 verbose tar unpack /home/rianders/.npm/console-browserify/0.1.6/package.tgz
+700 silly lockFile 665b1e8d-console-browserify-0-1-6-package tar:///home/rianders/.npm/console-browserify/0.1.6/package
+701 verbose lock tar:///home/rianders/.npm/console-browserify/0.1.6/package /home/rianders/.npm/665b1e8d-console-browserify-0-1-6-package.lock
+702 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+703 verbose lock tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz /home/rianders/.npm/fe70c03c-ole-browserify-0-1-6-package-tgz.lock
+704 silly gunzTarPerm modes [ '755', '644' ]
+705 silly gunzTarPerm extractEntry package.json
+706 silly gunzTarPerm extractEntry .npmignore
+707 silly gunzTarPerm extractEntry README.md
+708 silly gunzTarPerm extractEntry LICENCE
+709 silly gunzTarPerm extractEntry index.js
+710 silly gunzTarPerm extractEntry .testem.json
+711 silly gunzTarPerm extractEntry .travis.yml
+712 silly gunzTarPerm extractEntry test/index.js
+713 silly gunzTarPerm extractEntry test/static/test-adapter.js
+714 silly gunzTarPerm extractEntry test/static/index.html
+715 silly lockFile 665b1e8d-console-browserify-0-1-6-package tar:///home/rianders/.npm/console-browserify/0.1.6/package
+716 silly lockFile 665b1e8d-console-browserify-0-1-6-package tar:///home/rianders/.npm/console-browserify/0.1.6/package
+717 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+718 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+719 verbose chmod /home/rianders/.npm/console-browserify/0.1.6/package.tgz 644
+720 verbose chown /home/rianders/.npm/console-browserify/0.1.6/package.tgz [ 1002, 1002 ]
+721 silly lockFile 1199cf87-ify-console-browserify-0-1-6-tgz https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+722 silly lockFile 1199cf87-ify-console-browserify-0-1-6-tgz https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz
+723 silly lockFile f41566ee-console-browserify-0-1-6 console-browserify@0.1.6
+724 silly lockFile f41566ee-console-browserify-0-1-6 console-browserify@0.1.6
+725 silly lockFile e69eec4c-console-browserify-0-1-x console-browserify@0.1.x
+726 silly lockFile e69eec4c-console-browserify-0-1-x console-browserify@0.1.x
+727 silly resolved [ { author:
+727 silly resolved      { name: 'Isaac Z. Schlueter',
+727 silly resolved        email: 'i@izs.me',
+727 silly resolved        url: 'http://blog.izs.me' },
+727 silly resolved     name: 'minimatch',
+727 silly resolved     description: 'a glob matcher in javascript',
+727 silly resolved     version: '0.2.12',
+727 silly resolved     repository: { type: 'git', url: 'git://github.com/isaacs/minimatch.git' },
+727 silly resolved     main: 'minimatch.js',
+727 silly resolved     scripts: { test: 'tap test' },
+727 silly resolved     engines: { node: '*' },
+727 silly resolved     dependencies: { 'lru-cache': '2', sigmund: '~1.0.0' },
+727 silly resolved     devDependencies: { tap: '' },
+727 silly resolved     license:
+727 silly resolved      { type: 'MIT',
+727 silly resolved        url: 'http://github.com/isaacs/minimatch/raw/master/LICENSE' },
+727 silly resolved     readme: '# minimatch\n\nA minimal matching utility.\n\n[![Build Status](https://secure.travis-ci.org/isaacs/minimatch.png)](http://travis-ci.org/isaacs/minimatch)\n\n\nThis is the matching library used internally by npm.\n\nEventually, it will replace the C binding in node-glob.\n\nIt works by converting glob expressions into JavaScript `RegExp`\nobjects.\n\n## Usage\n\n```javascript\nvar minimatch = require("minimatch")\n\nminimatch("bar.foo", "*.foo") // true!\nminimatch("bar.foo", "*.bar") // false!\n```\n\n## Features\n\nSupports these glob features:\n\n* Brace Expansion\n* Extended glob matching\n* "Globstar" `**` matching\n\nSee:\n\n* `man sh`\n* `man bash`\n* `man 3 fnmatch`\n* `man 5 gitignore`\n\n### Comparisons to other fnmatch/glob implementations\n\nWhile strict compliance with the existing standards is a worthwhile\ngoal, some discrepancies exist between minimatch and other\nimplementations, and are intentional.\n\nIf the pattern starts with a `!` character, then it is negated.  Set the\n`nonegate` flag to suppress this behavior, and treat leading `!`\ncharacters normally.  This is perhaps relevant if you wish to start the\npattern with a negative extglob pattern like `!(a|B)`.  Multiple `!`\ncharacters at the start of a pattern will negate the pattern multiple\ntimes.\n\nIf a pattern starts with `#`, then it is treated as a comment, and\nwill not match anything.  Use `\\#` to match a literal `#` at the\nstart of a line, or set the `nocomment` flag to suppress this behavior.\n\nThe double-star character `**` is supported by default, unless the\n`noglobstar` flag is set.  This is supported in the manner of bsdglob\nand bash 4.1, where `**` only has special significance if it is the only\nthing in a path part.  That is, `a/**/b` will match `a/x/y/b`, but\n`a/**b` will not.  **Note that this is different from the way that `**` is\nhandled by ruby\'s `Dir` class.**\n\nIf an escaped pattern has no matches, and the `nonull` flag is set,\nthen minimatch.match returns the pattern as-provided, rather than\ninterpreting the character escapes.  For example,\n`minimatch.match([], "\\\\*a\\\\?")` will return `"\\\\*a\\\\?"` rather than\n`"*a?"`.  This is akin to setting the `nullglob` option in bash, except\nthat it does not resolve escaped pattern characters.\n\nIf brace expansion is not disabled, then it is performed before any\nother interpretation of the glob pattern.  Thus, a pattern like\n`+(a|{b),c)}`, which would not be valid in bash or zsh, is expanded\n**first** into the set of `+(a|b)` and `+(a|c)`, and those patterns are\nchecked for validity.  Since those two are valid, matching proceeds.\n\n\n## Minimatch Class\n\nCreate a minimatch object by instanting the `minimatch.Minimatch` class.\n\n```javascript\nvar Minimatch = require("minimatch").Minimatch\nvar mm = new Minimatch(pattern, options)\n```\n\n### Properties\n\n* `pattern` The original pattern the minimatch object represents.\n* `options` The options supplied to the constructor.\n* `set` A 2-dimensional array of regexp or string expressions.\n  Each row in the\n  array corresponds to a brace-expanded pattern.  Each item in the row\n  corresponds to a single path-part.  For example, the pattern\n  `{a,b/c}/d` would expand to a set of patterns like:\n\n        [ [ a, d ]\n        , [ b, c, d ] ]\n\n    If a portion of the pattern doesn\'t have any "magic" in it\n    (that is, it\'s something like `"foo"` rather than `fo*o?`), then it\n    will be left as a string rather than converted to a regular\n    expression.\n\n* `regexp` Created by the `makeRe` method.  A single regular expression\n  expressing the entire pattern.  This is useful in cases where you wish\n  to use the pattern somewhat like `fnmatch(3)` with `FNM_PATH` enabled.\n* `negate` True if the pattern is negated.\n* `comment` True if the pattern is a comment.\n* `empty` True if the pattern is `""`.\n\n### Methods\n\n* `makeRe` Generate the `regexp` member if necessary, and return it.\n  Will return `false` if the pattern is invalid.\n* `match(fname)` Return true if the filename matches the pattern, or\n  false otherwise.\n* `matchOne(fileArray, patternArray, partial)` Take a `/`-split\n  filename, and match it against a single row in the `regExpSet`.  This\n  method is mainly for internal use, but is exposed so that it can be\n  used by a glob-walker that needs to avoid excessive filesystem calls.\n\nAll other methods are internal, and will be called as necessary.\n\n## Functions\n\nThe top-level exported function has a `cache` property, which is an LRU\ncache set to store 100 items.  So, calling these methods repeatedly\nwith the same pattern and options will use the same Minimatch object,\nsaving the cost of parsing it multiple times.\n\n### minimatch(path, pattern, options)\n\nMain export.  Tests a path against the pattern using the options.\n\n```javascript\nvar isJS = minimatch(file, "*.js", { matchBase: true })\n```\n\n### minimatch.filter(pattern, options)\n\nReturns a function that tests its\nsupplied argument, suitable for use with `Array.filter`.  Example:\n\n```javascript\nvar javascripts = fileList.filter(minimatch.filter("*.js", {matchBase: true}))\n```\n\n### minimatch.match(list, pattern, options)\n\nMatch against the list of\nfiles, in the style of fnmatch or glob.  If nothing is matched, and\noptions.nonull is set, then return a list containing the pattern itself.\n\n```javascript\nvar javascripts = minimatch.match(fileList, "*.js", {matchBase: true}))\n```\n\n### minimatch.makeRe(pattern, options)\n\nMake a regular expression object from the pattern.\n\n## Options\n\nAll options are `false` by default.\n\n### debug\n\nDump a ton of stuff to stderr.\n\n### nobrace\n\nDo not expand `{a,b}` and `{1..3}` brace sets.\n\n### noglobstar\n\nDisable `**` matching against multiple folder names.\n\n### dot\n\nAllow patterns to match filenames starting with a period, even if\nthe pattern does not explicitly have a period in that spot.\n\nNote that by default, `a/**/b` will **not** match `a/.d/b`, unless `dot`\nis set.\n\n### noext\n\nDisable "extglob" style patterns like `+(a|b)`.\n\n### nocase\n\nPerform a case-insensitive match.\n\n### nonull\n\nWhen a match is not found by `minimatch.match`, return a list containing\nthe pattern itself.  When set, an empty list is returned if there are\nno matches.\n\n### matchBase\n\nIf set, then patterns without slashes will be matched\nagainst the basename of the path if it contains slashes.  For example,\n`a?b` would match the path `/xyz/123/acb`, but not `/xyz/acb/123`.\n\n### nocomment\n\nSuppress the behavior of treating `#` at the start of a pattern as a\ncomment.\n\n### nonegate\n\nSuppress the behavior of treating a leading `!` character as negation.\n\n### flipNegate\n\nReturns from negate expressions the same as if they were not negated.\n(Ie, true on a hit, false on a miss.)\n',
+727 silly resolved     readmeFilename: 'README.md',
+727 silly resolved     bugs: { url: 'https://github.com/isaacs/minimatch/issues' },
+727 silly resolved     _id: 'minimatch@0.2.12',
+727 silly resolved     _from: 'minimatch@0.x.x' },
+727 silly resolved   { name: 'cli',
+727 silly resolved     description: 'A tool for rapidly building command line apps',
+727 silly resolved     version: '0.4.5',
+727 silly resolved     homepage: 'http://github.com/chriso/cli',
+727 silly resolved     keywords:
+727 silly resolved      [ 'cli',
+727 silly resolved        'command line',
+727 silly resolved        'opts',
+727 silly resolved        'parseopt',
+727 silly resolved        'opt',
+727 silly resolved        'args',
+727 silly resolved        'console',
+727 silly resolved        'argsparse',
+727 silly resolved        'optparse',
+727 silly resolved        'daemon',
+727 silly resolved        'autocomplete',
+727 silly resolved        'command',
+727 silly resolved        'autocompletion' ],
+727 silly resolved     author: { name: 'Chris O\'Hara', email: 'cohara87@gmail.com' },
+727 silly resolved     main: 'cli.js',
+727 silly resolved     bugs: { url: 'http://github.com/chriso/cli/issues' },
+727 silly resolved     repository: { type: 'git', url: 'http://github.com/chriso/cli.git' },
+727 silly resolved     dependencies: { glob: '>= 3.1.4' },
+727 silly resolved     contributors: [ [Object] ],
+727 silly resolved     engines: { node: '>=0.2.5' },
+727 silly resolved     licenses: [ [Object] ],
+727 silly resolved     readme: '**cli is a toolkit for rapidly building command line apps - it includes:**\n\n- Full featured opts/args parser\n- Plugin support for adding common options and switches\n- Helper methods for working with input/output and spawning child processes\n- Output colored/styled messages, [progress bars](https://github.com/chriso/cli/blob/master/examples/progress.js) or [spinners](https://github.com/chriso/cli/blob/master/examples/spinner.js)\n- Command [auto-completion](https://github.com/chriso/cli/blob/master/examples/command.js) and [glob support](https://github.com/chriso/cli/blob/master/examples/glob.js)\n\nInstall using `npm install cli` or just bundle [cli.js](https://github.com/chriso/cli/raw/master/cli-min.js) with your app.\n\n## Example apps\n\n### sort.js\n\n```javascript\n#!/usr/bin/env node\nrequire(\'cli\').withStdinLines(function(lines, newline) {\n    this.output(lines.sort().join(newline));\n});\n```\n\nTry it out\n\n```bash\n$ ./sort.js < input.txt\n```\n\nLet\'s add support for an `-n` switch to use a numeric sort, and a `-r` switch to reverse output - only 5 extra lines of code (!)\n\n```javascript\nvar cli = require(\'cli\'), options = cli.parse();\n\ncli.withStdinLines(function(lines, newline) {\n    lines.sort(!options.n ? null : function(a, b) {\n        return parseInt(a) > parseInt(b);\n    });\n    if (options.r) lines.reverse();\n    this.output(lines.join(newline));\n});\n```\n\n### static.js\n\nLet\'s create a static file server with daemon support to see the opts parser + plugins in use - note: this requires `npm install creationix daemon`\n\n```javascript\nvar cli = require(\'cli\').enable(\'daemon\', \'status\'); //Enable 2 plugins\n\ncli.parse({\n    log:   [\'l\', \'Enable logging\'],\n    port:  [\'p\', \'Listen on this port\', \'number\', 8080],\n    serve: [false, \'Serve static files from PATH\', \'path\', \'./public\']\n});\n\ncli.main(function(args, options) {\n    var server, middleware = [];\n\n    if (options.log) {\n        this.debug(\'Enabling logging\');\n        middleware.push(require(\'creationix/log\')());\n    }\n\n    this.debug(\'Serving files from \' + options.serve);\n    middleware.push(require(\'creationix/static\')(\'/\', options.serve, \'index.html\'));\n\n    server = this.createServer(middleware).listen(options.port);\n\n    this.ok(\'Listening on port \' + options.port);\n});\n```\n\nTo output usage information\n\n```bash\n$ ./static.js --help\n```\n\nTo create a daemon that serves files from */tmp*, run\n\n```bash\n$ ./static.js -ld --serve=/tmp\n```\n\nFor more examples, see [./examples](https://github.com/chriso/cli/tree/master/examples)\n\n## Helper methods\n\ncli has methods that collect stdin (newline is autodetected as \\n or \\r\\n)\n\n```javascript\ncli.withStdin(callback);        //callback receives stdin as a string\ncli.withStdinLines(callback);   //callback receives stdin split into an array of lines (lines, newline)\n```\n\ncli also has a lower level method for working with input line by line (see [./examples/cat.js](https://github.com/chriso/cli/blob/master/examples/cat.js) for an example). \n\n```javascript\ncli.withInput(file, function (line, newline, eof) {\n    if (!eof) {\n        this.output(line + newline);\n    }\n});\n```\n\n*Note: `file` can be omitted if you want to work with stdin*\n\nTo output a progress bar, call\n\n```javascript\ncli.progress(progress); //Where 0 <= progress <= 1\n```\n\nTo spawn a child process, use\n\n```javascript\ncli.exec(cmd, callback); //callback receives the output of the process (split into lines)\n```\n\ncli also comes bundled with kof\'s [node-natives](https://github.com/kof/node-natives) (access with cli.native) and creationix\' [stack](https://github.com/creationix/stack) (access with cli.createServer)\n\n## Plugins\n\nPlugins are a way of adding common opts and can be enabled using \n\n```javascript\ncli.enable(plugin1, [plugin2, ...]);  //To disable, use the equivalent disable() method\n```\n\n**help** - *enabled by default*\n\nAdds `-h,--help` to output auto-generated usage information\n\n**version**\n\nAdds `-v,--version` to output version information for the app. cli will attempt to locate and parse a nearby *package.json*\n\nTo set your own app name and version, use `cli.setApp(app_name, version)`\n\n**status**\n\nAdds options to show/hide the stylized status messages that are output to the console when using one of these methods\n\n```javascript\ncli.debug(msg);  //Only shown when using --debug\ncli.error(msg);\ncli.fatal(msg);  //Exits the process after outputting msg\ncli.info(msg);\ncli.ok(msg);\n```\n\n`-k,--no-color` will omit ANSI color escapes from the output\n\n**glob**  - *requires* `npm install glob`\n\nEnables glob matching of arguments\n\n**daemon**  - *requires* `npm install daemon`\n\nAdds `-d,--daemon ARG` for daemonizing the process and controlling the resulting daemon\n\n`ARG` can be either start (default), stop, restart, pid (outputs the daemon\'s pid if it\'s running), or log (output the daemon\'s stdout+stderr)\n\n**timeout**\n\nAdds `-t,--timeout N` to exit the process after N seconds with an error\n\n**catchall**\n\nAdds `-c,--catch` to catch and output uncaughtExceptions and resume execution\n\n*Note: Plugins are automatically disabled if an option or switch of the same name is already defined*\n\n## LICENSE\n\n(MIT license)\n\nCopyright (c) 2010 Chris O\'Hara <cohara87@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n"Software"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\nNONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\nLIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\nOF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\nWITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+727 silly resolved     readmeFilename: 'README.md',
+727 silly resolved     _id: 'cli@0.4.5',
+727 silly resolved     dist: { shasum: 'ef47a8d2353077e379bd074ecdc3af7cb8ac9d9f' },
+727 silly resolved     _from: 'cli@0.4.x',
+727 silly resolved     _resolved: 'https://registry.npmjs.org/cli/-/cli-0.4.5.tgz' },
+727 silly resolved   { name: 'underscore',
+727 silly resolved     description: 'JavaScript\'s functional programming helper library.',
+727 silly resolved     homepage: 'http://underscorejs.org',
+727 silly resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+727 silly resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+727 silly resolved     repository:
+727 silly resolved      { type: 'git',
+727 silly resolved        url: 'git://github.com/documentcloud/underscore.git' },
+727 silly resolved     main: 'underscore.js',
+727 silly resolved     version: '1.4.4',
+727 silly resolved     devDependencies: { phantomjs: '0.2.2' },
+727 silly resolved     scripts: { test: 'phantomjs test/vendor/runner.js test/index.html?noglobals=true' },
+727 silly resolved     readme: '                       __\n                      /\\ \\                                                         __\n     __  __    ___    \\_\\ \\     __   _ __   ____    ___    ___   _ __    __       /\\_\\    ____\n    /\\ \\/\\ \\ /\' _ `\\  /\'_  \\  /\'__`\\/\\  __\\/ ,__\\  / ___\\ / __`\\/\\  __\\/\'__`\\     \\/\\ \\  /\',__\\\n    \\ \\ \\_\\ \\/\\ \\/\\ \\/\\ \\ \\ \\/\\  __/\\ \\ \\//\\__, `\\/\\ \\__//\\ \\ \\ \\ \\ \\//\\  __/  __  \\ \\ \\/\\__, `\\\n     \\ \\____/\\ \\_\\ \\_\\ \\___,_\\ \\____\\\\ \\_\\\\/\\____/\\ \\____\\ \\____/\\ \\_\\\\ \\____\\/\\_\\ _\\ \\ \\/\\____/\n      \\/___/  \\/_/\\/_/\\/__,_ /\\/____/ \\/_/ \\/___/  \\/____/\\/___/  \\/_/ \\/____/\\/_//\\ \\_\\ \\/___/\n                                                                                  \\ \\____/\n                                                                                   \\/___/\n\nUnderscore.js is a utility-belt library for JavaScript that provides\nsupport for the usual functional suspects (each, map, reduce, filter...)\nwithout extending any core JavaScript objects.\n\nFor Docs, License, Tests, and pre-packed downloads, see:\nhttp://underscorejs.org\n\nMany thanks to our contributors:\nhttps://github.com/documentcloud/underscore/contributors\n',
+727 silly resolved     readmeFilename: 'README.md',
+727 silly resolved     bugs: { url: 'https://github.com/documentcloud/underscore/issues' },
+727 silly resolved     _id: 'underscore@1.4.4',
+727 silly resolved     dist: { shasum: '33a27ab28819b51423750a96397eedb3ad8b428b' },
+727 silly resolved     _from: 'underscore@1.4.x',
+727 silly resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz' },
+727 silly resolved   { name: 'shelljs',
+727 silly resolved     version: '0.1.4',
+727 silly resolved     author: { name: 'Artur Adib', email: 'aadib@mozilla.com' },
+727 silly resolved     description: 'Portable Unix shell commands for Node.js',
+727 silly resolved     keywords: [ 'unix', 'shell', 'makefile', 'make', 'jake', 'synchronous' ],
+727 silly resolved     repository: { type: 'git', url: 'git://github.com/arturadib/shelljs.git' },
+727 silly resolved     homepage: 'http://github.com/arturadib/shelljs',
+727 silly resolved     main: './shell.js',
+727 silly resolved     scripts: { test: 'node scripts/run-tests' },
+727 silly resolved     bin: { shjs: './bin/shjs' },
+727 silly resolved     dependencies: {},
+727 silly resolved     devDependencies: { jshint: '~1.1.0' },
+727 silly resolved     optionalDependencies: {},
+727 silly resolved     engines: { node: '*' },
+727 silly resolved     readme: '# ShellJS - Unix shell commands for Node.js [![Build Status](https://secure.travis-ci.org/arturadib/shelljs.png)](http://travis-ci.org/arturadib/shelljs)\n\nShellJS is a portable **(Windows/Linux/OS X)** implementation of Unix shell commands on top of the Node.js API. You can use it to eliminate your shell script\'s dependency on Unix while still keeping its familiar and powerful commands. You can also install it globally so you can run it from outside Node projects - say goodbye to those gnarly Bash scripts!\n\nThe project is [unit-tested](http://travis-ci.org/arturadib/shelljs) and battled-tested in projects like:\n\n+ [PDF.js](http://github.com/mozilla/pdf.js) - Firefox\'s next-gen PDF reader\n+ [Firebug](http://getfirebug.com/) - Firefox\'s infamous debugger\n+ [JSHint](http://jshint.com) - Most popular JavaScript linter\n+ [Zepto](http://zeptojs.com) - jQuery-compatible JavaScript library for modern browsers\n+ [Yeoman](http://yeoman.io/) - Web application stack and development tool\n+ [Deployd.com](http://deployd.com) - Open source PaaS for quick API backend generation\n\nand [many more](https://npmjs.org/browse/depended/shelljs).\n\n## Installing\n\nVia npm:\n\n```bash\n$ npm install [-g] shelljs\n```\n\nIf the global option `-g` is specified, the binary `shjs` will be installed. This makes it possible to\nrun ShellJS scripts much like any shell script from the command line, i.e. without requiring a `node_modules` folder:\n\n```bash\n$ shjs my_script\n```\n\nYou can also just copy `shell.js` into your project\'s directory, and `require()` accordingly.\n\n\n## Examples\n\n### JavaScript\n\n```javascript\nrequire(\'shelljs/global\');\n\nif (!which(\'git\')) {\n  echo(\'Sorry, this script requires git\');\n  exit(1);\n}\n\n// Copy files to release dir\nmkdir(\'-p\', \'out/Release\');\ncp(\'-R\', \'stuff/*\', \'out/Release\');\n\n// Replace macros in each .js file\ncd(\'lib\');\nls(\'*.js\').forEach(function(file) {\n  sed(\'-i\', \'BUILD_VERSION\', \'v0.1.2\', file);\n  sed(\'-i\', /.*REMOVE_THIS_LINE.*\\n/, \'\', file);\n  sed(\'-i\', /.*REPLACE_LINE_WITH_MACRO.*\\n/, cat(\'macro.js\'), file);\n});\ncd(\'..\');\n\n// Run external tool synchronously\nif (exec(\'git commit -am "Auto-commit"\').code !== 0) {\n  echo(\'Error: Git commit failed\');\n  exit(1);\n}\n```\n\n### CoffeeScript\n\n```coffeescript\nrequire \'shelljs/global\'\n\nif not which \'git\'\n  echo \'Sorry, this script requires git\'\n  exit 1\n\n# Copy files to release dir\nmkdir \'-p\', \'out/Release\'\ncp \'-R\', \'stuff/*\', \'out/Release\'\n\n# Replace macros in each .js file\ncd \'lib\'\nfor file in ls \'*.js\'\n  sed \'-i\', \'BUILD_VERSION\', \'v0.1.2\', file\n  sed \'-i\', /.*REMOVE_THIS_LINE.*\\n/, \'\', file\n  sed \'-i\', /.*REPLACE_LINE_WITH_MACRO.*\\n/, cat \'macro.js\', file\ncd \'..\'\n\n# Run external tool synchronously\nif (exec \'git commit -am "Auto-commit"\').code != 0\n  echo \'Error: Git commit failed\'\n  exit 1\n```\n\n## Global vs. Local\n\nThe example above uses the convenience script `shelljs/global` to reduce verbosity. If polluting your global namespace is not desirable, simply require `shelljs`.\n\nExample:\n\n```javascript\nvar shell = require(\'shelljs\');\nshell.echo(\'hello world\');\n```\n\n## Make tool\n\nA convenience script `shelljs/make` is also provided to mimic the behavior of a Unix Makefile. In this case all shell objects are global, and command line arguments will cause the script to execute only the corresponding function in the global `target` object. To avoid redundant calls, target functions are executed only once per script.\n\nExample (CoffeeScript):\n\n```coffeescript\nrequire \'shelljs/make\'\n\ntarget.all = ->\n  target.bundle()\n  target.docs()\n\ntarget.bundle = ->\n  cd __dirname\n  mkdir \'build\'\n  cd \'lib\'\n  (cat \'*.js\').to \'../build/output.js\'\n\ntarget.docs = ->\n  cd __dirname\n  mkdir \'docs\'\n  cd \'lib\'\n  for file in ls \'*.js\'\n    text = grep \'//@\', file     # extract special comments\n    text.replace \'//@\', \'\'      # remove comment tags\n    text.to \'docs/my_docs.md\'\n```\n\nTo run the target `all`, call the above script without arguments: `$ node make`. To run the target `docs`: `$ node make docs`, and so on.\n\n\n\n<!-- \n\n  DO NOT MODIFY BEYOND THIS POINT - IT\'S AUTOMATICALLY GENERATED\n\n-->\n\n\n## Command reference\n\n\nAll commands run synchronously, unless otherwise stated.\n\n\n### cd(\'dir\')\nChanges to directory `dir` for the duration of the script\n\n### pwd()\nReturns the current directory.\n\n### ls([options ,] path [,path ...])\n### ls([options ,] path_array)\nAvailable options:\n\n+ `-R`: recursive\n+ `-A`: all files (include files beginning with `.`, except for `.` and `..`)\n\nExamples:\n\n```javascript\nls(\'projs/*.js\');\nls(\'-R\', \'/users/me\', \'/tmp\');\nls(\'-R\', [\'/users/me\', \'/tmp\']); // same as above\n```\n\nReturns array of files in the given path, or in current directory if no path provided.\n\n### find(path [,path ...])\n### find(path_array)\nExamples:\n\n```javascript\nfind(\'src\', \'lib\');\nfind([\'src\', \'lib\']); // same as above\nfind(\'.\').filter(function(file) { return file.match(/\\.js$/); });\n```\n\nReturns array of all files (however deep) in the given paths.\n\nThe main difference from `ls(\'-R\', path)` is that the resulting file names\ninclude the base directories, e.g. `lib/resources/file1` instead of just `file1`.\n\n### cp([options ,] source [,source ...], dest)\n### cp([options ,] source_array, dest)\nAvailable options:\n\n+ `-f`: force\n+ `-r, -R`: recursive\n\nExamples:\n\n```javascript\ncp(\'file1\', \'dir1\');\ncp(\'-Rf\', \'/tmp/*\', \'/usr/local/*\', \'/home/tmp\');\ncp(\'-Rf\', [\'/tmp/*\', \'/usr/local/*\'], \'/home/tmp\'); // same as above\n```\n\nCopies files. The wildcard `*` is accepted.\n\n### rm([options ,] file [, file ...])\n### rm([options ,] file_array)\nAvailable options:\n\n+ `-f`: force\n+ `-r, -R`: recursive\n\nExamples:\n\n```javascript\nrm(\'-rf\', \'/tmp/*\');\nrm(\'some_file.txt\', \'another_file.txt\');\nrm([\'some_file.txt\', \'another_file.txt\']); // same as above\n```\n\nRemoves files. The wildcard `*` is accepted.\n\n### mv(source [, source ...], dest\')\n### mv(source_array, dest\')\nAvailable options:\n\n+ `f`: force\n\nExamples:\n\n```javascript\nmv(\'-f\', \'file\', \'dir/\');\nmv(\'file1\', \'file2\', \'dir/\');\nmv([\'file1\', \'file2\'], \'dir/\'); // same as above\n```\n\nMoves files. The wildcard `*` is accepted.\n\n### mkdir([options ,] dir [, dir ...])\n### mkdir([options ,] dir_array)\nAvailable options:\n\n+ `p`: full path (will create intermediate dirs if necessary)\n\nExamples:\n\n```javascript\nmkdir(\'-p\', \'/tmp/a/b/c/d\', \'/tmp/e/f/g\');\nmkdir(\'-p\', [\'/tmp/a/b/c/d\', \'/tmp/e/f/g\']); // same as above\n```\n\nCreates directories.\n\n### test(expression)\nAvailable expression primaries:\n\n+ `\'-b\', \'path\'`: true if path is a block device\n+ `\'-c\', \'path\'`: true if path is a character device\n+ `\'-d\', \'path\'`: true if path is a directory\n+ `\'-e\', \'path\'`: true if path exists\n+ `\'-f\', \'path\'`: true if path is a regular file\n+ `\'-L\', \'path\'`: true if path is a symboilc link\n+ `\'-p\', \'path\'`: true if path is a pipe (FIFO)\n+ `\'-S\', \'path\'`: true if path is a socket\n\nExamples:\n\n```javascript\nif (test(\'-d\', path)) { /* do something with dir */ };\nif (!test(\'-f\', path)) continue; // skip if it\'s a regular file\n```\n\nEvaluates expression using the available primaries and returns corresponding value.\n\n### cat(file [, file ...])\n### cat(file_array)\n\nExamples:\n\n```javascript\nvar str = cat(\'file*.txt\');\nvar str = cat(\'file1\', \'file2\');\nvar str = cat([\'file1\', \'file2\']); // same as above\n```\n\nReturns a string containing the given file, or a concatenated string\ncontaining the files if more than one file is given (a new line character is\nintroduced between each file). Wildcard `*` accepted.\n\n### \'string\'.to(file)\n\nExamples:\n\n```javascript\ncat(\'input.txt\').to(\'output.txt\');\n```\n\nAnalogous to the redirection operator `>` in Unix, but works with JavaScript strings (such as\nthose returned by `cat`, `grep`, etc). _Like Unix redirections, `to()` will overwrite any existing file!_\n\n### sed([options ,] search_regex, replace_str, file)\nAvailable options:\n\n+ `-i`: Replace contents of \'file\' in-place. _Note that no backups will be created!_\n\nExamples:\n\n```javascript\nsed(\'-i\', \'PROGRAM_VERSION\', \'v0.1.3\', \'source.js\');\nsed(/.*DELETE_THIS_LINE.*\\n/, \'\', \'source.js\');\n```\n\nReads an input string from `file` and performs a JavaScript `replace()` on the input\nusing the given search regex and replacement string. Returns the new string after replacement.\n\n### grep([options ,] regex_filter, file [, file ...])\n### grep([options ,] regex_filter, file_array)\nAvailable options:\n\n+ `-v`: Inverse the sense of the regex and print the lines not matching the criteria.\n\nExamples:\n\n```javascript\ngrep(\'-v\', \'GLOBAL_VARIABLE\', \'*.js\');\ngrep(\'GLOBAL_VARIABLE\', \'*.js\');\n```\n\nReads input string from given files and returns a string containing all lines of the\nfile that match the given `regex_filter`. Wildcard `*` accepted.\n\n### which(command)\n\nExamples:\n\n```javascript\nvar nodeExec = which(\'node\');\n```\n\nSearches for `command` in the system\'s PATH. On Windows looks for `.exe`, `.cmd`, and `.bat` extensions.\nReturns string containing the absolute path to the command.\n\n### echo(string [,string ...])\n\nExamples:\n\n```javascript\necho(\'hello world\');\nvar str = echo(\'hello world\');\n```\n\nPrints string to stdout, and returns string with additional utility methods\nlike `.to()`.\n\n### dirs([options | \'+N\' | \'-N\'])\n\nAvailable options:\n\n+ `-c`: Clears the directory stack by deleting all of the elements.\n\nArguments:\n\n+ `+N`: Displays the Nth directory (counting from the left of the list printed by dirs when invoked without options), starting with zero.\n+ `-N`: Displays the Nth directory (counting from the right of the list printed by dirs when invoked without options), starting with zero.\n\nDisplay the list of currently remembered directories. Returns an array of paths in the stack, or a single path if +N or -N was specified.\n\nSee also: pushd, popd\n\n### pushd([options,] [dir | \'-N\' | \'+N\'])\n\nAvailable options:\n\n+ `-n`: Suppresses the normal change of directory when adding directories to the stack, so that only the stack is manipulated.\n\nArguments:\n\n+ `dir`: Makes the current working directory be the top of the stack, and then executes the equivalent of `cd dir`.\n+ `+N`: Brings the Nth directory (counting from the left of the list printed by dirs, starting with zero) to the top of the list by rotating the stack.\n+ `-N`: Brings the Nth directory (counting from the right of the list printed by dirs, starting with zero) to the top of the list by rotating the stack.\n\nExamples:\n\n```javascript\n// process.cwd() === \'/usr\'\npushd(\'/etc\'); // Returns /etc /usr\npushd(\'+1\');   // Returns /usr /etc\n```\n\nSave the current directory on the top of the directory stack and then cd to `dir`. With no arguments, pushd exchanges the top two directories. Returns an array of paths in the stack.\n\n### popd([options,] [\'-N\' | \'+N\'])\n\nAvailable options:\n\n+ `-n`: Suppresses the normal change of directory when removing directories from the stack, so that only the stack is manipulated.\n\nArguments:\n\n+ `+N`: Removes the Nth directory (counting from the left of the list printed by dirs), starting with zero.\n+ `-N`: Removes the Nth directory (counting from the right of the list printed by dirs), starting with zero.\n\nExamples:\n\n```javascript\necho(process.cwd()); // \'/usr\'\npushd(\'/etc\');       // \'/etc /usr\'\necho(process.cwd()); // \'/etc\'\npopd();              // \'/usr\'\necho(process.cwd()); // \'/usr\'\n```\n\nWhen no arguments are given, popd removes the top directory from the stack and performs a cd to the new top directory. The elements are numbered from 0 starting at the first directory listed with dirs; i.e., popd is equivalent to popd +0. Returns an array of paths in the stack.\n\n### exit(code)\nExits the current process with the given exit code.\n\n### env[\'VAR_NAME\']\nObject containing environment variables (both getter and setter). Shortcut to process.env.\n\n### exec(command [, options] [, callback])\nAvailable options (all `false` by default):\n\n+ `async`: Asynchronous execution. Defaults to true if a callback is provided.\n+ `silent`: Do not echo program output to console.\n\nExamples:\n\n```javascript\nvar version = exec(\'node --version\', {silent:true}).output;\n\nvar child = exec(\'some_long_running_process\', {async:true});\nchild.stdout.on(\'data\', function(data) {\n  /* ... do something with data ... */\n});\n\nexec(\'some_long_running_process\', function(code, output) {\n  console.log(\'Exit code:\', code);\n  console.log(\'Program output:\', output);\n});\n```\n\nExecutes the given `command` _synchronously_, unless otherwise specified.\nWhen in synchronous mode returns the object `{ code:..., output:... }`, containing the program\'s\n`output` (stdout + stderr)  and its exit `code`. Otherwise returns the child process object, and\nthe `callback` gets the arguments `(code, output)`.\n\n**Note:** For long-lived processes, it\'s best to run `exec()` asynchronously as\nthe current synchronous implementation uses a lot of CPU. This should be getting\nfixed soon.\n\n### chmod(octal_mode || octal_string, file)\n### chmod(symbolic_mode, file)\n\nAvailable options:\n\n+ `-v`: output a diagnostic for every file processed\n+ `-c`: like verbose but report only when a change is made\n+ `-R`: change files and directories recursively\n\nExamples:\n\n```javascript\nchmod(755, \'/Users/brandon\');\nchmod(\'755\', \'/Users/brandon\'); // same as above \nchmod(\'u+x\', \'/Users/brandon\');\n```\n\nAlters the permissions of a file or directory by either specifying the\nabsolute permissions in octal form or expressing the changes in symbols.\nThis command tries to mimic the POSIX behavior as much as possible.\nNotable exceptions:\n\n+ In symbolic modes, \'a-r\' and \'-r\' are identical.  No consideration is\n  given to the umask.\n+ There is no "quiet" option since default behavior is to run silent.\n\n## Configuration\n\n\n### config.silent\nExample:\n\n```javascript\nvar silentState = config.silent; // save old silent state\nconfig.silent = true;\n/* ... */\nconfig.silent = silentState; // restore old silent state\n```\n\nSuppresses all command output if `true`, except for `echo()` calls.\nDefault is `false`.\n\n### config.fatal\nExample:\n\n```javascript\nconfig.fatal = true;\ncp(\'this_file_does_not_exist\', \'/dev/null\'); // dies here\n/* more commands... */\n```\n\nIf `true` the script will die on errors. Default is `false`.\n\n## Non-Unix commands\n\n\n### tempdir()\nSearches and returns string containing a writeable, platform-dependent temporary directory.\nFollows Python\'s [tempfile algorithm](http://docs.python.org/library/tempfile.html#tempfile.tempdir).\n\n### error()\nTests if error occurred in the last command. Returns `null` if no error occurred,\notherwise returns string explaining the error\n',
+727 silly resolved     readmeFilename: 'README.md',
+727 silly resolved     bugs: { url: 'https://github.com/arturadib/shelljs/issues' },
+727 silly resolved     _id: 'shelljs@0.1.4',
+727 silly resolved     dist: { shasum: 'eff965715f6583cec49780349209b48e9f13e42b' },
+727 silly resolved     _from: 'shelljs@0.1.x',
+727 silly resolved     _resolved: 'https://registry.npmjs.org/shelljs/-/shelljs-0.1.4.tgz' },
+727 silly resolved   { name: 'console-browserify',
+727 silly resolved     version: '0.1.6',
+727 silly resolved     description: 'Emulate console for all the browsers',
+727 silly resolved     keywords: [],
+727 silly resolved     author: { name: 'Raynos', email: 'raynos2@gmail.com' },
+727 silly resolved     repository:
+727 silly resolved      { type: 'git',
+727 silly resolved        url: 'git://github.com/Raynos/console-browserify.git' },
+727 silly resolved     main: 'index',
+727 silly resolved     homepage: 'https://github.com/Raynos/console-browserify',
+727 silly resolved     contributors: [ [Object] ],
+727 silly resolved     bugs:
+727 silly resolved      { url: 'https://github.com/Raynos/console-browserify/issues',
+727 silly resolved        email: 'raynos2@gmail.com' },
+727 silly resolved     dependencies: {},
+727 silly resolved     devDependencies:
+727 silly resolved      { tape: '~0.2.2',
+727 silly resolved        browserify: 'https://github.com/raynos/node-browserify/tarball/master',
+727 silly resolved        testem: '~0.2.55',
+727 silly resolved        jsonify: '0.0.0' },
+727 silly resolved     licenses: [ [Object] ],
+727 silly resolved     scripts:
+727 silly resolved      { test: 'node ./test',
+727 silly resolved        build: 'browserify test/index.js -o test/static/bundle.js',
+727 silly resolved        testem: 'testem' },
+727 silly resolved     testling: { files: 'test/index.js', browsers: [Object] },
+727 silly resolved     readme: '# console-browserify\n\n[![build status][1]][2]\n\n[![browser support][3]][4]\n\nEmulate console for all the browsers\n\n## Example\n\n```js\nvar console = require("console-browserify")\n\nconsole.log("hello world!")\n```\n\n## Installation\n\n`npm install console-browserify`\n\n## Contributors\n\n - Raynos\n\n## MIT Licenced\n\n\n\n  [1]: https://secure.travis-ci.org/Raynos/console-browserify.png\n  [2]: http://travis-ci.org/Raynos/console-browserify\n  [3]: http://ci.testling.com/Raynos/console-browserify.png\n  [4]: http://ci.testling.com/Raynos/console-browserify\n',
+727 silly resolved     readmeFilename: 'README.md',
+727 silly resolved     _id: 'console-browserify@0.1.6',
+727 silly resolved     dist: { shasum: '1d98b13caca24c9b55abc426fa1e4c73e5365e97' },
+727 silly resolved     _from: 'console-browserify@0.1.x',
+727 silly resolved     _resolved: 'https://registry.npmjs.org/console-browserify/-/console-browserify-0.1.6.tgz' } ]
+728 info install minimatch@0.2.12 into /usr/local/lib/node_modules/jshint
+729 info install cli@0.4.5 into /usr/local/lib/node_modules/jshint
+730 info install underscore@1.4.4 into /usr/local/lib/node_modules/jshint
+731 info install shelljs@0.1.4 into /usr/local/lib/node_modules/jshint
+732 info install console-browserify@0.1.6 into /usr/local/lib/node_modules/jshint
+733 info installOne minimatch@0.2.12
+734 info installOne cli@0.4.5
+735 info installOne underscore@1.4.4
+736 info installOne shelljs@0.1.4
+737 info installOne console-browserify@0.1.6
+738 info /usr/local/lib/node_modules/jshint/node_modules/minimatch unbuild
+739 info /usr/local/lib/node_modules/jshint/node_modules/cli unbuild
+740 info /usr/local/lib/node_modules/jshint/node_modules/underscore unbuild
+741 info /usr/local/lib/node_modules/jshint/node_modules/shelljs unbuild
+742 info /usr/local/lib/node_modules/jshint/node_modules/console-browserify unbuild
+743 verbose tar unpack /home/rianders/.npm/minimatch/0.2.12/package.tgz
+744 silly lockFile b3b4f349-es-jshint-node-modules-minimatch tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch
+745 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch /home/rianders/.npm/b3b4f349-es-jshint-node-modules-minimatch.lock
+746 silly lockFile 7396b1ef-npm-minimatch-0-2-12-package-tgz tar:///home/rianders/.npm/minimatch/0.2.12/package.tgz
+747 verbose lock tar:///home/rianders/.npm/minimatch/0.2.12/package.tgz /home/rianders/.npm/7396b1ef-npm-minimatch-0-2-12-package-tgz.lock
+748 verbose tar unpack /home/rianders/.npm/cli/0.4.5/package.tgz
+749 silly lockFile 79c2756a--modules-jshint-node-modules-cli tar:///usr/local/lib/node_modules/jshint/node_modules/cli
+750 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/cli /home/rianders/.npm/79c2756a--modules-jshint-node-modules-cli.lock
+751 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+752 verbose lock tar:///home/rianders/.npm/cli/0.4.5/package.tgz /home/rianders/.npm/97d9641f-anders-npm-cli-0-4-5-package-tgz.lock
+753 verbose tar unpack /home/rianders/.npm/underscore/1.4.4/package.tgz
+754 silly lockFile fa7adc95-s-jshint-node-modules-underscore tar:///usr/local/lib/node_modules/jshint/node_modules/underscore
+755 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/underscore /home/rianders/.npm/fa7adc95-s-jshint-node-modules-underscore.lock
+756 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+757 verbose lock tar:///home/rianders/.npm/underscore/1.4.4/package.tgz /home/rianders/.npm/794fca0f-npm-underscore-1-4-4-package-tgz.lock
+758 verbose tar unpack /home/rianders/.npm/shelljs/0.1.4/package.tgz
+759 silly lockFile 5118d1b6-ules-jshint-node-modules-shelljs tar:///usr/local/lib/node_modules/jshint/node_modules/shelljs
+760 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/shelljs /home/rianders/.npm/5118d1b6-ules-jshint-node-modules-shelljs.lock
+761 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+762 verbose lock tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz /home/rianders/.npm/e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz.lock
+763 verbose tar unpack /home/rianders/.npm/console-browserify/0.1.6/package.tgz
+764 silly lockFile 05e2884b--node-modules-console-browserify tar:///usr/local/lib/node_modules/jshint/node_modules/console-browserify
+765 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/console-browserify /home/rianders/.npm/05e2884b--node-modules-console-browserify.lock
+766 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+767 verbose lock tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz /home/rianders/.npm/fe70c03c-ole-browserify-0-1-6-package-tgz.lock
+768 silly gunzTarPerm modes [ '755', '644' ]
+769 silly gunzTarPerm modes [ '755', '644' ]
+770 silly gunzTarPerm modes [ '755', '644' ]
+771 silly gunzTarPerm modes [ '755', '644' ]
+772 silly gunzTarPerm modes [ '755', '644' ]
+773 silly gunzTarPerm extractEntry package.json
+774 silly gunzTarPerm extractEntry package.json
+775 silly gunzTarPerm extractEntry package.json
+776 silly gunzTarPerm extractEntry package.json
+777 silly gunzTarPerm extractEntry package.json
+778 silly gunzTarPerm extractEntry README.md
+779 silly gunzTarPerm extractEntry LICENSE
+780 silly gunzTarPerm extractEntry README.md
+781 silly gunzTarPerm extractEntry cli.js
+782 silly gunzTarPerm extractEntry .npmignore
+783 silly gunzTarPerm extractEntry README.md
+784 silly gunzTarPerm extractEntry .npmignore
+785 silly gunzTarPerm extractEntry README.md
+786 silly gunzTarPerm extractEntry .npmignore
+787 silly gunzTarPerm extractEntry README.md
+788 silly gunzTarPerm extractEntry minimatch.js
+789 silly gunzTarPerm extractEntry test/basic.js
+790 silly gunzTarPerm extractEntry test/brace-expand.js
+791 silly gunzTarPerm extractEntry test/caching.js
+792 silly gunzTarPerm extractEntry test/defaults.js
+793 silly gunzTarPerm extractEntry index.js
+794 silly gunzTarPerm extractEntry LICENSE
+795 silly gunzTarPerm extractEntry underscore-min.js
+796 silly gunzTarPerm extractEntry LICENSE
+797 silly gunzTarPerm extractEntry LICENCE
+798 silly gunzTarPerm extractEntry index.js
+799 silly gunzTarPerm extractEntry index.js
+800 silly gunzTarPerm extractEntry global.js
+801 silly gunzTarPerm extractEntry make.js
+802 silly gunzTarPerm extractEntry .testem.json
+803 silly gunzTarPerm extractEntry .travis.yml
+804 silly gunzTarPerm extractEntry underscore.js
+805 silly gunzTarPerm extractEntry index.html
+806 silly gunzTarPerm extractEntry test/index.js
+807 silly gunzTarPerm extractEntry test/static/test-adapter.js
+808 silly gunzTarPerm extractEntry examples/cat.js
+809 silly gunzTarPerm extractEntry examples/command.js
+810 silly gunzTarPerm extractEntry .travis.yml
+811 silly gunzTarPerm extractEntry CONTRIBUTING.md
+812 silly gunzTarPerm extractEntry test/static/index.html
+813 silly gunzTarPerm extractEntry shell.js
+814 silly gunzTarPerm extractEntry jshint.json
+815 silly gunzTarPerm extractEntry .travis.yml
+816 silly gunzTarPerm extractEntry bin/shjs
+817 silly gunzTarPerm extractEntry CNAME
+818 silly gunzTarPerm extractEntry favicon.ico
+819 silly gunzTarPerm extractEntry scripts/docs.js
+820 silly gunzTarPerm extractEntry scripts/run-tests.js
+821 silly gunzTarPerm extractEntry .documentup.json
+822 silly gunzTarPerm extractEntry test/.npmignore
+823 silly lockFile 05e2884b--node-modules-console-browserify tar:///usr/local/lib/node_modules/jshint/node_modules/console-browserify
+824 silly lockFile 05e2884b--node-modules-console-browserify tar:///usr/local/lib/node_modules/jshint/node_modules/console-browserify
+825 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+826 silly lockFile fe70c03c-ole-browserify-0-1-6-package-tgz tar:///home/rianders/.npm/console-browserify/0.1.6/package.tgz
+827 silly gunzTarPerm extractEntry examples/echo.js
+828 silly gunzTarPerm extractEntry examples/glob.js
+829 info preinstall console-browserify@0.1.6
+830 verbose readDependencies using package.json deps
+831 verbose readDependencies using package.json deps
+832 silly resolved []
+833 verbose about to build /usr/local/lib/node_modules/jshint/node_modules/console-browserify
+834 info build /usr/local/lib/node_modules/jshint/node_modules/console-browserify
+835 verbose linkStuff [ true,
+835 verbose linkStuff   '/usr/local/lib/node_modules',
+835 verbose linkStuff   false,
+835 verbose linkStuff   '/usr/local/lib/node_modules/jshint/node_modules' ]
+836 info linkStuff console-browserify@0.1.6
+837 silly gunzTarPerm extractEntry examples/long_desc.js
+838 silly gunzTarPerm extractEntry examples/progress.js
+839 verbose linkBins console-browserify@0.1.6
+840 verbose linkMans console-browserify@0.1.6
+841 verbose rebuildBundles console-browserify@0.1.6
+842 info install console-browserify@0.1.6
+843 info postinstall console-browserify@0.1.6
+844 silly gunzTarPerm extractEntry examples/sort.js
+845 silly gunzTarPerm extractEntry examples/spinner.js
+846 silly gunzTarPerm extractEntry examples/static.js
+847 silly gunzTarPerm extractEntry examples/static.coffee
+848 silly gunzTarPerm extractEntry test/exec.js
+849 silly gunzTarPerm extractEntry test/find.js
+850 silly lockFile b3b4f349-es-jshint-node-modules-minimatch tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch
+851 silly lockFile b3b4f349-es-jshint-node-modules-minimatch tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch
+852 silly lockFile 7396b1ef-npm-minimatch-0-2-12-package-tgz tar:///home/rianders/.npm/minimatch/0.2.12/package.tgz
+853 silly lockFile 7396b1ef-npm-minimatch-0-2-12-package-tgz tar:///home/rianders/.npm/minimatch/0.2.12/package.tgz
+854 silly gunzTarPerm extractEntry test/grep.js
+855 silly gunzTarPerm extractEntry test/env.js
+856 info preinstall minimatch@0.2.12
+857 verbose readDependencies using package.json deps
+858 verbose readDependencies using package.json deps
+859 silly gunzTarPerm extractEntry test/cat.js
+860 silly gunzTarPerm extractEntry test/mkdir.js
+861 verbose cache add [ 'lru-cache@2', null ]
+862 verbose cache add name=undefined spec="lru-cache@2" args=["lru-cache@2",null]
+863 verbose parsed url { protocol: null,
+863 verbose parsed url   slashes: null,
+863 verbose parsed url   auth: null,
+863 verbose parsed url   host: null,
+863 verbose parsed url   port: null,
+863 verbose parsed url   hostname: null,
+863 verbose parsed url   hash: null,
+863 verbose parsed url   search: null,
+863 verbose parsed url   query: null,
+863 verbose parsed url   pathname: 'lru-cache@2',
+863 verbose parsed url   path: 'lru-cache@2',
+863 verbose parsed url   href: 'lru-cache@2' }
+864 verbose cache add name="lru-cache" spec="2" args=["lru-cache","2"]
+865 verbose parsed url { protocol: null,
+865 verbose parsed url   slashes: null,
+865 verbose parsed url   auth: null,
+865 verbose parsed url   host: null,
+865 verbose parsed url   port: null,
+865 verbose parsed url   hostname: null,
+865 verbose parsed url   hash: null,
+865 verbose parsed url   search: null,
+865 verbose parsed url   query: null,
+865 verbose parsed url   pathname: '2',
+865 verbose parsed url   path: '2',
+865 verbose parsed url   href: '2' }
+866 verbose addNamed [ 'lru-cache', '2' ]
+867 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+868 silly lockFile b4f9d1ff-lru-cache-2 lru-cache@2
+869 verbose lock lru-cache@2 /home/rianders/.npm/b4f9d1ff-lru-cache-2.lock
+870 verbose cache add [ 'sigmund@~1.0.0', null ]
+871 verbose cache add name=undefined spec="sigmund@~1.0.0" args=["sigmund@~1.0.0",null]
+872 verbose parsed url { protocol: null,
+872 verbose parsed url   slashes: null,
+872 verbose parsed url   auth: null,
+872 verbose parsed url   host: null,
+872 verbose parsed url   port: null,
+872 verbose parsed url   hostname: null,
+872 verbose parsed url   hash: null,
+872 verbose parsed url   search: null,
+872 verbose parsed url   query: null,
+872 verbose parsed url   pathname: 'sigmund@~1.0.0',
+872 verbose parsed url   path: 'sigmund@~1.0.0',
+872 verbose parsed url   href: 'sigmund@~1.0.0' }
+873 verbose cache add name="sigmund" spec="~1.0.0" args=["sigmund","~1.0.0"]
+874 verbose parsed url { protocol: null,
+874 verbose parsed url   slashes: null,
+874 verbose parsed url   auth: null,
+874 verbose parsed url   host: null,
+874 verbose parsed url   port: null,
+874 verbose parsed url   hostname: null,
+874 verbose parsed url   hash: null,
+874 verbose parsed url   search: null,
+874 verbose parsed url   query: null,
+874 verbose parsed url   pathname: '~1.0.0',
+874 verbose parsed url   path: '~1.0.0',
+874 verbose parsed url   href: '~1.0.0' }
+875 verbose addNamed [ 'sigmund', '~1.0.0' ]
+876 verbose addNamed [ null, '>=1.0.0-0 <1.1.0-0' ]
+877 silly lockFile 584a4a05-sigmund-1-0-0 sigmund@~1.0.0
+878 verbose lock sigmund@~1.0.0 /home/rianders/.npm/584a4a05-sigmund-1-0-0.lock
+879 silly addNameRange { name: 'lru-cache',
+879 silly addNameRange   range: '>=2.0.0-0 <3.0.0-0',
+879 silly addNameRange   hasData: false }
+880 silly addNameRange { name: 'sigmund', range: '>=1.0.0-0 <1.1.0-0', hasData: false }
+881 silly lockFile 79c2756a--modules-jshint-node-modules-cli tar:///usr/local/lib/node_modules/jshint/node_modules/cli
+882 silly lockFile 79c2756a--modules-jshint-node-modules-cli tar:///usr/local/lib/node_modules/jshint/node_modules/cli
+883 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+884 silly lockFile 97d9641f-anders-npm-cli-0-4-5-package-tgz tar:///home/rianders/.npm/cli/0.4.5/package.tgz
+885 verbose url raw lru-cache
+886 verbose url resolving [ 'https://registry.npmjs.org/', './lru-cache' ]
+887 verbose url resolved https://registry.npmjs.org/lru-cache
+888 info trying registry request attempt 1 at 15:48:43
+889 verbose etag "14VF40U499GDAIDK33TEOG56Q"
+890 http GET https://registry.npmjs.org/lru-cache
+891 verbose url raw sigmund
+892 verbose url resolving [ 'https://registry.npmjs.org/', './sigmund' ]
+893 verbose url resolved https://registry.npmjs.org/sigmund
+894 info trying registry request attempt 1 at 15:48:43
+895 verbose etag "BAAVPGGBONNEW4H9S234JOULZ"
+896 http GET https://registry.npmjs.org/sigmund
+897 info preinstall cli@0.4.5
+898 silly gunzTarPerm extractEntry test/mv.js
+899 silly gunzTarPerm extractEntry test/popd.js
+900 verbose readDependencies using package.json deps
+901 verbose readDependencies using package.json deps
+902 verbose cache add [ 'glob@>= 3.1.4', null ]
+903 verbose cache add name=undefined spec="glob@>= 3.1.4" args=["glob@>= 3.1.4",null]
+904 verbose parsed url { protocol: null,
+904 verbose parsed url   slashes: null,
+904 verbose parsed url   auth: null,
+904 verbose parsed url   host: null,
+904 verbose parsed url   port: null,
+904 verbose parsed url   hostname: null,
+904 verbose parsed url   hash: null,
+904 verbose parsed url   search: null,
+904 verbose parsed url   query: null,
+904 verbose parsed url   pathname: 'glob@%3E=%203.1.4',
+904 verbose parsed url   path: 'glob@%3E=%203.1.4',
+904 verbose parsed url   href: 'glob@%3E=%203.1.4' }
+905 verbose cache add name="glob" spec=">= 3.1.4" args=["glob",">= 3.1.4"]
+906 verbose parsed url { protocol: null,
+906 verbose parsed url   slashes: null,
+906 verbose parsed url   auth: null,
+906 verbose parsed url   host: null,
+906 verbose parsed url   port: null,
+906 verbose parsed url   hostname: null,
+906 verbose parsed url   hash: null,
+906 verbose parsed url   search: null,
+906 verbose parsed url   query: null,
+906 verbose parsed url   pathname: '%3E=%203.1.4',
+906 verbose parsed url   path: '%3E=%203.1.4',
+906 verbose parsed url   href: '%3E=%203.1.4' }
+907 verbose addNamed [ 'glob', '>= 3.1.4' ]
+908 verbose addNamed [ null, '>=3.1.4' ]
+909 silly lockFile 2f09716d-glob-3-1-4 glob@>= 3.1.4
+910 verbose lock glob@>= 3.1.4 /home/rianders/.npm/2f09716d-glob-3-1-4.lock
+911 silly addNameRange { name: 'glob', range: '>=3.1.4', hasData: false }
+912 silly gunzTarPerm extractEntry test/pushd.js
+913 silly gunzTarPerm extractEntry test/echo.js
+914 verbose url raw glob
+915 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+916 verbose url resolved https://registry.npmjs.org/glob
+917 info trying registry request attempt 1 at 15:48:43
+918 http GET https://registry.npmjs.org/glob
+919 silly gunzTarPerm extractEntry test/pwd.js
+920 silly gunzTarPerm extractEntry test/dirs.js
+921 silly gunzTarPerm extractEntry test/to.js
+922 silly gunzTarPerm extractEntry test/cp.js
+923 silly gunzTarPerm extractEntry test/rm.js
+924 silly gunzTarPerm extractEntry test/config.js
+925 silly gunzTarPerm extractEntry test/sed.js
+926 silly gunzTarPerm extractEntry test/chmod.js
+927 silly gunzTarPerm extractEntry test/tempdir.js
+928 silly gunzTarPerm extractEntry test/cd.js
+929 silly gunzTarPerm extractEntry test/test.js
+930 silly gunzTarPerm extractEntry test/ls.js
+931 silly gunzTarPerm extractEntry test/which.js
+932 silly gunzTarPerm extractEntry test/make.js
+933 silly gunzTarPerm extractEntry test/resources/file1.js
+934 silly gunzTarPerm extractEntry test/resources/file2.js
+935 silly gunzTarPerm extractEntry test/resources/file2
+936 silly gunzTarPerm extractEntry test/resources/external/node_script.js
+937 silly gunzTarPerm extractEntry test/resources/file1
+938 silly gunzTarPerm extractEntry test/resources/a.txt
+939 silly gunzTarPerm extractEntry test/resources/file1.txt
+940 silly gunzTarPerm extractEntry test/resources/chmod/a/b/c/.npmignore
+941 silly gunzTarPerm extractEntry test/resources/chmod/b/a/b/.npmignore
+942 silly gunzTarPerm extractEntry test/resources/chmod/c/a/b/.npmignore
+943 silly gunzTarPerm extractEntry test/resources/chmod/file1
+944 silly gunzTarPerm extractEntry test/resources/cp/a
+945 silly gunzTarPerm extractEntry test/resources/cp/b
+946 silly gunzTarPerm extractEntry test/resources/cp/dir_a/z
+947 silly gunzTarPerm extractEntry test/resources/cp/dir_b/dir_b_a/dir_b_a_a/z
+948 silly gunzTarPerm extractEntry test/resources/file2.txt
+949 silly lockFile fa7adc95-s-jshint-node-modules-underscore tar:///usr/local/lib/node_modules/jshint/node_modules/underscore
+950 silly lockFile fa7adc95-s-jshint-node-modules-underscore tar:///usr/local/lib/node_modules/jshint/node_modules/underscore
+951 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+952 silly lockFile 794fca0f-npm-underscore-1-4-4-package-tgz tar:///home/rianders/.npm/underscore/1.4.4/package.tgz
+953 info preinstall underscore@1.4.4
+954 verbose readDependencies using package.json deps
+955 silly gunzTarPerm extractEntry test/resources/find/.hidden
+956 silly gunzTarPerm extractEntry test/resources/find/a
+957 verbose readDependencies using package.json deps
+958 silly resolved []
+959 verbose about to build /usr/local/lib/node_modules/jshint/node_modules/underscore
+960 info build /usr/local/lib/node_modules/jshint/node_modules/underscore
+961 verbose linkStuff [ true,
+961 verbose linkStuff   '/usr/local/lib/node_modules',
+961 verbose linkStuff   false,
+961 verbose linkStuff   '/usr/local/lib/node_modules/jshint/node_modules' ]
+962 info linkStuff underscore@1.4.4
+963 verbose linkBins underscore@1.4.4
+964 verbose linkMans underscore@1.4.4
+965 verbose rebuildBundles underscore@1.4.4
+966 info install underscore@1.4.4
+967 info postinstall underscore@1.4.4
+968 silly gunzTarPerm extractEntry test/resources/find/b
+969 silly gunzTarPerm extractEntry test/resources/find/dir1/a_dir1
+970 silly gunzTarPerm extractEntry test/resources/find/dir1/dir11/a_dir11
+971 silly gunzTarPerm extractEntry test/resources/find/dir2/a_dir1
+972 silly gunzTarPerm extractEntry test/resources/issue44/main.js
+973 silly gunzTarPerm extractEntry test/resources/ls/file1.js
+974 silly gunzTarPerm extractEntry test/resources/ls/file2.js
+975 silly gunzTarPerm extractEntry test/resources/ls/.hidden_dir/nada
+976 silly gunzTarPerm extractEntry test/resources/ls/.hidden_file
+977 silly gunzTarPerm extractEntry test/resources/ls/a_dir/.hidden_dir/nada
+978 silly gunzTarPerm extractEntry test/resources/ls/a_dir/b_dir/z
+979 silly gunzTarPerm extractEntry test/resources/ls/a_dir/nada
+980 silly gunzTarPerm extractEntry test/resources/ls/file1
+981 silly gunzTarPerm extractEntry test/resources/ls/file2
+982 silly gunzTarPerm extractEntry test/resources/ls/filename(with)[chars$]^that.must+be-escaped
+983 silly gunzTarPerm extractEntry test/resources/pushd/a/dummy
+984 silly gunzTarPerm extractEntry test/resources/pushd/b/c/dummy
+985 silly lockFile 5118d1b6-ules-jshint-node-modules-shelljs tar:///usr/local/lib/node_modules/jshint/node_modules/shelljs
+986 silly lockFile 5118d1b6-ules-jshint-node-modules-shelljs tar:///usr/local/lib/node_modules/jshint/node_modules/shelljs
+987 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+988 silly lockFile e06d9a8d-rs-npm-shelljs-0-1-4-package-tgz tar:///home/rianders/.npm/shelljs/0.1.4/package.tgz
+989 info preinstall shelljs@0.1.4
+990 verbose readDependencies using package.json deps
+991 verbose readDependencies using package.json deps
+992 silly resolved []
+993 verbose about to build /usr/local/lib/node_modules/jshint/node_modules/shelljs
+994 info build /usr/local/lib/node_modules/jshint/node_modules/shelljs
+995 verbose linkStuff [ true,
+995 verbose linkStuff   '/usr/local/lib/node_modules',
+995 verbose linkStuff   false,
+995 verbose linkStuff   '/usr/local/lib/node_modules/jshint/node_modules' ]
+996 info linkStuff shelljs@0.1.4
+997 verbose linkBins shelljs@0.1.4
+998 verbose link bins [ { shjs: './bin/shjs' },
+998 verbose link bins   '/usr/local/lib/node_modules/jshint/node_modules/.bin',
+998 verbose link bins   false ]
+999 verbose linkMans shelljs@0.1.4
+1000 verbose rebuildBundles shelljs@0.1.4
+1001 info install shelljs@0.1.4
+1002 info postinstall shelljs@0.1.4
+1003 info retry will retry, error on last attempt: Error: socket hang up
+1004 info retry will retry, error on last attempt: Error: socket hang up
+1005 info retry will retry, error on last attempt: Error: socket hang up
+1006 info trying registry request attempt 2 at 15:49:23
+1007 http GET https://registry.npmjs.org/glob
+1008 info trying registry request attempt 2 at 15:49:23
+1009 verbose etag "BAAVPGGBONNEW4H9S234JOULZ"
+1010 http GET https://registry.npmjs.org/sigmund
+1011 info trying registry request attempt 2 at 15:49:23
+1012 verbose etag "14VF40U499GDAIDK33TEOG56Q"
+1013 http GET https://registry.npmjs.org/lru-cache
+1014 info retry will retry, error on last attempt: Error: socket hang up
+1015 info retry will retry, error on last attempt: Error: socket hang up
+1016 info retry will retry, error on last attempt: Error: socket hang up
+1017 info trying registry request attempt 3 at 15:50:45
+1018 http GET https://registry.npmjs.org/glob
+1019 info trying registry request attempt 3 at 15:50:45
+1020 verbose etag "BAAVPGGBONNEW4H9S234JOULZ"
+1021 http GET https://registry.npmjs.org/sigmund
+1022 info trying registry request attempt 3 at 15:50:45
+1023 verbose etag "14VF40U499GDAIDK33TEOG56Q"
+1024 http GET https://registry.npmjs.org/lru-cache
+1025 silly lockFile 2f09716d-glob-3-1-4 glob@>= 3.1.4
+1026 silly lockFile 2f09716d-glob-3-1-4 glob@>= 3.1.4
+1027 verbose about to build /usr/local/lib/node_modules/jshint/node_modules/cli
+1028 info /usr/local/lib/node_modules/jshint/node_modules/cli unbuild
+1029 info preuninstall cli@0.4.5
+1030 info uninstall cli@0.4.5
+1031 silly registry.get cb [ 304, undefined ]
+1032 verbose etag sigmund from cache
+1033 verbose false,/usr/local/lib/node_modules,/usr/local/lib/node_modules/jshint/node_modules unbuild cli@0.4.5
+1034 info postuninstall cli@0.4.5
+1035 silly addNameRange number 2 { name: 'sigmund', range: '>=1.0.0-0 <1.1.0-0', hasData: true }
+1036 silly addNameRange versions [ 'sigmund', [ '1.0.0' ] ]
+1037 verbose addNamed [ 'sigmund', '1.0.0' ]
+1038 verbose addNamed [ '1.0.0', '1.0.0' ]
+1039 silly lockFile 7b2d1244-sigmund-1-0-0 sigmund@1.0.0
+1040 verbose lock sigmund@1.0.0 /home/rianders/.npm/7b2d1244-sigmund-1-0-0.lock
+1041 verbose about to build /usr/local/lib/node_modules/jshint
+1042 info /usr/local/lib/node_modules/jshint unbuild
+1043 info preuninstall jshint@2.3.0
+1044 info uninstall jshint@2.3.0
+1045 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild jshint@2.3.0
+1046 verbose /usr/local/bin,[object Object] binRoot
+1047 info postuninstall jshint@2.3.0
+1048 silly lockFile 7b2d1244-sigmund-1-0-0 sigmund@1.0.0
+1049 silly lockFile 7b2d1244-sigmund-1-0-0 sigmund@1.0.0
+1050 silly lockFile 584a4a05-sigmund-1-0-0 sigmund@~1.0.0
+1051 silly lockFile 584a4a05-sigmund-1-0-0 sigmund@~1.0.0
+1052 silly registry.get cb [ 304, undefined ]
+1053 verbose etag lru-cache from cache
+1054 silly addNameRange number 2 { name: 'lru-cache', range: '>=2.0.0-0 <3.0.0-0', hasData: true }
+1055 silly addNameRange versions [ 'lru-cache',
+1055 silly addNameRange   [ '1.0.1',
+1055 silly addNameRange     '1.0.2',
+1055 silly addNameRange     '1.0.3',
+1055 silly addNameRange     '1.0.4',
+1055 silly addNameRange     '1.0.5',
+1055 silly addNameRange     '1.0.6',
+1055 silly addNameRange     '1.1.0',
+1055 silly addNameRange     '1.1.1',
+1055 silly addNameRange     '2.0.0',
+1055 silly addNameRange     '2.0.1',
+1055 silly addNameRange     '2.0.2',
+1055 silly addNameRange     '2.0.3',
+1055 silly addNameRange     '2.0.4',
+1055 silly addNameRange     '2.1.0',
+1055 silly addNameRange     '2.2.0',
+1055 silly addNameRange     '2.2.1',
+1055 silly addNameRange     '2.2.2',
+1055 silly addNameRange     '2.2.4',
+1055 silly addNameRange     '2.3.0',
+1055 silly addNameRange     '2.3.1' ] ]
+1056 verbose addNamed [ 'lru-cache', '2.3.1' ]
+1057 verbose addNamed [ '2.3.1', '2.3.1' ]
+1058 silly lockFile ef81ebb1-lru-cache-2-3-1 lru-cache@2.3.1
+1059 verbose lock lru-cache@2.3.1 /home/rianders/.npm/ef81ebb1-lru-cache-2-3-1.lock
+1060 silly lockFile ef81ebb1-lru-cache-2-3-1 lru-cache@2.3.1
+1061 silly lockFile ef81ebb1-lru-cache-2-3-1 lru-cache@2.3.1
+1062 silly lockFile b4f9d1ff-lru-cache-2 lru-cache@2
+1063 silly lockFile b4f9d1ff-lru-cache-2 lru-cache@2
+1064 silly resolved [ { name: 'sigmund',
+1064 silly resolved     version: '1.0.0',
+1064 silly resolved     description: 'Quick and dirty signatures for Objects.',
+1064 silly resolved     main: 'sigmund.js',
+1064 silly resolved     directories: { test: 'test' },
+1064 silly resolved     dependencies: {},
+1064 silly resolved     devDependencies: { tap: '~0.3.0' },
+1064 silly resolved     scripts: { test: 'tap test/*.js', bench: 'node bench.js' },
+1064 silly resolved     repository: { type: 'git', url: 'git://github.com/isaacs/sigmund' },
+1064 silly resolved     keywords: [ 'object', 'signature', 'key', 'data', 'psychoanalysis' ],
+1064 silly resolved     author:
+1064 silly resolved      { name: 'Isaac Z. Schlueter',
+1064 silly resolved        email: 'i@izs.me',
+1064 silly resolved        url: 'http://blog.izs.me/' },
+1064 silly resolved     license: 'BSD',
+1064 silly resolved     readme: '# sigmund\n\nQuick and dirty signatures for Objects.\n\nThis is like a much faster `deepEquals` comparison, which returns a\nstring key suitable for caches and the like.\n\n## Usage\n\n```javascript\nfunction doSomething (someObj) {\n  var key = sigmund(someObj, maxDepth) // max depth defaults to 10\n  var cached = cache.get(key)\n  if (cached) return cached)\n\n  var result = expensiveCalculation(someObj)\n  cache.set(key, result)\n  return result\n}\n```\n\nThe resulting key will be as unique and reproducible as calling\n`JSON.stringify` or `util.inspect` on the object, but is much faster.\nIn order to achieve this speed, some differences are glossed over.\nFor example, the object `{0:\'foo\'}` will be treated identically to the\narray `[\'foo\']`.\n\nAlso, just as there is no way to summon the soul from the scribblings\nof a cocain-addled psychoanalyst, there is no way to revive the object\nfrom the signature string that sigmund gives you.  In fact, it\'s\nbarely even readable.\n\nAs with `sys.inspect` and `JSON.stringify`, larger objects will\nproduce larger signature strings.\n\nBecause sigmund is a bit less strict than the more thorough\nalternatives, the strings will be shorter, and also there is a\nslightly higher chance for collisions.  For example, these objects\nhave the same signature:\n\n    var obj1 = {a:\'b\',c:/def/,g:[\'h\',\'i\',{j:\'\',k:\'l\'}]}\n    var obj2 = {a:\'b\',c:\'/def/\',g:[\'h\',\'i\',\'{jkl\']}\n\nLike a good Freudian, sigmund is most effective when you already have\nsome understanding of what you\'re looking for.  It can help you help\nyourself, but you must be willing to do some work as well.\n\nCycles are handled, and cyclical objects are silently omitted (though\nthe key is included in the signature output.)\n\nThe second argument is the maximum depth, which defaults to 10,\nbecause that is the maximum object traversal depth covered by most\ninsurance carriers.\n',
+1064 silly resolved     readmeFilename: 'README.md',
+1064 silly resolved     bugs: { url: 'https://github.com/isaacs/sigmund/issues' },
+1064 silly resolved     _id: 'sigmund@1.0.0',
+1064 silly resolved     _from: 'sigmund@~1.0.0' },
+1064 silly resolved   { name: 'lru-cache',
+1064 silly resolved     description: 'A cache object that deletes the least-recently-used items.',
+1064 silly resolved     version: '2.3.1',
+1064 silly resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+1064 silly resolved     scripts: { test: 'tap test --gc' },
+1064 silly resolved     main: 'lib/lru-cache.js',
+1064 silly resolved     repository:
+1064 silly resolved      { type: 'git',
+1064 silly resolved        url: 'git://github.com/isaacs/node-lru-cache.git' },
+1064 silly resolved     devDependencies: { tap: '', weak: '' },
+1064 silly resolved     license:
+1064 silly resolved      { type: 'MIT',
+1064 silly resolved        url: 'http://github.com/isaacs/node-lru-cache/raw/master/LICENSE' },
+1064 silly resolved     contributors:
+1064 silly resolved      [ [Object],
+1064 silly resolved        [Object],
+1064 silly resolved        [Object],
+1064 silly resolved        [Object],
+1064 silly resolved        [Object],
+1064 silly resolved        [Object],
+1064 silly resolved        [Object] ],
+1064 silly resolved     readme: '# lru cache\n\nA cache object that deletes the least-recently-used items.\n\n## Usage:\n\n```javascript\nvar LRU = require("lru-cache")\n  , options = { max: 500\n              , length: function (n) { return n * 2 }\n              , dispose: function (key, n) { n.close() }\n              , maxAge: 1000 * 60 * 60 }\n  , cache = LRU(options)\n  , otherCache = LRU(50) // sets just the max size\n\ncache.set("key", "value")\ncache.get("key") // "value"\n\ncache.reset()    // empty the cache\n```\n\nIf you put more stuff in it, then items will fall out.\n\nIf you try to put an oversized thing in it, then it\'ll fall out right\naway.\n\n## Options\n\n* `max` The maximum size of the cache, checked by applying the length\n  function to all values in the cache.  Not setting this is kind of\n  silly, since that\'s the whole purpose of this lib, but it defaults\n  to `Infinity`.\n* `maxAge` Maximum age in ms.  Items are not pro-actively pruned out\n  as they age, but if you try to get an item that is too old, it\'ll\n  drop it and return undefined instead of giving it to you.\n* `length` Function that is used to calculate the length of stored\n  items.  If you\'re storing strings or buffers, then you probably want\n  to do something like `function(n){return n.length}`.  The default is\n  `function(n){return 1}`, which is fine if you want to store `n`\n  like-sized things.\n* `dispose` Function that is called on items when they are dropped\n  from the cache.  This can be handy if you want to close file\n  descriptors or do other cleanup tasks when items are no longer\n  accessible.  Called with `key, value`.  It\'s called *before*\n  actually removing the item from the internal cache, so if you want\n  to immediately put it back in, you\'ll have to do that in a\n  `nextTick` or `setTimeout` callback or it won\'t do anything.\n* `stale` By default, if you set a `maxAge`, it\'ll only actually pull\n  stale items out of the cache when you `get(key)`.  (That is, it\'s\n  not pre-emptively doing a `setTimeout` or anything.)  If you set\n  `stale:true`, it\'ll return the stale value before deleting it.  If\n  you don\'t set this, then it\'ll return `undefined` when you try to\n  get a stale entry, as if it had already been deleted.\n\n## API\n\n* `set(key, value)`\n* `get(key) => value`\n\n    Both of these will update the "recently used"-ness of the key.\n    They do what you think.\n\n* `peek(key)`\n\n    Returns the key value (or `undefined` if not found) without\n    updating the "recently used"-ness of the key.\n\n    (If you find yourself using this a lot, you *might* be using the\n    wrong sort of data structure, but there are some use cases where\n    it\'s handy.)\n\n* `del(key)`\n\n    Deletes a key out of the cache.\n\n* `reset()`\n\n    Clear the cache entirely, throwing away all values.\n\n* `has(key)`\n\n    Check if a key is in the cache, without updating the recent-ness\n    or deleting it for being stale.\n\n* `forEach(function(value,key,cache), [thisp])`\n\n    Just like `Array.prototype.forEach`.  Iterates over all the keys\n    in the cache, in order of recent-ness.  (Ie, more recently used\n    items are iterated over first.)\n\n* `keys()`\n\n    Return an array of the keys in the cache.\n\n* `values()`\n\n    Return an array of the values in the cache.\n',
+1064 silly resolved     readmeFilename: 'README.md',
+1064 silly resolved     bugs: { url: 'https://github.com/isaacs/node-lru-cache/issues' },
+1064 silly resolved     _id: 'lru-cache@2.3.1',
+1064 silly resolved     _from: 'lru-cache@2' } ]
+1065 info install sigmund@1.0.0 into /usr/local/lib/node_modules/jshint/node_modules/minimatch
+1066 info install lru-cache@2.3.1 into /usr/local/lib/node_modules/jshint/node_modules/minimatch
+1067 info installOne sigmund@1.0.0
+1068 info installOne lru-cache@2.3.1
+1069 info /usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/sigmund unbuild
+1070 info /usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/lru-cache unbuild
+1071 verbose tar unpack /home/rianders/.npm/sigmund/1.0.0/package.tgz
+1072 silly lockFile 447f7448-s-minimatch-node-modules-sigmund tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/sigmund
+1073 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/sigmund /home/rianders/.npm/447f7448-s-minimatch-node-modules-sigmund.lock
+1074 silly lockFile 71d934c3-rs-npm-sigmund-1-0-0-package-tgz tar:///home/rianders/.npm/sigmund/1.0.0/package.tgz
+1075 verbose lock tar:///home/rianders/.npm/sigmund/1.0.0/package.tgz /home/rianders/.npm/71d934c3-rs-npm-sigmund-1-0-0-package-tgz.lock
+1076 verbose tar unpack /home/rianders/.npm/lru-cache/2.3.1/package.tgz
+1077 silly lockFile 3ae898a4-minimatch-node-modules-lru-cache tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/lru-cache
+1078 verbose lock tar:///usr/local/lib/node_modules/jshint/node_modules/minimatch/node_modules/lru-cache /home/rianders/.npm/3ae898a4-minimatch-node-modules-lru-cache.lock
+1079 silly lockFile 80dd85a9--npm-lru-cache-2-3-1-package-tgz tar:///home/rianders/.npm/lru-cache/2.3.1/package.tgz
+1080 verbose lock tar:///home/rianders/.npm/lru-cache/2.3.1/package.tgz /home/rianders/.npm/80dd85a9--npm-lru-cache-2-3-1-package-tgz.lock
+1081 silly gunzTarPerm modes [ '755', '644' ]
+1082 silly gunzTarPerm modes [ '755', '644' ]
+1083 error error rolling back Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/jshint/node_modules'
+1083 error error rolling back  jshint@2.3.0 { [Error: ENOTEMPTY, rmdir '/usr/local/lib/node_modules/jshint/node_modules']
+1083 error error rolling back   errno: 53,
+1083 error error rolling back   code: 'ENOTEMPTY',
+1083 error error rolling back   path: '/usr/local/lib/node_modules/jshint/node_modules' }
+1084 error network socket hang up
+1084 error network This is most likely not a problem with npm itself
+1084 error network and is related to network connectivity.
+1084 error network In most cases you are behind a proxy or have bad network settings.
+1084 error network
+1084 error network If you are behind a proxy, please make sure that the
+1084 error network 'proxy' config is set properly.  See: 'npm help config'
+1085 error System Linux 3.11.0-12-generic
+1086 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "jshint" "-g"
+1087 error cwd /home/rianders/projects/vwtalk/app/public/Negotiation
+1088 error node -v v0.10.21
+1089 error npm -v 1.3.11
+1090 error code ECONNRESET
+1091 verbose exit [ 1, true ]

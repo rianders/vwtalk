@@ -1,38 +1,38 @@
 var currentRoom;
-var room = 'room1';
+var room = 'middle';
 var user;
 var sessions = {};
 var globaldata = {};
 var publisher;
-var isMicOn = true;
-var sessionToJoinOnStart;
-var subscribed = false;
 var config = {
-	mic: true,
-	video: true
-}
+  mic: true,
+  video: false
+};
 
-TB.setLogLevel(TB.DEBUG);
+TB.setLogLevel(TB.INFO);
 
 function subscribeToStreams(streams) {
   console.log('subscribeToStreams');
   for (var ii = 0; ii < streams.length; ii++) {
     console.log('stream ii: ' + streams.length + ', StreamName: ' + streams[ii].name);
     // Make sure we don't subscribe to ourself
-    if (streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
-      return;
-    }
     // Create the div to put the subscriber element in to
     var div = document.createElement('div');
     div.setAttribute('id', 'stream' + streams[ii].streamId);
     var streamsContainer = document.getElementById('streamsContainer');
     streamsContainer.appendChild(div);
-    var subProperties = {};
-    subProperties.height = 100;
-    subProperties.width = 128;
-    subProperties.style = {};
-    subProperties.style.nameDisplayMode = 'on';
+    var subProperties = {
+    height : 100,
+    width : 128,
+    style : {
+      nameDisplayMode : 'on'
+    }
+    };
     var subscriber = sessions[currentRoom].subscribe(streams[ii], 'stream' + streams[ii].streamId, subProperties);  // subscriber.subscribeToVideo(false).subscribeToAudio(true);
+    //prevent echo
+    if(streams[ii].connection.connectionId == sessions[currentRoom].connection.connectionId) {
+	subscriber.setAudioVolume(0);
+    }
   }
 }
 
@@ -45,42 +45,33 @@ function sessionConnectedHandler(event) {
   console.log('sessionConnectedHandler');
   //: cnt:  " +  event.connections.length);
   // Create publisher and start streaming into the session
-  var div = document.createElement('div');
-  div.setAttribute('id', 'publisher');
-  var publisherContainer = document.getElementById('publisherContainer');
-  // This example assumes that a publisherContainer div exists
-  publisherContainer.appendChild(div);
-  //set publishing options
-  var pubOptions = {
-      publishAudio: config.mic,
-      publishVideo: config.video,
-      height: 128,
-      width: 128,
-      name: user
-    };
-  var publisher = TB.initPublisher(event.apikey, publisherContainer, pubOptions);
   sessions[currentRoom].publish(publisher);
-  sessions[currentRoom].pubObj = publisher;
   console.log('Pub Room: ' + room);
   console.log('Pub currentRoom: ' + currentRoom);
   // Subscribe to streams that were in the session when we connected
-  subscribeToStreams(event.streams);
+  //subscribeToStreams(event.streams);
 }
 
 function streamAvailableHandler(event) {
   console.log('streamAvailableHandler: no camera or microphone');
 }
 function unpublish(room) {
-	sessions[room].unpublish(sessions[room].pubObj);
-	console.log("unpublished: " + room);
+  sessions[room].unpublish(publisher);
+  console.log("unpublished: " + room);
+}
+function publish(room) {
+  sessions[room].publish(publisher);
+  console.log("published: " + room);
+}
+function toggleAudio(isEnabled) {
+  if(publisher!=undefined) publisher.publishAudio(isEnabled);
 }
 function connectionDestroyedHandler(event) {
-	preventDefault();
-	console.log("The session disconnected. " + event.reason);
+  event.preventDefault();
+  console.log("The session disconnected. " + event.reason);
 }
-function streamDestroyedHandler(event) {
-    for (var ii = 0; ii < event.streams.length; ii++) {
-           var stream = event.streams[ii];
-            console.log("Stream " + stream.name + " ended. " + event.reason);
-    }
+function streamDestroyedHandler(ee) {
+  var subscriberDiv = document.getElementById("stream"+ee.streams[0].streamId);
+  console.log(subscriberDiv);
+  subscriberDiv.parentNode.removeChild(subscriberDiv);
 }
